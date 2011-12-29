@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		C301C16210E58A1F00544DB5 /* LGSAdditionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C301C15F10E58A1F00544DB5 /* LGSAdditionControl.m */; };
+		C301C16310E58A1F00544DB5 /* LGSAdditionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C301C16110E58A1F00544DB5 /* LGSAdditionView.m */; };
+		C304810210C5BE4200F7DF51 /* CMGlyphDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = C304810110C5BE4200F7DF51 /* CMGlyphDrawing.m */; };
+		C30597B810B9D04600116C93 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C30597A110B9D04500116C93 /* DDXMLDocument.m */; };
+		C30597B910B9D04600116C93 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C30597A310B9D04500116C93 /* DDXMLElement.m */; };
+		C30597BA10B9D04600116C93 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C30597A510B9D04500116C93 /* DDXMLElementAdditions.m */; };
+		C30597BB10B9D04600116C93 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C30597A710B9D04500116C93 /* DDXMLNode.m */; };
+		C30597C110B9D04600116C93 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C30597B610B9D04500116C93 /* NSStringAdditions.m */; };
+		C31DD362110C731800F79415 /* LGSPlatformSound.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DD361110C731800F79415 /* LGSPlatformSound.m */; };
+		C31DD3EE110C803D00F79415 /* LGSSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DD3ED110C803D00F79415 /* LGSSoundManager.m */; };
+		C323AEA310EA6457003217AD /* LGSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C323AEA210EA6457003217AD /* LGSGameViewController.m */; };
+		C323AEA810EA64CB003217AD /* LGSPlatformGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C323AEA710EA64CB003217AD /* LGSPlatformGameViewController.m */; };
+		C323AF3C10EA6A26003217AD /* LGSPlatformDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C323AF3B10EA6A26003217AD /* LGSPlatformDefaultViewController.m */; };
+		C327F4AD1149A202007CD331 /* lgsApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = C327F4AC1149A202007CD331 /* lgsApp.icns */; };
+		C337DB67113F008000F8FBBE /* LGSPlatformEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C337DB66113F008000F8FBBE /* LGSPlatformEndViewController.m */; };
+		C337DB6A113F00BC00F8FBBE /* LGSEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C337DB69113F00BC00F8FBBE /* LGSEndViewController.m */; };
+		C35BACE1114D4930004165E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C35BACDD114D4930004165E8 /* InfoPlist.strings */; };
+		C35BACE2114D4930004165E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35BACDF114D4930004165E8 /* MainMenu.xib */; };
+		C3641B1410FA158400EB254A /* LGSSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3641B1310FA158400EB254A /* LGSSurfaceView.m */; };
+		C3641B1A10FA192B00EB254A /* LGSPlatformSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3641B1910FA192B00EB254A /* LGSPlatformSurfaceView.m */; };
+		C398C5C710E7C4D900D75498 /* LGSIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C5C610E7C4D900D75498 /* LGSIntroViewController.m */; };
+		C398C5CE10E7C58700D75498 /* LGSPlatformIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C5CD10E7C58700D75498 /* LGSPlatformIntroViewController.m */; };
+		C3AED2EF11037900005208A7 /* LGSAdditionValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AED2EE11037900005208A7 /* LGSAdditionValue.m */; };
+		C3B18EA310B9AC4500E38315 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B18EA210B9AC4500E38315 /* libxml2.dylib */; };
+		C3D92E8810E4284300A8AE2D /* LGSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92E7610E4284300A8AE2D /* LGSCard.m */; };
+		C3D92E8A10E4284300A8AE2D /* LGSData.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92E7A10E4284300A8AE2D /* LGSData.m */; };
+		C3D92E8B10E4284300A8AE2D /* LGSFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92E7C10E4284300A8AE2D /* LGSFontManager.m */; };
+		C3D92E8D10E4284300A8AE2D /* LGSQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92E8010E4284300A8AE2D /* LGSQuestion.m */; };
+		C3D92E8E10E4284300A8AE2D /* LGSSound.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92E8210E4284300A8AE2D /* LGSSound.m */; };
+		C3D92E8F10E4284300A8AE2D /* LGSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92E8410E4284300A8AE2D /* LGSUser.m */; };
+		C3D92F0F10E4320700A8AE2D /* LGSDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F0E10E4320700A8AE2D /* LGSDefaultViewController.m */; };
+		C3D9303F10E439C100A8AE2D /* LGSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9303E10E439C100A8AE2D /* LGSAppDelegate.m */; };
+		C3D9311D10E4488600A8AE2D /* LGSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9311C10E4488600A8AE2D /* LGSMainViewController.m */; };
+		C3D931FC10E451CF00A8AE2D /* LGSBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D931FB10E451CF00A8AE2D /* LGSBoxView.m */; };
+		C3F83AC810E4E8F80064EFAF /* LGSPromptTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F83AC510E4E8F80064EFAF /* LGSPromptTextView.m */; };
+		C3F83AC910E4E8F80064EFAF /* LGSPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F83AC710E4E8F80064EFAF /* LGSPromptView.m */; };
+		C3F83B2D10E4F39A0064EFAF /* LGSPlatformMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F83B2410E4F39A0064EFAF /* LGSPlatformMainViewController.m */; };
+		C3F83B2E10E4F39A0064EFAF /* LGSPlatformBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F83B2710E4F39A0064EFAF /* LGSPlatformBoxView.m */; };
+		C3F83B2F10E4F39A0064EFAF /* LGSPlatformPromptTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F83B2A10E4F39A0064EFAF /* LGSPlatformPromptTextView.m */; };
+		C3F83B3010E4F39A0064EFAF /* LGSPlatformPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F83B2C10E4F39A0064EFAF /* LGSPlatformPromptView.m */; };
+		C3F8E7B810B5F62B00F42312 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = C3F8E7B710B5F62B00F42312 /* Datas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		256AC3F00F4B6AF500CF3369 /* LGS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGS_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* LGS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LGS-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* LGS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C301C15E10E58A1F00544DB5 /* LGSAdditionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAdditionControl.h; sourceTree = "<group>"; };
+		C301C15F10E58A1F00544DB5 /* LGSAdditionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAdditionControl.m; sourceTree = "<group>"; };
+		C301C16010E58A1F00544DB5 /* LGSAdditionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAdditionView.h; sourceTree = "<group>"; };
+		C301C16110E58A1F00544DB5 /* LGSAdditionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAdditionView.m; sourceTree = "<group>"; };
+		C304810010C5BE4200F7DF51 /* CMGlyphDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGlyphDrawing.h; sourceTree = "<group>"; };
+		C304810110C5BE4200F7DF51 /* CMGlyphDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGlyphDrawing.m; sourceTree = "<group>"; };
+		C305979F10B9D04500116C93 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		C30597A010B9D04500116C93 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		C30597A110B9D04500116C93 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		C30597A210B9D04500116C93 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		C30597A310B9D04500116C93 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		C30597A410B9D04500116C93 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		C30597A510B9D04500116C93 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		C30597A610B9D04500116C93 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		C30597A710B9D04500116C93 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		C30597A810B9D04500116C93 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		C30597B510B9D04500116C93 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		C30597B610B9D04500116C93 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		C31DD360110C731800F79415 /* LGSPlatformSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformSound.h; sourceTree = "<group>"; };
+		C31DD361110C731800F79415 /* LGSPlatformSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformSound.m; sourceTree = "<group>"; };
+		C31DD3EC110C803D00F79415 /* LGSSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSSoundManager.h; sourceTree = "<group>"; };
+		C31DD3ED110C803D00F79415 /* LGSSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSoundManager.m; sourceTree = "<group>"; };
+		C323AEA110EA6457003217AD /* LGSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSGameViewController.h; sourceTree = "<group>"; };
+		C323AEA210EA6457003217AD /* LGSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSGameViewController.m; sourceTree = "<group>"; };
+		C323AEA610EA64CB003217AD /* LGSPlatformGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformGameViewController.h; sourceTree = "<group>"; };
+		C323AEA710EA64CB003217AD /* LGSPlatformGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformGameViewController.m; sourceTree = "<group>"; };
+		C323AF3A10EA6A26003217AD /* LGSPlatformDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformDefaultViewController.h; sourceTree = "<group>"; };
+		C323AF3B10EA6A26003217AD /* LGSPlatformDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformDefaultViewController.m; sourceTree = "<group>"; };
+		C327F4AC1149A202007CD331 /* lgsApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = lgsApp.icns; sourceTree = "<group>"; };
+		C337DB65113F008000F8FBBE /* LGSPlatformEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformEndViewController.h; sourceTree = "<group>"; };
+		C337DB66113F008000F8FBBE /* LGSPlatformEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformEndViewController.m; sourceTree = "<group>"; };
+		C337DB68113F00BC00F8FBBE /* LGSEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSEndViewController.h; sourceTree = "<group>"; };
+		C337DB69113F00BC00F8FBBE /* LGSEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSEndViewController.m; sourceTree = "<group>"; };
+		C35BACDE114D4930004165E8 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C35BACE0114D4930004165E8 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C3641B1210FA158400EB254A /* LGSSurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSSurfaceView.h; sourceTree = "<group>"; };
+		C3641B1310FA158400EB254A /* LGSSurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSurfaceView.m; sourceTree = "<group>"; };
+		C3641B1810FA192B00EB254A /* LGSPlatformSurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformSurfaceView.h; sourceTree = "<group>"; };
+		C3641B1910FA192B00EB254A /* LGSPlatformSurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformSurfaceView.m; sourceTree = "<group>"; };
+		C398C5C510E7C4D900D75498 /* LGSIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSIntroViewController.h; sourceTree = "<group>"; };
+		C398C5C610E7C4D900D75498 /* LGSIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSIntroViewController.m; sourceTree = "<group>"; };
+		C398C5CC10E7C58700D75498 /* LGSPlatformIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformIntroViewController.h; sourceTree = "<group>"; };
+		C398C5CD10E7C58700D75498 /* LGSPlatformIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformIntroViewController.m; sourceTree = "<group>"; };
+		C3AED2ED11037900005208A7 /* LGSAdditionValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAdditionValue.h; sourceTree = "<group>"; };
+		C3AED2EE11037900005208A7 /* LGSAdditionValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAdditionValue.m; sourceTree = "<group>"; };
+		C3B18EA210B9AC4500E38315 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		C3D92E7510E4284300A8AE2D /* LGSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSCard.h; sourceTree = "<group>"; };
+		C3D92E7610E4284300A8AE2D /* LGSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSCard.m; sourceTree = "<group>"; };
+		C3D92E7910E4284300A8AE2D /* LGSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSData.h; sourceTree = "<group>"; };
+		C3D92E7A10E4284300A8AE2D /* LGSData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSData.m; sourceTree = "<group>"; };
+		C3D92E7B10E4284300A8AE2D /* LGSFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSFontManager.h; sourceTree = "<group>"; };
+		C3D92E7C10E4284300A8AE2D /* LGSFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSFontManager.m; sourceTree = "<group>"; };
+		C3D92E7F10E4284300A8AE2D /* LGSQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSQuestion.h; sourceTree = "<group>"; };
+		C3D92E8010E4284300A8AE2D /* LGSQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSQuestion.m; sourceTree = "<group>"; };
+		C3D92E8110E4284300A8AE2D /* LGSSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSSound.h; sourceTree = "<group>"; };
+		C3D92E8210E4284300A8AE2D /* LGSSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSound.m; sourceTree = "<group>"; };
+		C3D92E8310E4284300A8AE2D /* LGSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSUser.h; sourceTree = "<group>"; };
+		C3D92E8410E4284300A8AE2D /* LGSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSUser.m; sourceTree = "<group>"; };
+		C3D92EE510E42F9700A8AE2D /* LGSProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSProtocols.h; sourceTree = "<group>"; };
+		C3D92EEA10E430C300A8AE2D /* LGSTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSTypes.h; sourceTree = "<group>"; };
+		C3D92F0D10E4320700A8AE2D /* LGSDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSDefaultViewController.h; sourceTree = "<group>"; };
+		C3D92F0E10E4320700A8AE2D /* LGSDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSDefaultViewController.m; sourceTree = "<group>"; };
+		C3D9303D10E439C100A8AE2D /* LGSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAppDelegate.h; sourceTree = "<group>"; };
+		C3D9303E10E439C100A8AE2D /* LGSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAppDelegate.m; sourceTree = "<group>"; };
+		C3D9311B10E4488600A8AE2D /* LGSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSMainViewController.h; sourceTree = "<group>"; };
+		C3D9311C10E4488600A8AE2D /* LGSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSMainViewController.m; sourceTree = "<group>"; };
+		C3D931FA10E451CF00A8AE2D /* LGSBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSBoxView.h; sourceTree = "<group>"; };
+		C3D931FB10E451CF00A8AE2D /* LGSBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSBoxView.m; sourceTree = "<group>"; };
+		C3F83AC410E4E8F80064EFAF /* LGSPromptTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPromptTextView.h; sourceTree = "<group>"; };
+		C3F83AC510E4E8F80064EFAF /* LGSPromptTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPromptTextView.m; sourceTree = "<group>"; };
+		C3F83AC610E4E8F80064EFAF /* LGSPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPromptView.h; sourceTree = "<group>"; };
+		C3F83AC710E4E8F80064EFAF /* LGSPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPromptView.m; sourceTree = "<group>"; };
+		C3F83B2310E4F39A0064EFAF /* LGSPlatformMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformMainViewController.h; sourceTree = "<group>"; };
+		C3F83B2410E4F39A0064EFAF /* LGSPlatformMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformMainViewController.m; sourceTree = "<group>"; };
+		C3F83B2610E4F39A0064EFAF /* LGSPlatformBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformBoxView.h; sourceTree = "<group>"; };
+		C3F83B2710E4F39A0064EFAF /* LGSPlatformBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformBoxView.m; sourceTree = "<group>"; };
+		C3F83B2910E4F39A0064EFAF /* LGSPlatformPromptTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformPromptTextView.h; sourceTree = "<group>"; };
+		C3F83B2A10E4F39A0064EFAF /* LGSPlatformPromptTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformPromptTextView.m; sourceTree = "<group>"; };
+		C3F83B2B10E4F39A0064EFAF /* LGSPlatformPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformPromptView.h; sourceTree = "<group>"; };
+		C3F83B2C10E4F39A0064EFAF /* LGSPlatformPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformPromptView.m; sourceTree = "<group>"; };
+		C3F8E7B710B5F62B00F42312 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Datas; path = ../../Common/Bin/Datas; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				C3B18EA310B9AC4500E38315 /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3B18EA210B9AC4500E38315 /* libxml2.dylib */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* LGS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* LGS */ = {
+			isa = PBXGroup;
+			children = (
+				C305979B10B9D04500116C93 /* Externals */,
+				C3F8E78A10B5F5F800F42312 /* LGS - Common */,
+				C3F8E7A310B5F60900F42312 /* LGS - Mac */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = LGS;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* LGS_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3F8E7B710B5F62B00F42312 /* Datas */,
+				8D1107310486CEB800E47090 /* LGS-Info.plist */,
+				C35BACDD114D4930004165E8 /* InfoPlist.strings */,
+				C35BACDF114D4930004165E8 /* MainMenu.xib */,
+				C327F4AC1149A202007CD331 /* lgsApp.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C301C15D10E58A1F00544DB5 /* addition */ = {
+			isa = PBXGroup;
+			children = (
+				C301C15E10E58A1F00544DB5 /* LGSAdditionControl.h */,
+				C301C15F10E58A1F00544DB5 /* LGSAdditionControl.m */,
+				C3AED2ED11037900005208A7 /* LGSAdditionValue.h */,
+				C3AED2EE11037900005208A7 /* LGSAdditionValue.m */,
+				C301C16010E58A1F00544DB5 /* LGSAdditionView.h */,
+				C301C16110E58A1F00544DB5 /* LGSAdditionView.m */,
+			);
+			path = addition;
+			sourceTree = "<group>";
+		};
+		C30480FF10C5BE4200F7DF51 /* CMGlyphDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C304810010C5BE4200F7DF51 /* CMGlyphDrawing.h */,
+				C304810110C5BE4200F7DF51 /* CMGlyphDrawing.m */,
+			);
+			path = CMGlyphDrawing;
+			sourceTree = "<group>";
+		};
+		C305979B10B9D04500116C93 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				C30480FF10C5BE4200F7DF51 /* CMGlyphDrawing */,
+				C305979C10B9D04500116C93 /* KissXML */,
+			);
+			name = Externals;
+			path = ../../Common/Src/Externals;
+			sourceTree = SOURCE_ROOT;
+		};
+		C305979C10B9D04500116C93 /* KissXML */ = {
+			isa = PBXGroup;
+			children = (
+				C305979F10B9D04500116C93 /* DDXML.h */,
+				C30597A010B9D04500116C93 /* DDXMLDocument.h */,
+				C30597A110B9D04500116C93 /* DDXMLDocument.m */,
+				C30597A210B9D04500116C93 /* DDXMLElement.h */,
+				C30597A310B9D04500116C93 /* DDXMLElement.m */,
+				C30597A410B9D04500116C93 /* DDXMLElementAdditions.h */,
+				C30597A510B9D04500116C93 /* DDXMLElementAdditions.m */,
+				C30597A610B9D04500116C93 /* DDXMLNode.h */,
+				C30597A710B9D04500116C93 /* DDXMLNode.m */,
+				C30597A810B9D04500116C93 /* DDXMLPrivate.h */,
+				C30597B510B9D04500116C93 /* NSStringAdditions.h */,
+				C30597B610B9D04500116C93 /* NSStringAdditions.m */,
+			);
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		C31DD35F110C731800F79415 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C31DD360110C731800F79415 /* LGSPlatformSound.h */,
+				C31DD361110C731800F79415 /* LGSPlatformSound.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C3D92E7310E4284300A8AE2D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3D92F0D10E4320700A8AE2D /* LGSDefaultViewController.h */,
+				C3D92F0E10E4320700A8AE2D /* LGSDefaultViewController.m */,
+				C337DB68113F00BC00F8FBBE /* LGSEndViewController.h */,
+				C337DB69113F00BC00F8FBBE /* LGSEndViewController.m */,
+				C323AEA110EA6457003217AD /* LGSGameViewController.h */,
+				C323AEA210EA6457003217AD /* LGSGameViewController.m */,
+				C398C5C510E7C4D900D75498 /* LGSIntroViewController.h */,
+				C398C5C610E7C4D900D75498 /* LGSIntroViewController.m */,
+				C3D9311B10E4488600A8AE2D /* LGSMainViewController.h */,
+				C3D9311C10E4488600A8AE2D /* LGSMainViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C3D92E7410E4284300A8AE2D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C3D92E7510E4284300A8AE2D /* LGSCard.h */,
+				C3D92E7610E4284300A8AE2D /* LGSCard.m */,
+				C3D92E7910E4284300A8AE2D /* LGSData.h */,
+				C3D92E7A10E4284300A8AE2D /* LGSData.m */,
+				C3D92E7B10E4284300A8AE2D /* LGSFontManager.h */,
+				C3D92E7C10E4284300A8AE2D /* LGSFontManager.m */,
+				C3D92E7F10E4284300A8AE2D /* LGSQuestion.h */,
+				C3D92E8010E4284300A8AE2D /* LGSQuestion.m */,
+				C3D92E8110E4284300A8AE2D /* LGSSound.h */,
+				C3D92E8210E4284300A8AE2D /* LGSSound.m */,
+				C31DD3EC110C803D00F79415 /* LGSSoundManager.h */,
+				C31DD3ED110C803D00F79415 /* LGSSoundManager.m */,
+				C3D92E8310E4284300A8AE2D /* LGSUser.h */,
+				C3D92E8410E4284300A8AE2D /* LGSUser.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C3D92E8710E4284300A8AE2D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C3D931FA10E451CF00A8AE2D /* LGSBoxView.h */,
+				C3D931FB10E451CF00A8AE2D /* LGSBoxView.m */,
+				C3641B1210FA158400EB254A /* LGSSurfaceView.h */,
+				C3641B1310FA158400EB254A /* LGSSurfaceView.m */,
+				C3F83AC310E4E8F80064EFAF /* prompt */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C3D92EE410E42F9700A8AE2D /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C301C15D10E58A1F00544DB5 /* addition */,
+				C3D9303D10E439C100A8AE2D /* LGSAppDelegate.h */,
+				C3D9303E10E439C100A8AE2D /* LGSAppDelegate.m */,
+				C3D92EE510E42F9700A8AE2D /* LGSProtocols.h */,
+				C3D92EEA10E430C300A8AE2D /* LGSTypes.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		C3F83AC310E4E8F80064EFAF /* prompt */ = {
+			isa = PBXGroup;
+			children = (
+				C3F83AC410E4E8F80064EFAF /* LGSPromptTextView.h */,
+				C3F83AC510E4E8F80064EFAF /* LGSPromptTextView.m */,
+				C3F83AC610E4E8F80064EFAF /* LGSPromptView.h */,
+				C3F83AC710E4E8F80064EFAF /* LGSPromptView.m */,
+			);
+			path = prompt;
+			sourceTree = "<group>";
+		};
+		C3F83B2210E4F39A0064EFAF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C323AF3A10EA6A26003217AD /* LGSPlatformDefaultViewController.h */,
+				C323AF3B10EA6A26003217AD /* LGSPlatformDefaultViewController.m */,
+				C337DB65113F008000F8FBBE /* LGSPlatformEndViewController.h */,
+				C337DB66113F008000F8FBBE /* LGSPlatformEndViewController.m */,
+				C323AEA610EA64CB003217AD /* LGSPlatformGameViewController.h */,
+				C323AEA710EA64CB003217AD /* LGSPlatformGameViewController.m */,
+				C398C5CC10E7C58700D75498 /* LGSPlatformIntroViewController.h */,
+				C398C5CD10E7C58700D75498 /* LGSPlatformIntroViewController.m */,
+				C3F83B2310E4F39A0064EFAF /* LGSPlatformMainViewController.h */,
+				C3F83B2410E4F39A0064EFAF /* LGSPlatformMainViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C3F83B2510E4F39A0064EFAF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C3F83B2610E4F39A0064EFAF /* LGSPlatformBoxView.h */,
+				C3F83B2710E4F39A0064EFAF /* LGSPlatformBoxView.m */,
+				C3641B1810FA192B00EB254A /* LGSPlatformSurfaceView.h */,
+				C3641B1910FA192B00EB254A /* LGSPlatformSurfaceView.m */,
+				C3F83B2810E4F39A0064EFAF /* prompt */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C3F83B2810E4F39A0064EFAF /* prompt */ = {
+			isa = PBXGroup;
+			children = (
+				C3F83B2910E4F39A0064EFAF /* LGSPlatformPromptTextView.h */,
+				C3F83B2A10E4F39A0064EFAF /* LGSPlatformPromptTextView.m */,
+				C3F83B2B10E4F39A0064EFAF /* LGSPlatformPromptView.h */,
+				C3F83B2C10E4F39A0064EFAF /* LGSPlatformPromptView.m */,
+			);
+			path = prompt;
+			sourceTree = "<group>";
+		};
+		C3F8E78A10B5F5F800F42312 /* LGS - Common */ = {
+			isa = PBXGroup;
+			children = (
+				C3D92EE410E42F9700A8AE2D /* common */,
+				C3D92E7310E4284300A8AE2D /* controller */,
+				C3D92E7410E4284300A8AE2D /* model */,
+				C3D92E8710E4284300A8AE2D /* view */,
+			);
+			name = "LGS - Common";
+			path = ../../Common/Src/LGS;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3F8E7A310B5F60900F42312 /* LGS - Mac */ = {
+			isa = PBXGroup;
+			children = (
+				C3F83B2210E4F39A0064EFAF /* controller */,
+				C31DD35F110C731800F79415 /* model */,
+				C3F83B2510E4F39A0064EFAF /* view */,
+			);
+			name = "LGS - Mac";
+			path = ../Src/LGS;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* LGS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "LGS" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGS;
+			productInstallPath = "$(HOME)/Applications";
+			productName = LGS;
+			productReference = 8D1107320486CEB800E47090 /* LGS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LGS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* LGS */;
+			projectDirPath = "";
+			projectRoot = ../..;
+			targets = (
+				8D1107260486CEB800E47090 /* LGS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3F8E7B810B5F62B00F42312 /* Datas in Resources */,
+				C327F4AD1149A202007CD331 /* lgsApp.icns in Resources */,
+				C35BACE1114D4930004165E8 /* InfoPlist.strings in Resources */,
+				C35BACE2114D4930004165E8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				C30597B810B9D04600116C93 /* DDXMLDocument.m in Sources */,
+				C30597B910B9D04600116C93 /* DDXMLElement.m in Sources */,
+				C30597BA10B9D04600116C93 /* DDXMLElementAdditions.m in Sources */,
+				C30597BB10B9D04600116C93 /* DDXMLNode.m in Sources */,
+				C30597C110B9D04600116C93 /* NSStringAdditions.m in Sources */,
+				C304810210C5BE4200F7DF51 /* CMGlyphDrawing.m in Sources */,
+				C3D92E8810E4284300A8AE2D /* LGSCard.m in Sources */,
+				C3D92E8A10E4284300A8AE2D /* LGSData.m in Sources */,
+				C3D92E8B10E4284300A8AE2D /* LGSFontManager.m in Sources */,
+				C3D92E8D10E4284300A8AE2D /* LGSQuestion.m in Sources */,
+				C3D92E8E10E4284300A8AE2D /* LGSSound.m in Sources */,
+				C3D92E8F10E4284300A8AE2D /* LGSUser.m in Sources */,
+				C3D92F0F10E4320700A8AE2D /* LGSDefaultViewController.m in Sources */,
+				C3D9303F10E439C100A8AE2D /* LGSAppDelegate.m in Sources */,
+				C3D9311D10E4488600A8AE2D /* LGSMainViewController.m in Sources */,
+				C3D931FC10E451CF00A8AE2D /* LGSBoxView.m in Sources */,
+				C3F83AC810E4E8F80064EFAF /* LGSPromptTextView.m in Sources */,
+				C3F83AC910E4E8F80064EFAF /* LGSPromptView.m in Sources */,
+				C3F83B2D10E4F39A0064EFAF /* LGSPlatformMainViewController.m in Sources */,
+				C3F83B2E10E4F39A0064EFAF /* LGSPlatformBoxView.m in Sources */,
+				C3F83B2F10E4F39A0064EFAF /* LGSPlatformPromptTextView.m in Sources */,
+				C3F83B3010E4F39A0064EFAF /* LGSPlatformPromptView.m in Sources */,
+				C301C16210E58A1F00544DB5 /* LGSAdditionControl.m in Sources */,
+				C301C16310E58A1F00544DB5 /* LGSAdditionView.m in Sources */,
+				C398C5C710E7C4D900D75498 /* LGSIntroViewController.m in Sources */,
+				C398C5CE10E7C58700D75498 /* LGSPlatformIntroViewController.m in Sources */,
+				C323AEA310EA6457003217AD /* LGSGameViewController.m in Sources */,
+				C323AEA810EA64CB003217AD /* LGSPlatformGameViewController.m in Sources */,
+				C323AF3C10EA6A26003217AD /* LGSPlatformDefaultViewController.m in Sources */,
+				C3641B1410FA158400EB254A /* LGSSurfaceView.m in Sources */,
+				C3641B1A10FA192B00EB254A /* LGSPlatformSurfaceView.m in Sources */,
+				C3AED2EF11037900005208A7 /* LGSAdditionValue.m in Sources */,
+				C31DD362110C731800F79415 /* LGSPlatformSound.m in Sources */,
+				C31DD3EE110C803D00F79415 /* LGSSoundManager.m in Sources */,
+				C337DB67113F008000F8FBBE /* LGSPlatformEndViewController.m in Sources */,
+				C337DB6A113F00BC00F8FBBE /* LGSEndViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C35BACDD114D4930004165E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C35BACDE114D4930004165E8 /* French */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C35BACDF114D4930004165E8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C35BACE0114D4930004165E8 /* French */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LGS_Prefix.pch;
+				INFOPLIST_FILE = "LGS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = LGS;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LGS_Prefix.pch;
+				INFOPLIST_FILE = "LGS-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = LGS;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = D_MAC;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = D_MAC;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "LGS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LGS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

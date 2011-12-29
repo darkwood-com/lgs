@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		C31EB8881168C1D0001FACC5 /* CMGlyphDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB83A1168C1D0001FACC5 /* CMGlyphDrawing.m */; };
+		C31EB88A1168C1D0001FACC5 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8401168C1D0001FACC5 /* DDXMLDocument.m */; };
+		C31EB88B1168C1D0001FACC5 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8421168C1D0001FACC5 /* DDXMLElement.m */; };
+		C31EB88C1168C1D0001FACC5 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8441168C1D0001FACC5 /* DDXMLElementAdditions.m */; };
+		C31EB88D1168C1D0001FACC5 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8461168C1D0001FACC5 /* DDXMLNode.m */; };
+		C31EB8931168C1D0001FACC5 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8551168C1D0001FACC5 /* NSStringAdditions.m */; };
+		C31EB8941168C1D0001FACC5 /* LGSAdditionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB85A1168C1D0001FACC5 /* LGSAdditionControl.m */; };
+		C31EB8951168C1D0001FACC5 /* LGSAdditionValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB85C1168C1D0001FACC5 /* LGSAdditionValue.m */; };
+		C31EB8961168C1D0001FACC5 /* LGSAdditionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB85E1168C1D0001FACC5 /* LGSAdditionView.m */; };
+		C31EB8971168C1D0001FACC5 /* LGSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8601168C1D0001FACC5 /* LGSAppDelegate.m */; };
+		C31EB8981168C1D0001FACC5 /* LGSDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8661168C1D0001FACC5 /* LGSDefaultViewController.m */; };
+		C31EB8991168C1D0001FACC5 /* LGSEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8681168C1D0001FACC5 /* LGSEndViewController.m */; };
+		C31EB89A1168C1D0001FACC5 /* LGSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB86A1168C1D0001FACC5 /* LGSGameViewController.m */; };
+		C31EB89B1168C1D0001FACC5 /* LGSIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB86C1168C1D0001FACC5 /* LGSIntroViewController.m */; };
+		C31EB89C1168C1D0001FACC5 /* LGSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB86E1168C1D0001FACC5 /* LGSMainViewController.m */; };
+		C31EB89D1168C1D0001FACC5 /* LGSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8711168C1D0001FACC5 /* LGSCard.m */; };
+		C31EB89E1168C1D0001FACC5 /* LGSData.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8731168C1D0001FACC5 /* LGSData.m */; };
+		C31EB89F1168C1D0001FACC5 /* LGSFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8751168C1D0001FACC5 /* LGSFontManager.m */; };
+		C31EB8A01168C1D0001FACC5 /* LGSQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8771168C1D0001FACC5 /* LGSQuestion.m */; };
+		C31EB8A11168C1D0001FACC5 /* LGSSound.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8791168C1D0001FACC5 /* LGSSound.m */; };
+		C31EB8A21168C1D0001FACC5 /* LGSSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB87B1168C1D0001FACC5 /* LGSSoundManager.m */; };
+		C31EB8A31168C1D0001FACC5 /* LGSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB87D1168C1D0001FACC5 /* LGSUser.m */; };
+		C31EB8A41168C1D0001FACC5 /* LGSBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8801168C1D0001FACC5 /* LGSBoxView.m */; };
+		C31EB8A51168C1D0001FACC5 /* LGSSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8821168C1D0001FACC5 /* LGSSurfaceView.m */; };
+		C31EB8A61168C1D0001FACC5 /* LGSPromptTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8851168C1D0001FACC5 /* LGSPromptTextView.m */; };
+		C31EB8A71168C1D0001FACC5 /* LGSPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8871168C1D0001FACC5 /* LGSPromptView.m */; };
+		C31EB8CD1168C1E5001FACC5 /* UKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8B31168C1E5001FACC5 /* UKImage.m */; };
+		C31EB8CE1168C1E5001FACC5 /* LGSPlatformDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8B71168C1E5001FACC5 /* LGSPlatformDefaultViewController.m */; };
+		C31EB8CF1168C1E5001FACC5 /* LGSPlatformEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8B91168C1E5001FACC5 /* LGSPlatformEndViewController.m */; };
+		C31EB8D01168C1E5001FACC5 /* LGSPlatformGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8BB1168C1E5001FACC5 /* LGSPlatformGameViewController.m */; };
+		C31EB8D11168C1E5001FACC5 /* LGSPlatformIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8BD1168C1E5001FACC5 /* LGSPlatformIntroViewController.m */; };
+		C31EB8D21168C1E5001FACC5 /* LGSPlatformMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8BF1168C1E5001FACC5 /* LGSPlatformMainViewController.m */; };
+		C31EB8D31168C1E5001FACC5 /* LGSPlatformSound.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8C21168C1E5001FACC5 /* LGSPlatformSound.m */; };
+		C31EB8D41168C1E5001FACC5 /* LGSPlatformBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8C51168C1E5001FACC5 /* LGSPlatformBoxView.m */; };
+		C31EB8D51168C1E5001FACC5 /* LGSPlatformSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8C71168C1E5001FACC5 /* LGSPlatformSurfaceView.m */; };
+		C31EB8D61168C1E5001FACC5 /* LGSPlatformPromptTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8CA1168C1E5001FACC5 /* LGSPlatformPromptTextView.m */; };
+		C31EB8D71168C1E5001FACC5 /* LGSPlatformPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = C31EB8CC1168C1E5001FACC5 /* LGSPlatformPromptView.m */; };
+		C31EB9D11168C307001FACC5 /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = C31EB9D01168C307001FACC5 /* Datas */; };
+		C31EBA281168C617001FACC5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C31EBA271168C617001FACC5 /* libxml2.dylib */; };
+		C31EBA541168C74A001FACC5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31EBA531168C74A001FACC5 /* AVFoundation.framework */; };
+		C31EBA901168CA43001FACC5 /* lgsApp.png in Resources */ = {isa = PBXBuildFile; fileRef = C31EBA8F1168CA43001FACC5 /* lgsApp.png */; };
+		C3C65E411273901800497043 /* lgsDefault-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C65E3F1273901800497043 /* lgsDefault-Landscape.png */; };
+		C3C65E421273901800497043 /* lgsDefault-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C65E401273901800497043 /* lgsDefault-Portrait.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* LGS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* LGS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGS_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* LGS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LGS-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C31EB8391168C1D0001FACC5 /* CMGlyphDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGlyphDrawing.h; sourceTree = "<group>"; };
+		C31EB83A1168C1D0001FACC5 /* CMGlyphDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGlyphDrawing.m; sourceTree = "<group>"; };
+		C31EB83E1168C1D0001FACC5 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		C31EB83F1168C1D0001FACC5 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		C31EB8401168C1D0001FACC5 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		C31EB8411168C1D0001FACC5 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		C31EB8421168C1D0001FACC5 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		C31EB8431168C1D0001FACC5 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		C31EB8441168C1D0001FACC5 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		C31EB8451168C1D0001FACC5 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		C31EB8461168C1D0001FACC5 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		C31EB8471168C1D0001FACC5 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		C31EB8541168C1D0001FACC5 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		C31EB8551168C1D0001FACC5 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		C31EB8591168C1D0001FACC5 /* LGSAdditionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAdditionControl.h; sourceTree = "<group>"; };
+		C31EB85A1168C1D0001FACC5 /* LGSAdditionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAdditionControl.m; sourceTree = "<group>"; };
+		C31EB85B1168C1D0001FACC5 /* LGSAdditionValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAdditionValue.h; sourceTree = "<group>"; };
+		C31EB85C1168C1D0001FACC5 /* LGSAdditionValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAdditionValue.m; sourceTree = "<group>"; };
+		C31EB85D1168C1D0001FACC5 /* LGSAdditionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAdditionView.h; sourceTree = "<group>"; };
+		C31EB85E1168C1D0001FACC5 /* LGSAdditionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAdditionView.m; sourceTree = "<group>"; };
+		C31EB85F1168C1D0001FACC5 /* LGSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSAppDelegate.h; sourceTree = "<group>"; };
+		C31EB8601168C1D0001FACC5 /* LGSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSAppDelegate.m; sourceTree = "<group>"; };
+		C31EB8611168C1D0001FACC5 /* LGSPlatformTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformTypes.h; sourceTree = "<group>"; };
+		C31EB8621168C1D0001FACC5 /* LGSProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSProtocols.h; sourceTree = "<group>"; };
+		C31EB8631168C1D0001FACC5 /* LGSTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSTypes.h; sourceTree = "<group>"; };
+		C31EB8651168C1D0001FACC5 /* LGSDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSDefaultViewController.h; sourceTree = "<group>"; };
+		C31EB8661168C1D0001FACC5 /* LGSDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSDefaultViewController.m; sourceTree = "<group>"; };
+		C31EB8671168C1D0001FACC5 /* LGSEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSEndViewController.h; sourceTree = "<group>"; };
+		C31EB8681168C1D0001FACC5 /* LGSEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSEndViewController.m; sourceTree = "<group>"; };
+		C31EB8691168C1D0001FACC5 /* LGSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSGameViewController.h; sourceTree = "<group>"; };
+		C31EB86A1168C1D0001FACC5 /* LGSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSGameViewController.m; sourceTree = "<group>"; };
+		C31EB86B1168C1D0001FACC5 /* LGSIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSIntroViewController.h; sourceTree = "<group>"; };
+		C31EB86C1168C1D0001FACC5 /* LGSIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSIntroViewController.m; sourceTree = "<group>"; };
+		C31EB86D1168C1D0001FACC5 /* LGSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSMainViewController.h; sourceTree = "<group>"; };
+		C31EB86E1168C1D0001FACC5 /* LGSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSMainViewController.m; sourceTree = "<group>"; };
+		C31EB8701168C1D0001FACC5 /* LGSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSCard.h; sourceTree = "<group>"; };
+		C31EB8711168C1D0001FACC5 /* LGSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSCard.m; sourceTree = "<group>"; };
+		C31EB8721168C1D0001FACC5 /* LGSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSData.h; sourceTree = "<group>"; };
+		C31EB8731168C1D0001FACC5 /* LGSData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSData.m; sourceTree = "<group>"; };
+		C31EB8741168C1D0001FACC5 /* LGSFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSFontManager.h; sourceTree = "<group>"; };
+		C31EB8751168C1D0001FACC5 /* LGSFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSFontManager.m; sourceTree = "<group>"; };
+		C31EB8761168C1D0001FACC5 /* LGSQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSQuestion.h; sourceTree = "<group>"; };
+		C31EB8771168C1D0001FACC5 /* LGSQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSQuestion.m; sourceTree = "<group>"; };
+		C31EB8781168C1D0001FACC5 /* LGSSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSSound.h; sourceTree = "<group>"; };
+		C31EB8791168C1D0001FACC5 /* LGSSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSound.m; sourceTree = "<group>"; };
+		C31EB87A1168C1D0001FACC5 /* LGSSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSSoundManager.h; sourceTree = "<group>"; };
+		C31EB87B1168C1D0001FACC5 /* LGSSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSoundManager.m; sourceTree = "<group>"; };
+		C31EB87C1168C1D0001FACC5 /* LGSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSUser.h; sourceTree = "<group>"; };
+		C31EB87D1168C1D0001FACC5 /* LGSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSUser.m; sourceTree = "<group>"; };
+		C31EB87F1168C1D0001FACC5 /* LGSBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSBoxView.h; sourceTree = "<group>"; };
+		C31EB8801168C1D0001FACC5 /* LGSBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSBoxView.m; sourceTree = "<group>"; };
+		C31EB8811168C1D0001FACC5 /* LGSSurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSSurfaceView.h; sourceTree = "<group>"; };
+		C31EB8821168C1D0001FACC5 /* LGSSurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSurfaceView.m; sourceTree = "<group>"; };
+		C31EB8841168C1D0001FACC5 /* LGSPromptTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPromptTextView.h; sourceTree = "<group>"; };
+		C31EB8851168C1D0001FACC5 /* LGSPromptTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPromptTextView.m; sourceTree = "<group>"; };
+		C31EB8861168C1D0001FACC5 /* LGSPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPromptView.h; sourceTree = "<group>"; };
+		C31EB8871168C1D0001FACC5 /* LGSPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPromptView.m; sourceTree = "<group>"; };
+		C31EB8B21168C1E5001FACC5 /* UKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKImage.h; sourceTree = "<group>"; };
+		C31EB8B31168C1E5001FACC5 /* UKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKImage.m; sourceTree = "<group>"; };
+		C31EB8B61168C1E5001FACC5 /* LGSPlatformDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformDefaultViewController.h; sourceTree = "<group>"; };
+		C31EB8B71168C1E5001FACC5 /* LGSPlatformDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformDefaultViewController.m; sourceTree = "<group>"; };
+		C31EB8B81168C1E5001FACC5 /* LGSPlatformEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformEndViewController.h; sourceTree = "<group>"; };
+		C31EB8B91168C1E5001FACC5 /* LGSPlatformEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformEndViewController.m; sourceTree = "<group>"; };
+		C31EB8BA1168C1E5001FACC5 /* LGSPlatformGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformGameViewController.h; sourceTree = "<group>"; };
+		C31EB8BB1168C1E5001FACC5 /* LGSPlatformGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformGameViewController.m; sourceTree = "<group>"; };
+		C31EB8BC1168C1E5001FACC5 /* LGSPlatformIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformIntroViewController.h; sourceTree = "<group>"; };
+		C31EB8BD1168C1E5001FACC5 /* LGSPlatformIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformIntroViewController.m; sourceTree = "<group>"; };
+		C31EB8BE1168C1E5001FACC5 /* LGSPlatformMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformMainViewController.h; sourceTree = "<group>"; };
+		C31EB8BF1168C1E5001FACC5 /* LGSPlatformMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformMainViewController.m; sourceTree = "<group>"; };
+		C31EB8C11168C1E5001FACC5 /* LGSPlatformSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformSound.h; sourceTree = "<group>"; };
+		C31EB8C21168C1E5001FACC5 /* LGSPlatformSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformSound.m; sourceTree = "<group>"; };
+		C31EB8C41168C1E5001FACC5 /* LGSPlatformBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformBoxView.h; sourceTree = "<group>"; };
+		C31EB8C51168C1E5001FACC5 /* LGSPlatformBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformBoxView.m; sourceTree = "<group>"; };
+		C31EB8C61168C1E5001FACC5 /* LGSPlatformSurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformSurfaceView.h; sourceTree = "<group>"; };
+		C31EB8C71168C1E5001FACC5 /* LGSPlatformSurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformSurfaceView.m; sourceTree = "<group>"; };
+		C31EB8C91168C1E5001FACC5 /* LGSPlatformPromptTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformPromptTextView.h; sourceTree = "<group>"; };
+		C31EB8CA1168C1E5001FACC5 /* LGSPlatformPromptTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformPromptTextView.m; sourceTree = "<group>"; };
+		C31EB8CB1168C1E5001FACC5 /* LGSPlatformPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformPromptView.h; sourceTree = "<group>"; };
+		C31EB8CC1168C1E5001FACC5 /* LGSPlatformPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformPromptView.m; sourceTree = "<group>"; };
+		C31EB9D01168C307001FACC5 /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Datas; path = ../../Common/Bin/Datas; sourceTree = SOURCE_ROOT; };
+		C31EBA271168C617001FACC5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		C31EBA531168C74A001FACC5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C31EBA8F1168CA43001FACC5 /* lgsApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lgsApp.png; sourceTree = "<group>"; };
+		C3C65E3F1273901800497043 /* lgsDefault-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lgsDefault-Landscape.png"; sourceTree = "<group>"; };
+		C3C65E401273901800497043 /* lgsDefault-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lgsDefault-Portrait.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				C31EBA281168C617001FACC5 /* libxml2.dylib in Frameworks */,
+				C31EBA541168C74A001FACC5 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* LGS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8361168C1D0001FACC5 /* Src - Common */,
+				C31EB8AF1168C1E5001FACC5 /* Src - iPad */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* LGS_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB9D01168C307001FACC5 /* Datas */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* LGS-Info.plist */,
+				C31EBA8F1168CA43001FACC5 /* lgsApp.png */,
+				C3C65E3F1273901800497043 /* lgsDefault-Landscape.png */,
+				C3C65E401273901800497043 /* lgsDefault-Portrait.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C31EBA531168C74A001FACC5 /* AVFoundation.framework */,
+				C31EBA271168C617001FACC5 /* libxml2.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C31EB8361168C1D0001FACC5 /* Src - Common */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8371168C1D0001FACC5 /* Externals */,
+				C31EB8561168C1D0001FACC5 /* LGS */,
+			);
+			name = "Src - Common";
+			path = ../../Common/Src;
+			sourceTree = SOURCE_ROOT;
+		};
+		C31EB8371168C1D0001FACC5 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8381168C1D0001FACC5 /* CMGlyphDrawing */,
+				C31EB83B1168C1D0001FACC5 /* KissXML */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		C31EB8381168C1D0001FACC5 /* CMGlyphDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8391168C1D0001FACC5 /* CMGlyphDrawing.h */,
+				C31EB83A1168C1D0001FACC5 /* CMGlyphDrawing.m */,
+			);
+			path = CMGlyphDrawing;
+			sourceTree = "<group>";
+		};
+		C31EB83B1168C1D0001FACC5 /* KissXML */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB83E1168C1D0001FACC5 /* DDXML.h */,
+				C31EB83F1168C1D0001FACC5 /* DDXMLDocument.h */,
+				C31EB8401168C1D0001FACC5 /* DDXMLDocument.m */,
+				C31EB8411168C1D0001FACC5 /* DDXMLElement.h */,
+				C31EB8421168C1D0001FACC5 /* DDXMLElement.m */,
+				C31EB8431168C1D0001FACC5 /* DDXMLElementAdditions.h */,
+				C31EB8441168C1D0001FACC5 /* DDXMLElementAdditions.m */,
+				C31EB8451168C1D0001FACC5 /* DDXMLNode.h */,
+				C31EB8461168C1D0001FACC5 /* DDXMLNode.m */,
+				C31EB8471168C1D0001FACC5 /* DDXMLPrivate.h */,
+				C31EB8541168C1D0001FACC5 /* NSStringAdditions.h */,
+				C31EB8551168C1D0001FACC5 /* NSStringAdditions.m */,
+			);
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		C31EB8561168C1D0001FACC5 /* LGS */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8571168C1D0001FACC5 /* common */,
+				C31EB8641168C1D0001FACC5 /* controller */,
+				C31EB86F1168C1D0001FACC5 /* model */,
+				C31EB87E1168C1D0001FACC5 /* view */,
+			);
+			path = LGS;
+			sourceTree = "<group>";
+		};
+		C31EB8571168C1D0001FACC5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8581168C1D0001FACC5 /* addition */,
+				C31EB85F1168C1D0001FACC5 /* LGSAppDelegate.h */,
+				C31EB8601168C1D0001FACC5 /* LGSAppDelegate.m */,
+				C31EB8611168C1D0001FACC5 /* LGSPlatformTypes.h */,
+				C31EB8621168C1D0001FACC5 /* LGSProtocols.h */,
+				C31EB8631168C1D0001FACC5 /* LGSTypes.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		C31EB8581168C1D0001FACC5 /* addition */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8591168C1D0001FACC5 /* LGSAdditionControl.h */,
+				C31EB85A1168C1D0001FACC5 /* LGSAdditionControl.m */,
+				C31EB85B1168C1D0001FACC5 /* LGSAdditionValue.h */,
+				C31EB85C1168C1D0001FACC5 /* LGSAdditionValue.m */,
+				C31EB85D1168C1D0001FACC5 /* LGSAdditionView.h */,
+				C31EB85E1168C1D0001FACC5 /* LGSAdditionView.m */,
+			);
+			path = addition;
+			sourceTree = "<group>";
+		};
+		C31EB8641168C1D0001FACC5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8651168C1D0001FACC5 /* LGSDefaultViewController.h */,
+				C31EB8661168C1D0001FACC5 /* LGSDefaultViewController.m */,
+				C31EB8671168C1D0001FACC5 /* LGSEndViewController.h */,
+				C31EB8681168C1D0001FACC5 /* LGSEndViewController.m */,
+				C31EB8691168C1D0001FACC5 /* LGSGameViewController.h */,
+				C31EB86A1168C1D0001FACC5 /* LGSGameViewController.m */,
+				C31EB86B1168C1D0001FACC5 /* LGSIntroViewController.h */,
+				C31EB86C1168C1D0001FACC5 /* LGSIntroViewController.m */,
+				C31EB86D1168C1D0001FACC5 /* LGSMainViewController.h */,
+				C31EB86E1168C1D0001FACC5 /* LGSMainViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C31EB86F1168C1D0001FACC5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8701168C1D0001FACC5 /* LGSCard.h */,
+				C31EB8711168C1D0001FACC5 /* LGSCard.m */,
+				C31EB8721168C1D0001FACC5 /* LGSData.h */,
+				C31EB8731168C1D0001FACC5 /* LGSData.m */,
+				C31EB8741168C1D0001FACC5 /* LGSFontManager.h */,
+				C31EB8751168C1D0001FACC5 /* LGSFontManager.m */,
+				C31EB8761168C1D0001FACC5 /* LGSQuestion.h */,
+				C31EB8771168C1D0001FACC5 /* LGSQuestion.m */,
+				C31EB8781168C1D0001FACC5 /* LGSSound.h */,
+				C31EB8791168C1D0001FACC5 /* LGSSound.m */,
+				C31EB87A1168C1D0001FACC5 /* LGSSoundManager.h */,
+				C31EB87B1168C1D0001FACC5 /* LGSSoundManager.m */,
+				C31EB87C1168C1D0001FACC5 /* LGSUser.h */,
+				C31EB87D1168C1D0001FACC5 /* LGSUser.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C31EB87E1168C1D0001FACC5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB87F1168C1D0001FACC5 /* LGSBoxView.h */,
+				C31EB8801168C1D0001FACC5 /* LGSBoxView.m */,
+				C31EB8811168C1D0001FACC5 /* LGSSurfaceView.h */,
+				C31EB8821168C1D0001FACC5 /* LGSSurfaceView.m */,
+				C31EB8831168C1D0001FACC5 /* prompt */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C31EB8831168C1D0001FACC5 /* prompt */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8841168C1D0001FACC5 /* LGSPromptTextView.h */,
+				C31EB8851168C1D0001FACC5 /* LGSPromptTextView.m */,
+				C31EB8861168C1D0001FACC5 /* LGSPromptView.h */,
+				C31EB8871168C1D0001FACC5 /* LGSPromptView.m */,
+			);
+			path = prompt;
+			sourceTree = "<group>";
+		};
+		C31EB8AF1168C1E5001FACC5 /* Src - iPad */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8B01168C1E5001FACC5 /* Externals */,
+				C31EB8B41168C1E5001FACC5 /* LGS */,
+			);
+			name = "Src - iPad";
+			path = ../Src;
+			sourceTree = SOURCE_ROOT;
+		};
+		C31EB8B01168C1E5001FACC5 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8B11168C1E5001FACC5 /* UKImage */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		C31EB8B11168C1E5001FACC5 /* UKImage */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8B21168C1E5001FACC5 /* UKImage.h */,
+				C31EB8B31168C1E5001FACC5 /* UKImage.m */,
+			);
+			path = UKImage;
+			sourceTree = "<group>";
+		};
+		C31EB8B41168C1E5001FACC5 /* LGS */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8B51168C1E5001FACC5 /* controller */,
+				C31EB8C01168C1E5001FACC5 /* model */,
+				C31EB8C31168C1E5001FACC5 /* view */,
+			);
+			path = LGS;
+			sourceTree = "<group>";
+		};
+		C31EB8B51168C1E5001FACC5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8B61168C1E5001FACC5 /* LGSPlatformDefaultViewController.h */,
+				C31EB8B71168C1E5001FACC5 /* LGSPlatformDefaultViewController.m */,
+				C31EB8B81168C1E5001FACC5 /* LGSPlatformEndViewController.h */,
+				C31EB8B91168C1E5001FACC5 /* LGSPlatformEndViewController.m */,
+				C31EB8BA1168C1E5001FACC5 /* LGSPlatformGameViewController.h */,
+				C31EB8BB1168C1E5001FACC5 /* LGSPlatformGameViewController.m */,
+				C31EB8BC1168C1E5001FACC5 /* LGSPlatformIntroViewController.h */,
+				C31EB8BD1168C1E5001FACC5 /* LGSPlatformIntroViewController.m */,
+				C31EB8BE1168C1E5001FACC5 /* LGSPlatformMainViewController.h */,
+				C31EB8BF1168C1E5001FACC5 /* LGSPlatformMainViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C31EB8C01168C1E5001FACC5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8C11168C1E5001FACC5 /* LGSPlatformSound.h */,
+				C31EB8C21168C1E5001FACC5 /* LGSPlatformSound.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C31EB8C31168C1E5001FACC5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8C41168C1E5001FACC5 /* LGSPlatformBoxView.h */,
+				C31EB8C51168C1E5001FACC5 /* LGSPlatformBoxView.m */,
+				C31EB8C61168C1E5001FACC5 /* LGSPlatformSurfaceView.h */,
+				C31EB8C71168C1E5001FACC5 /* LGSPlatformSurfaceView.m */,
+				C31EB8C81168C1E5001FACC5 /* prompt */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C31EB8C81168C1E5001FACC5 /* prompt */ = {
+			isa = PBXGroup;
+			children = (
+				C31EB8C91168C1E5001FACC5 /* LGSPlatformPromptTextView.h */,
+				C31EB8CA1168C1E5001FACC5 /* LGSPlatformPromptTextView.m */,
+				C31EB8CB1168C1E5001FACC5 /* LGSPlatformPromptView.h */,
+				C31EB8CC1168C1E5001FACC5 /* LGSPlatformPromptView.m */,
+			);
+			path = prompt;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* LGS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LGS" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGS;
+			productName = LGS;
+			productReference = 1D6058910D05DD3D006BFB54 /* LGS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LGS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* LGS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				C31EB9D11168C307001FACC5 /* Datas in Resources */,
+				C31EBA901168CA43001FACC5 /* lgsApp.png in Resources */,
+				C3C65E411273901800497043 /* lgsDefault-Landscape.png in Resources */,
+				C3C65E421273901800497043 /* lgsDefault-Portrait.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				C31EB8881168C1D0001FACC5 /* CMGlyphDrawing.m in Sources */,
+				C31EB88A1168C1D0001FACC5 /* DDXMLDocument.m in Sources */,
+				C31EB88B1168C1D0001FACC5 /* DDXMLElement.m in Sources */,
+				C31EB88C1168C1D0001FACC5 /* DDXMLElementAdditions.m in Sources */,
+				C31EB88D1168C1D0001FACC5 /* DDXMLNode.m in Sources */,
+				C31EB8931168C1D0001FACC5 /* NSStringAdditions.m in Sources */,
+				C31EB8941168C1D0001FACC5 /* LGSAdditionControl.m in Sources */,
+				C31EB8951168C1D0001FACC5 /* LGSAdditionValue.m in Sources */,
+				C31EB8961168C1D0001FACC5 /* LGSAdditionView.m in Sources */,
+				C31EB8971168C1D0001FACC5 /* LGSAppDelegate.m in Sources */,
+				C31EB8981168C1D0001FACC5 /* LGSDefaultViewController.m in Sources */,
+				C31EB8991168C1D0001FACC5 /* LGSEndViewController.m in Sources */,
+				C31EB89A1168C1D0001FACC5 /* LGSGameViewController.m in Sources */,
+				C31EB89B1168C1D0001FACC5 /* LGSIntroViewController.m in Sources */,
+				C31EB89C1168C1D0001FACC5 /* LGSMainViewController.m in Sources */,
+				C31EB89D1168C1D0001FACC5 /* LGSCard.m in Sources */,
+				C31EB89E1168C1D0001FACC5 /* LGSData.m in Sources */,
+				C31EB89F1168C1D0001FACC5 /* LGSFontManager.m in Sources */,
+				C31EB8A01168C1D0001FACC5 /* LGSQuestion.m in Sources */,
+				C31EB8A11168C1D0001FACC5 /* LGSSound.m in Sources */,
+				C31EB8A21168C1D0001FACC5 /* LGSSoundManager.m in Sources */,
+				C31EB8A31168C1D0001FACC5 /* LGSUser.m in Sources */,
+				C31EB8A41168C1D0001FACC5 /* LGSBoxView.m in Sources */,
+				C31EB8A51168C1D0001FACC5 /* LGSSurfaceView.m in Sources */,
+				C31EB8A61168C1D0001FACC5 /* LGSPromptTextView.m in Sources */,
+				C31EB8A71168C1D0001FACC5 /* LGSPromptView.m in Sources */,
+				C31EB8CD1168C1E5001FACC5 /* UKImage.m in Sources */,
+				C31EB8CE1168C1E5001FACC5 /* LGSPlatformDefaultViewController.m in Sources */,
+				C31EB8CF1168C1E5001FACC5 /* LGSPlatformEndViewController.m in Sources */,
+				C31EB8D01168C1E5001FACC5 /* LGSPlatformGameViewController.m in Sources */,
+				C31EB8D11168C1E5001FACC5 /* LGSPlatformIntroViewController.m in Sources */,
+				C31EB8D21168C1E5001FACC5 /* LGSPlatformMainViewController.m in Sources */,
+				C31EB8D31168C1E5001FACC5 /* LGSPlatformSound.m in Sources */,
+				C31EB8D41168C1E5001FACC5 /* LGSPlatformBoxView.m in Sources */,
+				C31EB8D51168C1E5001FACC5 /* LGSPlatformSurfaceView.m in Sources */,
+				C31EB8D61168C1E5001FACC5 /* LGSPlatformPromptTextView.m in Sources */,
+				C31EB8D71168C1E5001FACC5 /* LGSPlatformPromptView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LGS_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = D_IPAD;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				INFOPLIST_FILE = "LGS-Info.plist";
+				PRODUCT_NAME = LGS;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LGS_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = D_IPAD;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				INFOPLIST_FILE = "LGS-Info.plist";
+				PRODUCT_NAME = LGS;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LGS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LGS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

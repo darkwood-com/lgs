@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Le Gardien du Savoir";
+CFBundleShortVersionString = "Le Gardien du Savoir version 1.0";
+CFBundleGetInfoString = "Le Gardien du Savoir version 1.0, Copyright 2010 Darkwood.";
+NSHumanReadableCopyright = "Copyright 2010 Darkwood.";

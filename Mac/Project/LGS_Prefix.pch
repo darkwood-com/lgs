@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'LGS' target in the 'LGS' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
