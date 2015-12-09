@@ -90,7 +90,7 @@ static LGSView* sharedView = nil;
 -(void) dealloc
 {
 	[name release];
-	[self.view removeFromSuperview];
+	//[self.view removeFromSuperview];
 	[self.view release];
 	[super dealloc];
 }

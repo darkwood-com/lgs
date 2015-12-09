@@ -112,7 +112,16 @@
 {
 	srand(clock()); //make random number different for each run time
 
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    self.window = [[UIWindow alloc] initWithFrame:bounds];
+    self.view = [[UIView alloc] initWithFrame:bounds];
+    [self.view setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
+    [self.view setFrame:CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height)];
+    
 	mainController = [[[LGSDefaultViewController controllerClassWithKey:@"PlatformMain"] alloc] initWithAppDelegate:self];
+    mainController.view = self.view;
+    
+    self.window.rootViewController = mainController;
   
 	[window makeKeyAndVisible];
   
