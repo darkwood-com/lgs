@@ -86,8 +86,8 @@
 
 	studentView = [LGSPlatformBoxView viewWithFrame:CGRectMake(4, 12, 113, 27) andText:@"élève" rotate:LGSBoxViewOrientationRight andType:LGSBoxViewTypeButton];
 	studentMenuView = [LGSPlatformBoxView viewWithFrame:CGRectMake(44, 12, 203, 71) andText:@"#Commencer une nouvelle aventure.#\n#Reprendre une ancienne.#\n\n#Annuler.#" rotate:LGSBoxViewOrientationRight];
-	newUserPromptView = [LGSPlatformPromptTextView viewWithFrame:CGRectMake(120, 90, 300, 80) andText:@"Quel est ton prénom, aventurier." rotate:LGSBoxViewOrientationRight];
-	loadUserPromptView = [LGSPlatformPromptView viewWithFrame:CGRectMake(120, 90, 300, 80) andText:@"" rotate:LGSBoxViewOrientationRight];
+	newUserPromptView = [LGSPlatformPromptTextView viewWithFrame:CGRectMake(150, 90, 300, 80) andText:@"Quel est ton prénom, aventurier." rotate:LGSBoxViewOrientationRight];
+	loadUserPromptView = [LGSPlatformPromptView viewWithFrame:CGRectMake(150, 90, 300, 80) andText:@"" rotate:LGSBoxViewOrientationRight];
 
 	[studentView addToView:self.view withTarget:self isHidden:NO];
 	[studentMenuView addToView:self.view withTarget:self isHidden:YES];
