@@ -49,6 +49,7 @@
 	UIButton* backgroundButton = [[[UIButton alloc] initWithFrame:self.view.bounds] autorelease];
 
 	[backgroundImageView setImage:backgroundImage];
+	[backgroundImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 
 	[backgroundButton addToView:self.view withTarget:self isHidden:NO];
 	[self.view addSubview:backgroundImageView];

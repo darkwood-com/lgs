@@ -35,15 +35,24 @@
 
 #import "LGSPlatformPromptView.h"
 
+#import "LGSDefaultViewController.h"
+
 @implementation LGSPlatformPromptView
 
 -(id) initWithFrame:(CGRect) frameRect andText:(id) aString rotate:(LGSBoxViewOrientation) orient andType:(LGSBoxViewType) aType
 {
 	if(self = [super initWithFrame:frameRect andText:aString rotate:orient andType:aType])
 	{
-		CGRect position = CGRectMake(frameRect.size.width - 66, frameRect.size.height - 27 - 6, 60, 27);
+		LGSView* mainView = [LGSDefaultViewController getMainView];
+		CGSize frameRatio = CGSizeMake(mainView.frame.size.width / 342, mainView.frame.size.height / 512); //ratio scale according to original window size (512x342)
+        frameRatio = CGSizeMake(1.0, 1.0);
+		
+		CGRect position = CGRectMake(frameRect.size.width - 66 * frameRatio.width, frameRect.size.height - (27 + 6) * frameRatio.width, 60, 27);
+		position.size.width *= frameRatio.width;
+		position.size.height *= frameRatio.height;
+		
 		yesView = [LGSPlatformBoxView viewWithFrame:position andText:@"Ok" rotate:LGSBoxViewOrientationUp andType:LGSBoxViewTypeButton];
-		position.origin.x -= 66;
+		position.origin.x -= 66 * frameRatio.width;
 		noView = [LGSPlatformBoxView viewWithFrame:position andText:@"Annuler" rotate:LGSBoxViewOrientationUp andType:LGSBoxViewTypeButton];
 
 		[yesView addToView:self withTarget:self isHidden:NO];

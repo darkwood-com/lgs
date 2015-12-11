@@ -115,7 +115,12 @@
     CGRect bounds = [UIScreen mainScreen].bounds;
     self.window = [[UIWindow alloc] initWithFrame:bounds];
     self.view = [[UIView alloc] initWithFrame:bounds];
-    [self.view setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
+    
+    CGAffineTransform transform;
+    transform = CGAffineTransformMakeScale(bounds.size.width * 1.0 / 480, bounds.size.height / 320); //ratio scale according to original window size (480x320, iphone4)
+    transform = CGAffineTransformRotate(transform, -M_PI_2);
+    [self.view setTransform:transform];
+    
     [self.view setFrame:CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height)];
     
 	mainController = [[[LGSDefaultViewController controllerClassWithKey:@"PlatformMain"] alloc] initWithAppDelegate:self];

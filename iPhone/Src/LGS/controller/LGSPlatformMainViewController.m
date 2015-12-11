@@ -39,35 +39,42 @@
 
 #import "LGSPlatformBoxView.h"
 #import "LGSPlatformPromptTextView.h"
+#import "LGSDefaultViewController.h"
 
 @implementation LGSPlatformMainViewController
 
 -(BOOL) start
 {
+	LGSView* mainView = [LGSDefaultViewController getMainView];
+	CGSize frameRatio = CGSizeMake(mainView.frame.size.width / 342, mainView.frame.size.height / 512); //ratio scale according to original window size (512x342)
+    frameRatio = CGSizeMake(1.0, 1.0);
+	
 	//background image
 	NSString* backgroundImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:[[self initDatas] valueForKey:@"backgroundImage"]];
 	UIImage* backgroundImage = [[[[UIImage alloc] initWithContentsOfFile:backgroundImagePath] autorelease] rotate:UIImageOrientationRight];
 	UIImageView* backgroundImageView = [[[UIImageView alloc] initWithFrame:self.view.bounds] autorelease];
 
 	[backgroundImageView setImage:backgroundImage];
+	[backgroundImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 
 	[self.view addSubview:backgroundImageView];
 
 	//info view
 	NSString* infoImagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/Datas/Images/19678.png"];
 	UIImage* infoImage = [[[[UIImage alloc] initWithContentsOfFile:infoImagePath] autorelease] rotate:UIImageOrientationRight];
-	UIImageView* infoViewImage = [[[UIImageView alloc] initWithFrame:CGRectMake(320 - 24, 480 - 30, 16, 20)] autorelease];
+	UIImageView* infoViewImage = [[[UIImageView alloc] initWithFrame:LGSMakeResizeRect(342 - 20, 512 - 24, 16, 20, frameRatio)] autorelease];
 	
 	[infoViewImage setUserInteractionEnabled:YES];
 	[infoViewImage setImage:infoImage];
+	[infoViewImage setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight];
 	
 	[self.view addSubview:infoViewImage];
 	
 	//notes : UIImageView do not handle events (inherit from UIView), so we add an invisible UIControl inside the UIImageView to manage touch events
-	infoView = [[[UIControl alloc] initWithFrame:CGRectMake(0, 0, 16, 20)] autorelease];
+	infoView = [[[UIControl alloc] initWithFrame:LGSMakeResizeRect(0, 0, 16, 20, frameRatio)] autorelease];
 	[infoView addToView:infoViewImage withTarget:self isHidden:NO];
 	
-	infoMsgView = [LGSPlatformBoxView viewWithFrame:CGRectMake(165, 155, 300, 125) andText:@"" rotate:LGSBoxViewOrientationRight andType:LGSBoxViewTypeText];
+	infoMsgView = [LGSPlatformBoxView viewWithFrame:LGSMakeResizeRect(185, 125, 300, 125, frameRatio) andText:@"" rotate:LGSBoxViewOrientationRight andType:LGSBoxViewTypeText];
 	
 	[infoMsgView addToView:self.view withTarget:self isHidden:YES];
 	
@@ -84,10 +91,10 @@
 	[newUserPromptView addToView:self.view withTarget:self isHidden:YES];
 	 */
 
-	studentView = [LGSPlatformBoxView viewWithFrame:CGRectMake(4, 12, 113, 27) andText:@"élève" rotate:LGSBoxViewOrientationRight andType:LGSBoxViewTypeButton];
-	studentMenuView = [LGSPlatformBoxView viewWithFrame:CGRectMake(44, 12, 203, 71) andText:@"#Commencer une nouvelle aventure.#\n#Reprendre une ancienne.#\n\n#Annuler.#" rotate:LGSBoxViewOrientationRight];
-	newUserPromptView = [LGSPlatformPromptTextView viewWithFrame:CGRectMake(150, 90, 300, 80) andText:@"Quel est ton prénom, aventurier." rotate:LGSBoxViewOrientationRight];
-	loadUserPromptView = [LGSPlatformPromptView viewWithFrame:CGRectMake(150, 90, 300, 80) andText:@"" rotate:LGSBoxViewOrientationRight];
+	studentView = [LGSPlatformBoxView viewWithFrame:LGSMakeResizeRect(4, 12, 113, 27, frameRatio) andText:@"élève" rotate:LGSBoxViewOrientationRight andType:LGSBoxViewTypeButton];
+	studentMenuView = [LGSPlatformBoxView viewWithFrame:LGSMakeResizeRect(44, 12, 203, 71, frameRatio) andText:@"#Commencer une nouvelle aventure.#\n#Reprendre une ancienne.#\n\n#Annuler.#" rotate:LGSBoxViewOrientationRight];
+	newUserPromptView = [LGSPlatformPromptTextView viewWithFrame:LGSMakeResizeRect(131, 106, 300, 80, frameRatio) andText:@"Quel est ton prénom, aventurier." rotate:LGSBoxViewOrientationRight];
+	loadUserPromptView = [LGSPlatformPromptView viewWithFrame:LGSMakeResizeRect(131, 106, 300, 80, frameRatio) andText:@"" rotate:LGSBoxViewOrientationRight];
 
 	[studentView addToView:self.view withTarget:self isHidden:NO];
 	[studentMenuView addToView:self.view withTarget:self isHidden:YES];

@@ -33,15 +33,16 @@
  *
  */
 
-#import "UKImage.h"
-
 #import "LGSPlatformDefaultViewController.h"
 
 @implementation LGSPlatformDefaultViewController
 
 -(id) initWithAppDelegate:(LGSAppDelegate*) anAppDelegate;
 {
-	return [super initWithAppDelegate:anAppDelegate];
-}
+	if(self = [super initWithAppDelegate:anAppDelegate])
+	{
+		[self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+	}
+	return self;}
 
 @end

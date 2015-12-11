@@ -48,6 +48,8 @@
 		currentAction = anAction;
 		orientation = orient;
 
+		[self setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight];
+		
 		[self setOpaque:NO];
 
 		switch(orientation)

@@ -38,6 +38,7 @@
 #import "LGSPlatformBoxView.h"
 
 #import "LGSFontManager.h"
+#import "LGSDefaultViewController.h"
 
 @implementation LGSPlatformBoxView
 
@@ -59,7 +60,10 @@
 		type = aType;
 		actionsRect = [[NSMutableDictionary alloc] init];
 		orientation = orient;
+		originalSize = frameRect.size;
 
+		[self setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight];
+		
 		[self setOpaque:NO];
 
 		switch(orientation)
@@ -93,6 +97,12 @@
 
 -(void) drawRect:(CGRect) rect
 {
+	LGSView* mainView = [LGSDefaultViewController getMainView];
+	CGSize frameRatio = CGSizeMake(mainView.frame.size.width / 342, mainView.frame.size.height / 512); //ratio scale according to original window size (512x342)
+    frameRatio = CGSizeMake(1.0, 1.0);
+	CGSize invframeRatio = CGSizeMake(1.0 / frameRatio.width, 1.0 / frameRatio.height); //ratio scale according to original window size (512x342)
+    invframeRatio = CGSizeMake(1.0, 1.0);
+
 	CGContextRef context = UIGraphicsGetCurrentContext();
 
 	CGContextSaveGState(context);
@@ -101,10 +111,13 @@
 	CGAffineTransform  tran = CGAffineTransformIdentity;
 	tran = CGAffineTransformScale(tran, 1, -1);
 	CGContextSetTextMatrix(context, tran);
-
+	CGContextScaleCTM(context, frameRatio.width, frameRatio.height);
+	
+	rect = CGRectMake(rect.origin.x, rect.origin.y, originalSize.width, originalSize.height);
+	
 	//clear view
 	CGContextSetRGBFillColor(context, 1, 1, 1, 1);
-	CGContextAddRect(context, CGRectMake(rect.origin.x + 1, rect.origin.y + 1, rect.size.width - 3, rect.size.height - 3));
+	CGContextAddRect(context, LGSMakeResizeRect(rect.origin.x + 1, rect.origin.y + 1, rect.size.width - 3, rect.size.height - 3, invframeRatio));
 	CGContextFillPath(context);
 
 	//draw background
@@ -117,7 +130,7 @@
 		CGPointMake(rect.size.width - 1, rect.origin.y + 3),
 	};
 	CGContextAddLines(context, points, 3);
-	CGContextAddRect(context, CGRectMake(rect.origin.x, rect.origin.y + 1, rect.size.width - 2, rect.size.height - 2));
+	CGContextAddRect(context, LGSMakeResizeRect(rect.origin.x, rect.origin.y + 1, rect.size.width - 2, rect.size.height - 2, invframeRatio));
 	CGContextStrokePath(context);
 
 	//draw text
@@ -148,8 +161,8 @@
 			CGContextShowGlyphsAtPoint(context, 0, -10, glyphs, length);
 
 			beginPosition = CGContextGetTextPosition(context);
-			beginPosition.x = (rect.size.width - beginPosition.x) / 2.0f;
-			basePosition.y = (rect.size.height - beginPosition.y) / 2.0f;
+			beginPosition.x = (rect.size.width * invframeRatio.width - beginPosition.x) / 2.0f;
+			basePosition.y = (rect.size.height * invframeRatio.height - beginPosition.y) / 2.0f;
 		}
 
 		//we also calculate coords of text action (surrounded beetween #action#)
@@ -186,7 +199,7 @@
 				CGContextSetTextDrawingMode(context, kCGTextInvisible);
 				CGContextShowGlyphsAtPoint(context, beginPosition.x, beginPosition.y, &glyphs[pos], wordLength);
 				lastPosition = CGContextGetTextPosition(context);
-				if(lastPosition.x > rect.size.width)
+				if(lastPosition.x > rect.size.width * invframeRatio.width)
 				{
 					autoLines += 1;
 					beginPosition.x = basePosition.x;
@@ -203,7 +216,7 @@
 			//create an action rect
 			if(actionIndex % 2 == 1)
 			{
-				CGRect actionRect = CGRectMake(actionPosition.x, actionPosition.y - lineHeight + lineHeight / 4.0f, abs(lastPosition.x - actionPosition.x), lineHeight);
+				CGRect actionRect = LGSMakeResizeRect(actionPosition.x, actionPosition.y - lineHeight + lineHeight / 4.0f, abs(lastPosition.x - actionPosition.x), lineHeight, frameRatio);
 				[actionsRect setObject:[NSValue valueWithCGRect:actionRect] forKey:action];
 
 				//CGContextAddRect(context, CGRectMake(actionPosition.x, actionPosition.y - lineHeight + lineHeight / 4.0f, abs(lastPosition.x - actionPosition.x), lineHeight));

@@ -35,16 +35,23 @@
 
 #import "LGSPlatformPromptTextView.h"
 
+#import "LGSDefaultViewController.h"
+
 @implementation LGSPlatformPromptTextView
 
 -(id) initWithFrame:(CGRect) frameRect andText:(id) aString rotate:(LGSBoxViewOrientation) orient andType:(LGSBoxViewType) aType
 {
 	if(self = [super initWithFrame:frameRect andText:aString rotate:orient andType:aType])
 	{
-		textField = [[[UITextField alloc] initWithFrame:CGRectMake(6, 42 - 20, 150, 20)] autorelease];
+		LGSView* mainView = [LGSDefaultViewController getMainView];
+		CGSize frameRatio = CGSizeMake(mainView.frame.size.width / 342, mainView.frame.size.height / 512); //ratio scale according to original window size (512x342)
+        frameRatio = CGSizeMake(1.0, 1.0);
+		
+		textField = [[[UITextField alloc] initWithFrame:LGSMakeResizeRect(6, 42 - 20, 150, 20, frameRatio)] autorelease];
 
 		[textField setBorderStyle:UITextBorderStyleLine];
 		[textField setFont:[UIFont fontWithName:@"Arial" size:14.0f]];
+		[textField setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight];
 		[textField setDelegate:self];
 		[textField addToView:self withTarget:self isHidden:NO];
 	}

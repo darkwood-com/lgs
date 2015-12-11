@@ -52,6 +52,7 @@ typedef enum
 
 @interface LGSPlatformBoxView : LGSBoxView {
 	LGSBoxViewOrientation orientation;
+	CGSize originalSize; //original view size useful when resize
 }
 
 -(id) initWithFrame:(CGRect) frameRect andText:(id) aString;
