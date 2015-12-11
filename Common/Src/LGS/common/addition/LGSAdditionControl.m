@@ -47,7 +47,7 @@
 	[aView addSubview:self];
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 	[self addTarget:aTarget action:@selector(lgsActions:)forControlEvents:UIControlEventTouchDown];
 	[self setHidden:isHidden];
 
@@ -66,7 +66,7 @@
 	return [self sendAction:[self action] to:[self target]];
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 	id target = nil;
 	SEL action = nil;
 
@@ -103,7 +103,7 @@
 
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 
 -(void) touchesBegan:(NSSet*) touches withEvent:(UIEvent*) event
 {

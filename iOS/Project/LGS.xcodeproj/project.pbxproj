@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				C3086EC310D971CD008E42B5 /* Src - Common */,
-				C3B0B45710DD202600D9216F /* Src - Iphone */,
+				C3B0B45710DD202600D9216F /* Src - iOS */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -424,13 +424,13 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		C3B0B45710DD202600D9216F /* Src - Iphone */ = {
+		C3B0B45710DD202600D9216F /* Src - iOS */ = {
 			isa = PBXGroup;
 			children = (
 				C3B0B45810DD202600D9216F /* Externals */,
 				C3B0B45C10DD202600D9216F /* LGS */,
 			);
-			name = "Src - Iphone";
+			name = "Src - iOS";
 			path = ../Src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -487,7 +487,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 7SWX39DWY4;
@@ -593,6 +593,7 @@
 				GCC_PREFIX_HEADER = LGS_Prefix.pch;
 				INFOPLIST_FILE = "LGS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.darkwood.lgs;
 				PRODUCT_NAME = LGS;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -611,6 +612,7 @@
 				GCC_PREFIX_HEADER = LGS_Prefix.pch;
 				INFOPLIST_FILE = "LGS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.darkwood.lgs;
 				PRODUCT_NAME = LGS;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,14 +622,15 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PREPROCESSOR_DEFINITIONS = D_IPHONE;
+				GCC_PREPROCESSOR_DEFINITIONS = D_IOS;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -635,10 +638,9 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PREPROCESSOR_DEFINITIONS = D_IPHONE;
+				GCC_PREPROCESSOR_DEFINITIONS = D_IOS;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";

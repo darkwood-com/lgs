@@ -43,7 +43,7 @@
 	LGSDefaultViewController* mainController;
 }
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, retain) IBOutlet UIView* view;

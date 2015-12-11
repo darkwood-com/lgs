@@ -43,7 +43,7 @@
 	return [self valueWithRect:rect];
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 	return [self valueWithCGRect:rect];
 #endif
 }

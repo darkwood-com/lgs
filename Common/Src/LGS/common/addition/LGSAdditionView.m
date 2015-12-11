@@ -43,7 +43,7 @@
 	[self setNeedsDisplay:YES];
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 	[self setNeedsDisplay];
 #endif
 }

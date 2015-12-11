@@ -54,7 +54,7 @@
 
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

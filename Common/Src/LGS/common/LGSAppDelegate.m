@@ -106,7 +106,7 @@
 
 #endif
 
-#if defined(D_IPHONE) || defined(D_IPAD)
+#if defined(D_IOS)
 
 - (BOOL)application:(LGSApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
