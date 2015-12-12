@@ -29,6 +29,7 @@
 		C35BACE2114D4930004165E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35BACDF114D4930004165E8 /* MainMenu.xib */; };
 		C3641B1410FA158400EB254A /* LGSSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3641B1310FA158400EB254A /* LGSSurfaceView.m */; };
 		C3641B1A10FA192B00EB254A /* LGSPlatformSurfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3641B1910FA192B00EB254A /* LGSPlatformSurfaceView.m */; };
+		C39675181C1C5EFB00D16DF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39675171C1C5EFB00D16DF1 /* Images.xcassets */; };
 		C398C5C710E7C4D900D75498 /* LGSIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C5C610E7C4D900D75498 /* LGSIntroViewController.m */; };
 		C398C5CE10E7C58700D75498 /* LGSPlatformIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C5CD10E7C58700D75498 /* LGSPlatformIntroViewController.m */; };
 		C3AED2EF11037900005208A7 /* LGSAdditionValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AED2EE11037900005208A7 /* LGSAdditionValue.m */; };
@@ -100,6 +101,8 @@
 		C3641B1310FA158400EB254A /* LGSSurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSSurfaceView.m; sourceTree = "<group>"; };
 		C3641B1810FA192B00EB254A /* LGSPlatformSurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformSurfaceView.h; sourceTree = "<group>"; };
 		C3641B1910FA192B00EB254A /* LGSPlatformSurfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSPlatformSurfaceView.m; sourceTree = "<group>"; };
+		C39675171C1C5EFB00D16DF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LGS/Images.xcassets; sourceTree = "<group>"; };
+		C39675191C1C689900D16DF1 /* LGS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LGS.entitlements; path = LGS/LGS.entitlements; sourceTree = "<group>"; };
 		C398C5C510E7C4D900D75498 /* LGSIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSIntroViewController.h; sourceTree = "<group>"; };
 		C398C5C610E7C4D900D75498 /* LGSIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSIntroViewController.m; sourceTree = "<group>"; };
 		C398C5CC10E7C58700D75498 /* LGSPlatformIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSPlatformIntroViewController.h; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 		29B97314FDCFA39411CA2CEA /* LGS */ = {
 			isa = PBXGroup;
 			children = (
+				C39675191C1C689900D16DF1 /* LGS.entitlements */,
 				C305979B10B9D04500116C93 /* Externals */,
 				C3F8E78A10B5F5F800F42312 /* LGS - Common */,
 				C3F8E7A310B5F60900F42312 /* LGS - Mac */,
@@ -210,6 +214,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C39675171C1C5EFB00D16DF1 /* Images.xcassets */,
 				C3F8E7B710B5F62B00F42312 /* Datas */,
 				8D1107310486CEB800E47090 /* LGS-Info.plist */,
 				C35BACDD114D4930004165E8 /* InfoPlist.strings */,
@@ -455,6 +460,11 @@
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
 						DevelopmentTeam = 7SWX39DWY4;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -483,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F8E7B810B5F62B00F42312 /* Datas in Resources */,
+				C39675181C1C5EFB00D16DF1 /* Images.xcassets in Resources */,
 				C327F4AD1149A202007CD331 /* lgsApp.icns in Resources */,
 				C35BACE1114D4930004165E8 /* InfoPlist.strings in Resources */,
 				C35BACE2114D4930004165E8 /* MainMenu.xib in Resources */,
@@ -562,7 +573,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LGS/LGS.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -570,9 +583,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LGS_Prefix.pch;
 				INFOPLIST_FILE = "LGS-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = net.darkwood.lgs;
 				PRODUCT_NAME = LGS;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -580,15 +594,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LGS/LGS.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LGS_Prefix.pch;
 				INFOPLIST_FILE = "LGS-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = net.darkwood.lgs;
 				PRODUCT_NAME = LGS;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
