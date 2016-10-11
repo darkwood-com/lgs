@@ -17,7 +17,7 @@
 			<data key="end2Image" value="/Datas/Images/24968.png" />
 		</init>
 	</inits>
-	
+
 	<sounds>
 		<sound key="aaah" value="/Datas/Sounds/aaah.mp3" />
 		<sound key="aaaah" value="/Datas/Sounds/aaaah.mp3" />
@@ -100,7 +100,7 @@
 		<sound key="vache" value="/Datas/Sounds/vache.mp3" />
 		<sound key="versevin" value="/Datas/Sounds/versevin.mp3" />
 	</sounds>
-	
+
 	<cards>
 		<card key="4101" imagePath="/Datas/Images/6487.png" mapX="66" mapY="130">
 			<messages>
@@ -420,8 +420,8 @@
 			</surfaces>
 			<actions>
 				<action key="entrer dans la bibliothèque." type="customAction" value="entrer_bibliotheque" />
-				<action key="aller vers l'est." type="goCard" value="8813" />
-				<action key="aller vers l'ouest." type="goCard" value="19126" />
+				<action key="aller vers l'est." type="goCard" value="19126" />
+				<action key="aller vers l'ouest." type="goCard" value="8813" />
 			</actions>
 		</card>
 		<card key="13563" imagePath="/Datas/Images/22984.png" mapX="88" mapY="72">
