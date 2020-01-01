@@ -1,4 +1,4 @@
 LGS
 ===
 
-More informations at [http://apps.darkwood.fr/lgs](http://apps.darkwood.fr/lgs)
+More informations at [https://apps.darkwood.fr/lgs](https://apps.darkwood.fr/lgs)
