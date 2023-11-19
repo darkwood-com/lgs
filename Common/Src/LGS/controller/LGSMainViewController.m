@@ -76,8 +76,8 @@
 		}
 		else if([action isEqualToString:@"Reprendre une ancienne."])
 		{
-      NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
-      NSString* loadPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"save.lgs"];
+      		NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+      		NSString* loadPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"save.lgs"];
 			NSDictionary* rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:loadPath];
 			if(rootObject)
 			{
@@ -132,7 +132,7 @@
 		if([loadUserPromptView currentPromptAction] == YES)
 		{
 			NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
-      NSString* loadPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"save.lgs"];
+      		NSString* loadPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"save.lgs"];
 			NSDictionary* rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:loadPath];
 			if(rootObject)
 			{

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5ctycqj2q7yt"]
+
+[ext_resource type="Script" path="res://entities/prompt_text.gd" id="1_qqmfc"]
+[ext_resource type="FontFile" uid="uid://bsk3u2ilmn0aw" path="res://datas/fonts/lgsfont.ttf" id="2_hc74w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6n1f"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfxsy"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f674f"]
+bg_color = Color(0.901961, 0.901961, 0.901961, 1)
+
+[node name="PromptText" type="Node2D"]
+script = ExtResource("1_qqmfc")
+text = "Où voulez vous aller?
+#aller dans la tour nord.#
+#aller dans la tour sud.#
+#aller vers l'est.#
+#ressortir de l'abbaye.#"
+rect = Vector2i(200, 200)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 68.0625
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hc74w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6n1f")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dfxsy")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_f674f")
+placeholder_text = "Edit me"
+alignment = 1
+clear_button_enabled = true

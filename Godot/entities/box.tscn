@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://nhdditbqmaum"]
+
+[ext_resource type="Script" path="res://entities/box.gd" id="1_hgai3"]
+
+[node name="Box" type="Node2D"]
+script = ExtResource("1_hgai3")
+text = "Où voulez vous aller?
+#aller dans la tour nord.#
+#aller dans la tour sud.#
+#aller vers l'est.#
+#ressortir de l'abbaye.#"
+rect = Vector2i(200, 200)

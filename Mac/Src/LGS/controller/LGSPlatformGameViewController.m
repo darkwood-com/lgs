@@ -160,7 +160,7 @@
 	
 	LGSCard* card = [super goCard:cardID];
 
-  if([[card messageFromKey:@"angel"] isEqualToString:@""])
+	if([[card messageFromKey:@"angel"] isEqualToString:@""])
 	{
 		[angelView hide];
 	}
