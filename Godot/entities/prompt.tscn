@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqf3bfyojgb16"]
+
+[ext_resource type="Script" path="res://entities/prompt.gd" id="1_w7fo1"]
+
+[node name="Prompt" type="Node2D"]
+script = ExtResource("1_w7fo1")
+text = "Où voulez vous aller?
+#aller dans la tour nord.#
+#aller dans la tour sud.#
+#aller vers l'est.#
+#ressortir de l'abbaye.#"
+type = "bool"
+rect = Vector2i(200, 200)

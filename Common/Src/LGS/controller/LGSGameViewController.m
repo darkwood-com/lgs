@@ -241,8 +241,8 @@
 	}
 	else if(sender == saveView)
 	{
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
-    NSString* savePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"save.lgs"];
+    	NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+    	NSString* savePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"save.lgs"];
     
 		NSMutableDictionary * rootObject;
 		rootObject = [NSMutableDictionary dictionary];
