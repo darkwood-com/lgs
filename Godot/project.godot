@@ -13,7 +13,7 @@ config_version=5
 config/name="LGS"
 config/version="1.0.0"
 run/main_scene="res://scenes/root.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://design/icon/Icon1024.png"
 
 [display]
