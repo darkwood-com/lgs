@@ -18,8 +18,6 @@ config/icon="res://design/icon/Icon1024.png"
 
 [display]
 
-window/size/viewport_width=2880
-window/size/viewport_height=1800
 window/handheld/orientation=4
 
 [rendering]

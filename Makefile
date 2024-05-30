@@ -13,6 +13,9 @@ build-web: ## Build Web Zip
 build-linux: ## Build Linux Zip
 	(cd Exports && rm -f Linux.zip && zip -r Linux.zip Linux)
 
+build-linux: ## Build Windows Zip
+	(cd Exports && rm -f Windows.zip && zip -r Windows.zip Windows)
+
 # DEFAULT
 .DEFAULT_GOAL := help
 help:
