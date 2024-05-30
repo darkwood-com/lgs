@@ -10,6 +10,9 @@ SYMFONY         = symfony
 build-web: ## Build Web Zip
 	(cd Exports && rm -f Web.zip && zip -r Web.zip Web)
 
+build-linux: ## Build Linux Zip
+	(cd Exports && rm -f Linux.zip && zip -r Linux.zip Linux)
+
 # DEFAULT
 .DEFAULT_GOAL := help
 help:
