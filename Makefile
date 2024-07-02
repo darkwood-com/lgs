@@ -13,8 +13,11 @@ build-web: ## Build Web Zip
 build-linux: ## Build Linux Zip
 	(cd Exports && rm -f Linux.zip && zip -r Linux.zip Linux)
 
-build-linux: ## Build Windows Zip
+build-windows: ## Build Windows Zip
 	(cd Exports && rm -f Windows.zip && zip -r Windows.zip Windows)
+
+build-mac: ## Build Mac Zip
+	(cd Exports && rm -f Mac.zip && zip -r Mac.zip Mac)
 
 # DEFAULT
 .DEFAULT_GOAL := help
