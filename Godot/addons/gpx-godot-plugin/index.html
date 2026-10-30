@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no" />
+    <meta name="author" content="GamePix">
+    <title>Game</title>
+    <style>
+        html,
+        body {
+            position: fixed;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        * {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+            -ms-touch-action: none;
+            -ms-content-zooming: none;
+            touch-action: none;
+            outline: none;
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #background, #loading {
+            background-color: linear-gradient(to top, #00395e, #004978);
+            background: url(background.jpg), linear-gradient(to top, #00395e, #004978);
+            background-size:     cover;
+            background-repeat:   no-repeat;
+            background-position: center center;
+        }
+    </style>
+    <script>
+        const alertFn = window.alert;
+        window.alert = (message) => {
+            if (message.startsWith("GamePix SDK log:")) {
+                console.log(message);
+                return;
+            }
+            alertFn(message);
+        };
+    </script>
+    <script src="https://integration.gamepix.com/sdk/v3/gamepix.sdk.js"></script>
+
+    $GODOT_HEAD_INCLUDE
+	<script type='text/javascript' src='$GODOT_URL'></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <canvas id="canvas" tabindex="0"></canvas>
+    <script type="text/javascript">
+        var LoadingInfo = /** @class */ (function () {
+            var loaderCss = "\n        #loading {\n            position: absolute;\n            left: 0;\n            top: 0;\n            bottom: 0;\n            right: 0;\n            z-index: 999;\n            display: flex;\n            flex-direction: column;\n            align-content: center;\n            justify-content: center;\n        }\n        \n        .loading-spinner {\n            position:relative;\n            margin:auto;\n            width: 250px;\n            height: 250px;\n            display: inline-block;\n            overflow: hidden;\n            background: none;\n        }\n\n        .loading-spinner-items {\n            position: absolute;\n            top: 50px;\n            bottom: 50px;\n            left: 50px;\n            right: 50px;\n            width: 150px;\n            height: 150px;\n            transform: translateZ(0) scale(1);\n            backface-visibility: hidden;\n            transform-origin: 0 0;\n        }\n        .loading-spinner-items div { \n            box-sizing: content-box; \n        }\n        @keyframes loading-spinner-items {\n            0% { opacity: 1 }\n            100% { opacity: 0 }\n        }\n        .loading-spinner-items div {\n            left: 62.5px;\n            top: 2.5px;\n            position: absolute;\n            animation: loading-spinner-items linear 0.9174311926605504s infinite;\n            width: 25px;\n            height: 25px;\n            border-radius: 6.75px / 6.75px;\n            transform-origin: 12.5px 72.5px;\n        }\n        .loading-spinner-items .loading-spinner-item-1 {\n            transform: rotate(0deg);\n            animation-delay: -0.8340283569641368s;\n            background: #00e579;\n        }\n        .loading-spinner-items .loading-spinner-item-2 {\n            transform: rotate(32.72727272727273deg);\n            animation-delay: -0.7506255212677231s;\n            background: #00d2d9;\n        }\n        .loading-spinner-items .loading-spinner-item-3 {\n            transform: rotate(65.45454545454545deg);\n            animation-delay: -0.6672226855713094s;\n            background: #007dff;\n        }\n        .loading-spinner-items .loading-spinner-item-4 {\n            transform: rotate(98.18181818181819deg);\n            animation-delay: -0.5838198498748958s;\n            background: #00e579;\n        }\n        .loading-spinner-items .loading-spinner-item-5 {\n            transform: rotate(130.9090909090909deg);\n            animation-delay: -0.5004170141784821s;\n            background: #00d2d9;\n        }\n        .loading-spinner-items .loading-spinner-item-6 {\n            transform: rotate(163.63636363636363deg);\n            animation-delay: -0.4170141784820684s;\n            background: #007dff;\n        }\n        .loading-spinner-items .loading-spinner-item-7 {\n            transform: rotate(196.36363636363637deg);\n            animation-delay: -0.3336113427856547s;\n            background: #00e579;\n        }\n        .loading-spinner-items .loading-spinner-item-8 {\n            transform: rotate(229.0909090909091deg);\n            animation-delay: -0.25020850708924103s;\n            background: #00d2d9;\n        }\n        .loading-spinner-items .loading-spinner-item-9 {\n            transform: rotate(261.8181818181818deg);\n            animation-delay: -0.16680567139282734s;\n            background: #007dff;\n        }\n        .loading-spinner-items .loading-spinner-item-10 {\n            transform: rotate(294.54545454545456deg);\n            animation-delay: -0.08340283569641367s;\n            background: #00e579;\n        }\n        .loading-spinner-items .loading-spinner-item-11 {\n            transform: rotate(327.27272727272725deg);\n            animation-delay: 0s;\n            background: #00d2d9;\n        }\n\n        .loading-progress {\n            position: absolute;\n            top: 50px;\n            bottom: 50px;\n            left: 50px;\n            right: 50px;\n            width: 150px;\n            height: 150px;\n            margin-left: 6px;\n            margin-top: 2px;\n            display: flex;\n            flex-direction: column;\n            align-content: center;\n            justify-content: center;\n        }\n\n        .running-progress {\n            position: absolute;\n            top: 200px;\n            width: 100%;\n            height: 50px;\n            display: flex;\n            flex-direction: column;\n            align-content: center;\n            justify-content: center;\n        }\n\n        .loading-text {\n            color: white;\n            display: block;\n            text-align: center;\n            font-weight: bold;\n            text-shadow: -1px 0 7px rgba(6, 29, 98, 0.30), \n                         0 1px 7px rgba(6, 29, 98, 0.30), \n                         1px 0 7px rgba(6, 29, 98, 0.30), \n                         0 -1px 7px rgba(6, 29, 98, 0.30);\n        }\n        .loading-progress span {\n            font-size: 24px;\n        }\n        .running-progress span {\n            font-size: 16px;\n        }\n";
+            var loaderHtml = "\n        <div class=\"loading-spinner\">\n            <div class=\"loading-spinner-items\">\n                <div class=\"loading-spinner-item-1\"></div>\n                <div class=\"loading-spinner-item-2\"></div>\n                <div class=\"loading-spinner-item-3\"></div>\n                <div class=\"loading-spinner-item-4\"></div>\n                <div class=\"loading-spinner-item-5\"></div>\n                <div class=\"loading-spinner-item-6\"></div>\n                <div class=\"loading-spinner-item-7\"></div>\n                <div class=\"loading-spinner-item-8\"></div>\n                <div class=\"loading-spinner-item-9\"></div>\n                <div class=\"loading-spinner-item-10\"></div>\n                <div class=\"loading-spinner-item-11\"></div>\n            </div>\n            <div class=\"loading-progress\">\n                <span class=\"loading-text\"></span>\n            </div>\n            <div class=\"running-progress\">\n                <span class=\"loading-text\"></span>\n            </div>\n        </div>\n";
+
+            function LoadingInfo() {
+                this.defaultDuration = 30 * 1000;
+                this.hideTimeout = 500;
+                this.reportedPercent = 0;
+                this.intervalId = -1;
+                this.phrasesTimes = 4;
+                this.phrases = [
+                    "Checking data",
+                    "Checking runtime",
+                    "Initializing services",
+                    "Preparing the environment",
+                    "Starting the game",
+                ];
+                var head = document.head || document.getElementsByTagName("head")[0];
+                var style = document.createElement("style");
+                style.type = "text/css";
+                if (style.styleSheet) {
+                    style.styleSheet.cssText = loaderCss;
+                }
+                else {
+                    style.appendChild(document.createTextNode(loaderCss));
+                }
+                head.appendChild(style);
+                this.loading = document.createElement("div");
+                this.loading.id = "loading";
+                this.loading.innerHTML = loaderHtml;
+                document.body.appendChild(this.loading);
+                this.loadingText = document.querySelector(".loading-progress span");
+                this.runningText = document.querySelector(".running-progress span");
+            }
+            LoadingInfo.prototype.updateProgress = function (interval) {
+                var _this = this;
+                ++this.reportedPercent;
+                var intervalPercent = Math.round((Date.now() - this.startedAt) / interval);
+                this.reportedPercent = Math.max(this.reportedPercent, intervalPercent);
+                if (this.reportedPercent < 100) {
+                    this.loadingText.innerHTML = this.reportedPercent + "%";
+                    return;
+                }
+                this.loadingText.innerHTML = "99%";
+                this.reportedPercent = 0;
+                clearInterval(this.intervalId);
+                this.intervalId = setInterval(function () { return _this.updateText(); }, 1000);
+            };
+            LoadingInfo.prototype.updateText = function () {
+                this.loadingText.innerHTML = "";
+                var phraseIndex = Math.min(Math.trunc(this.reportedPercent / this.phrasesTimes), this.phrases.length - 1);
+                var runningText = this.phrases[phraseIndex] + "&nbsp;";
+                var dotsCount = this.reportedPercent % this.phrasesTimes;
+                for (var i = 0; i < this.phrasesTimes; ++i) {
+                    runningText += i < dotsCount ? "." : "&nbsp;";
+                }
+                this.runningText.innerHTML = runningText;
+                ++this.reportedPercent;
+            };
+            LoadingInfo.prototype.start = function (duration) {
+                var _this = this;
+                this.loading.style.display = "";
+                this.loadingText.innerHTML = "";
+                this.runningText.innerHTML = "";
+                this.reportedPercent = 0;
+                this.startedAt = Date.now();
+                this.stoppedAt = 0;
+                var updateInterval = (duration <= 0) ?
+                    this.defaultDuration / 100 :
+                    Math.min(duration, this.defaultDuration) / 100;
+                this.updateProgress(updateInterval);
+                this.intervalId = setInterval(function () { return _this.updateProgress(updateInterval); }, updateInterval);
+            };
+            LoadingInfo.prototype.stop = function () {
+                var _this = this;
+                this.stoppedAt = Date.now() + this.hideTimeout;
+                setTimeout(function () {
+                    _this.loadingText.innerHTML = "";
+                    _this.runningText.innerHTML = "";
+                    clearInterval(_this.intervalId);
+                    _this.loading.style.display = "none";
+                }, this.hideTimeout);
+            };
+            LoadingInfo.prototype.getDuration = function () {
+                if (this.startedAt > 0 && this.stoppedAt > 0 && this.startedAt < this.stoppedAt) {
+                    return this.stoppedAt - this.startedAt;
+                }
+                return null;
+            };
+            return LoadingInfo;
+        }());
+        
+        const loadingInfo = new LoadingInfo();
+		const engine = new Engine($GODOT_CONFIG);
+
+        if (!Engine.isWebGLAvailable()) {
+            alert('WebGL not available');
+        } else {
+            let duration = loadingInfo.defaultDuration;
+            try {
+                const runTime = GamePix.localStorage.getItem("gpxRunTime");
+                if (runTime != null) {
+                    duration = Number.parseInt(runTime, 10) || duration;
+                }
+            } catch (e) {
+                console.error("ERR! Can't parse loading time from local storage", e);
+            }
+            loadingInfo.start(duration);
+
+            engine.startGame()
+                .then(() => {
+                    loadingInfo.stop();
+                    const duration = loadingInfo.getDuration();
+                    if (duration !== null) {
+                        try {
+                            GamePix.localStorage.setItem("gpxRunTime", duration.toString());
+                        } catch (e) {
+                            console.error("ERR! Can't parse loading time from local storage", e);
+                        }  
+                    }
+                })
+                .catch((e) => {
+                    alert("Unexpected error happend, please send browser logs");
+                    console.error("ERR! Unexpected error happend:", e);
+                });
+        }
+    </script>
+</body>
+
+</html>
