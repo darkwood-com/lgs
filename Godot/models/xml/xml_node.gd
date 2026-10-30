@@ -61,6 +61,8 @@ func _get(property: StringName):
 			if child.name == property:
 				return child
 
+	return null
+
 
 # Dotted access via editor
 func _get_property_list():
