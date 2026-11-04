@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="author" content="GamePix">
-    <title>Game</title>
+    <title>The Keeper of Knowledge</title>
     <style>
         html,
         body {
@@ -37,6 +37,15 @@
             outline: none;
         }
 
+        #canvas {
+            display: block;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+
         #background {
             position: absolute;
             top: 0;
@@ -63,6 +72,7 @@
             alertFn(message);
         };
     </script>
+    <script>window.GamePixConfig = { lifecycle: "manual" };</script>
     <script src="https://integration.gamepix.com/sdk/v3/gamepix.sdk.js"></script>
 
     $GODOT_HEAD_INCLUDE
@@ -182,8 +192,14 @@
             }
             loadingInfo.start(duration);
 
-            engine.startGame()
-                .then(() => {
+            engine.startGame({
+                onProgress: (current, total) => {
+                    if (total > 0) GamePix.lifecycle.loading(Math.min(99, Math.floor(current * 100 / total)));
+                }
+            })
+                .then(async () => {
+                    GamePix.lifecycle.loading(100);
+                    await GamePix.lifecycle.loaded();
                     loadingInfo.stop();
                     const duration = loadingInfo.getDuration();
                     if (duration !== null) {
@@ -195,8 +211,8 @@
                     }
                 })
                 .catch((e) => {
-                    alert("Unexpected error happend, please send browser logs");
-                    console.error("ERR! Unexpected error happend:", e);
+                    alert("The game could not start. Please reload and try again.");
+                    console.error("ERR! Unexpected startup error:", e);
                 });
         }
     </script>

@@ -1,4 +1,4 @@
-class_name Data extends Object
+class_name Data extends RefCounted
 
 var inits: Dictionary = {} #Dictionary<String, Dictionary<String, String>>
 var sounds: Dictionary = {} #Dictionary<String(name) => String(path)>
@@ -6,7 +6,7 @@ var cards: Dictionary = {} #Dictionary<String(cardId) => Card>
 var questions: Dictionary = {} #Dictionary<String(city) => Array<Question>>
 
 func _init():
-	var node = XML.parse_file("res://datas/data.xml")
+	var node = XML.parse_file("res://datas/data.en.xml")
 	for rootChildNode in node.root.children:
 		if rootChildNode.name == 'inits':
 			for initNode in rootChildNode.children:
@@ -21,7 +21,7 @@ func _init():
 			for cardNode in rootChildNode.children:
 				cards[cardNode.attributes.key] = Card.new(cardNode)
 	
-	node = XML.parse_file("res://datas/questions.xml")
+	node = XML.parse_file("res://datas/questions.en.xml")
 	for questionsNode in node.root.children:
 		var questionList = []
 		for questionNode in questionsNode.children:

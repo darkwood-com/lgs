@@ -1,4 +1,4 @@
-class_name Card extends Object
+class_name Card extends RefCounted
 
 var imagePath: String #image path to the card
 var messages: Dictionary #Dictionary<String => String>

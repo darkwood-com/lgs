@@ -19,7 +19,7 @@ func set_rect(aRect: Rect2i):
 #func _draw():
 #	draw_rect(Rect2(0, 0, rect.x, rect.y), Color.GREEN, false, 5.0)
 	
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and is_visible_in_tree():
 			var local_position = to_local(event.position)

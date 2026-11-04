@@ -1,4 +1,4 @@
-class_name Action extends Node
+class_name Action extends RefCounted
 
 var type: String
 var value: String

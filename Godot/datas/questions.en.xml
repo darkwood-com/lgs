@@ -1,0 +1,813 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+	<questions city="Litter">
+		<question points="2" ask="What is the planet whose orbit is closest to the sun?">
+			<answer value="Venus" />
+			<answer value="March" />
+			<answer value="Jupiter" />
+			<answer value="Mercury" valid="true" />
+			<answer value="Saturn" />
+		</question>
+		<question points="4" ask="How far is the Earth from the Sun?">
+			<answer value="300,000 km" />
+			<answer value="600,000 km" />
+			<answer value="1 million km" />
+			<answer value="150 Million Km" valid="true" />
+			<answer value="1 billion km" />
+		</question>
+		<question points="3" ask="What is the Milky Way?">
+			<answer value="A comet" />
+			<answer value="A star" />
+			<answer value="A set of stars" valid="true" />
+			<answer value="The Big Bear" />
+			<answer value="The North Star" />
+		</question>
+		<question points="2" ask="On the celestial vault, only one star is motionless, which one?">
+			<answer value="Venus" />
+			<answer value="Little Bear" />
+			<answer value="the moon" />
+			<answer value="The North Star" valid="true" />
+			<answer value="Pluto" />
+		</question>
+		<question points="3" ask="How long is an Earth year?">
+			<answer value="365 days" />
+			<answer value="366 days" />
+			<answer value="365 days and 6 hours" valid="true" />
+			<answer value="366 days and 6 hours" />
+			<answer value="364 days" />
+		</question>
+		<question points="4" ask="What is a telluric planet?">
+			<answer value="A Jupiter-type planet" />
+			<answer value="A planet the size of Venus" />
+			<answer value="An earth-type planet" valid="true" />
+			<answer value="A planet without atmosphere" />
+			<answer value="A planet without life" />
+		</question>
+		<question points="2" ask="What is the Sun?">
+			<answer value="A planet" />
+			<answer value="An asteroid" />
+			<answer value="A star" valid="true" />
+			<answer value="A comet" />
+			<answer value="A shooting star" />
+		</question>
+		<question points="3" ask="How many natural satellites does the earth have?">
+			<answer value="1 Satellite" valid="true" />
+			<answer value="2 Satellites" />
+			<answer value="3 Satellites" />
+			<answer value="4 Satellites" />
+			<answer value="5 Satellites" />
+		</question>
+		<question points="4" ask="What are Demos and Phobos?">
+			<answer value="Stars" />
+			<answer value="Martians" />
+			<answer value="Satellites of Mars" valid="true" />
+			<answer value="Jupiter's satellites" />
+			<answer value="Mountains of the Moon" />
+		</question>
+		<question points="2" ask="Who first set foot on the moon?">
+			<answer value="Aldrin" />
+			<answer value="Collins" />
+			<answer value="Borman" />
+			<answer value="Armstrong" valid="true" />
+			<answer value="Lovell" />
+		</question>
+		<question points="3" ask="What is the Sea of ​​Tranquility?">
+			<answer value="A land sea" />
+			<answer value="Part of the Milky Way" />
+			<answer value="A constellation" />
+			<answer value="Part of the zodiac" />
+			<answer value="A lunar sea" valid="true" />
+		</question>
+		<question points="4" ask="How long does it take for light to reach us from the Sun?">
+			<answer value="3 seconds" />
+			<answer value="30 seconds" />
+			<answer value="8 minutes" valid="true" />
+			<answer value="2 hours" />
+			<answer value="1 day" />
+		</question>
+		<question points="2" ask="How many planets are there in the solar system?">
+			<answer value="4 planets" />
+			<answer value="8 planets" valid="true" />
+			<answer value="12 planets" />
+			<answer value="1 planet" />
+			<answer value="18 planets" />
+		</question>
+		<question points="3" ask="What is a galaxy?">
+			<answer value="A set of planets" />
+			<answer value="A constellation" />
+			<answer value="A collection of hundreds of stars" />
+			<answer value="A collection of dozens of stars" />
+			<answer value="A collection of billions of stars" valid="true" />
+		</question>
+		<question points="4" ask="What is found between the orbits of Mars and Jupiter?">
+			<answer value="Planets" />
+			<answer value="Stars" />
+			<answer value="Nothing" />
+			<answer value="An asteroid belt" valid="true" />
+			<answer value="The sun" />
+		</question>
+		<question points="4" ask="Why are there 6 months of day and 6 months of night at the poles?">
+			<answer value="Because it's cold there." />
+			<answer value="Because the earth rotates." />
+			<answer value="Because the earth is tilted in its orbit." valid="true" />
+			<answer value="Because of the moon." />
+		</question>
+		<question points="3" ask="Why is it warmer at the equator?">
+			<answer value="Because of the deserts." />
+			<answer value="Because the circumferential speed is higher there." />
+			<answer value="Because the sun's rays are perpendicular." valid="true" />
+		</question>
+		<question points="4" ask="What does a compass needle do to true north?">
+			<answer value="She points south." />
+			<answer value="She wriggles." />
+			<answer value="It turns on itself." />
+			<answer value="It indicates the direction of magnetic north." valid="true" />
+		</question>
+		<question points="2" ask="What do we see during the new moon?">
+			<answer value="Nothing." valid="true" />
+			<answer value="The entire moon." />
+			<answer value="A crescent moon." />
+			<answer value="A crown." />
+		</question>
+		<question points="4" ask="what is the separation between the 2 main rings of Saturn called?">
+			<answer value="The separation of Saturn." />
+			<answer value="The separation of Copernicus." />
+			<answer value="Cassini's division." valid="true" />
+			<answer value="Galileo's division." />
+		</question>
+		<question points="3" ask="What is the closest star to our solar system?">
+			<answer value="Pluto." />
+			<answer value="The Big Bear." />
+			<answer value="The North Star." />
+			<answer value="Proxima Centauri." valid="true" />
+			<answer value="Orion." />
+		</question>
+		<question points="4" ask="What is the diameter of the moon?">
+			<answer value="1500 km" />
+			<answer value="2250 km" />
+			<answer value="3480 km" valid="true" />
+			<answer value="4260 km" />
+			<answer value="5120 km" />
+		</question>
+		<question points="2" ask="What is lunar gravity?">
+			<answer value="The same as terrestrial gravity." />
+			<answer value="1/6 of Earth's gravity." valid="true" />
+			<answer value="Double the Earth's gravity." />
+		</question>
+		<question points="4" ask="How many Kepler's laws are there?">
+			<answer value="2 Laws." />
+			<answer value="3 Laws." valid="true" />
+			<answer value="4 Laws." />
+			<answer value="5 Laws." />
+			<answer value="6 Laws." />
+		</question>
+		<question points="3" ask="What is the largest planet in the solar system?">
+			<answer value="Mercury" />
+			<answer value="Neptune" />
+			<answer value="Jupiter" valid="true" />
+			<answer value="Saturn" />
+			<answer value="March" />
+		</question>
+		<question points="4" ask="What is the apparent retrograde motion of a planet?">
+			<answer value="A planet becoming smaller." />
+			<answer value="A planet leaving the Solar System." />
+			<answer value="A planet appearing to move backwards against the background stars." valid="true" />
+			<answer value="A planet no longer rotating." />
+		</question>
+		<question points="3" ask="What is the magnitude of a star?">
+			<answer value="His size." />
+			<answer value="Its mass." />
+			<answer value="Its shine." valid="true" />
+			<answer value="Its color." />
+			<answer value="Its distance from the earth." />
+		</question>
+		<question points="4" ask="What is M31?">
+			<answer value="A planet." />
+			<answer value="One star." />
+			<answer value="A natural satellite." />
+			<answer value="A galaxy." valid="true" />
+			<answer value="An artificial satellite." />
+		</question>
+	</questions>
+	<questions city="Matem">
+		<question points="3" ask="In a microcomputer, there are one or more microprocessors.\nBut what is it actually?">
+			<answer value="A memory area?" />
+			<answer value="The floppy disk drive?" />
+			<answer value="The R.A.M. ?" />
+			<answer value="the 'brain'?" valid="true" />
+			<answer value="the video monitor?" />
+		</question>
+		<question points="4" ask="In a Macintosh Plus, there is...">
+			<answer value="a 68000" valid="true" />
+			<answer value="a 68020" />
+			<answer value="a 80386" />
+			<answer value="a Z80" />
+			<answer value="an 8088" />
+		</question>
+		<question points="3" ask="The floppy disk drive of a Macintosh Plus can write to a floppy disk...">
+			<answer value="143 KBytes" />
+			<answer value="360 KBytes" />
+			<answer value="400 KBytes" />
+			<answer value="800 KBytes" valid="true" />
+			<answer value="1600 KBytes" />
+		</question>
+		<question points="2" ask="In a computer, there are registers called “accumulators”.\nThey are located...">
+			<answer value="in food." />
+			<answer value="in the microprocessor." valid="true" />
+			<answer value="in memory." />
+			<answer value="in the video screen." />
+			<answer value="in the keyboard." />
+		</question>
+		<question points="4" ask="The binary number 01101101 corresponds in hexadecimal to ...">
+			<answer value="110" />
+			<answer value="5A" />
+			<answer value="4F" />
+			<answer value="6D" valid="true" />
+			<answer value="8D" />
+		</question>
+		<question points="2" ask="The initials P.A.O. usually designate...">
+			<answer value="Computer Aided Production." />
+			<answer value="Computer Aided Hacking." />
+			<answer value="Computer Aided Politics." />
+			<answer value="Computer Aided Advertising." />
+			<answer value="Desktop Publishing." valid="true" />
+		</question>
+		<question points="2" ask="The initials C.A.O. usually refer to...">
+			<answer value="Computer Aided Creation." />
+			<answer value="Computer Aided Design." valid="true" />
+			<answer value="Computer Assisted Mail." />
+			<answer value="Computer-Assisted Cryogenics." />
+			<answer value="Computer Assisted Heating." />
+		</question>
+		<question points="4" ask="A monitor designates, in IT,...">
+			<answer value="The video screen." valid="true" />
+			<answer value="an operating system program." />
+			<answer value="a teacher." />
+			<answer value="a floppy disk drive." />
+		</question>
+		<question points="4" ask="when we talk about “driver” in computing, we are talking about...">
+			<answer value="floppy disk drive." />
+			<answer value="hard drive." />
+			<answer value="of part of the O.S." valid="true" />
+			<answer value="of the person controlling the computer." />
+			<answer value="of the printer." />
+		</question>
+		<question points="3" ask="In a computer, we often talk about the OS.\nIt is about...">
+			<answer value="from the central part of the computer." />
+			<answer value="of the operating system." valid="true" />
+			<answer value="of the Computer System." />
+			<answer value="of the Server Operator." />
+		</question>
+		<question points="4" ask="The binary number 01101101 corresponds in decimal to...">
+			<answer value="06" />
+			<answer value="55" />
+			<answer value="109" valid="true" />
+			<answer value="6D" />
+			<answer value="114" />
+		</question>
+		<question points="3" ask="The VIDEOTEX standard is a standard used for...">
+			<answer value="the minitel." valid="true" />
+			<answer value="the screens." />
+			<answer value="Text files." />
+			<answer value="hard drives." />
+			<answer value="telematics." />
+		</question>
+		<question points="4" ask="Bubble sort is...">
+			<answer value="a memory technology." />
+			<answer value="a sorting algorithm." valid="true" />
+			<answer value="A kind of magnetic bubble." />
+			<answer value="a new generation of mass memory." />
+		</question>
+		<question points="3" ask="The abbreviation LIFO is used to denote...">
+			<answer value="an accumulator." />
+			<answer value="a memory." />
+			<answer value="a row." />
+			<answer value="a stack." valid="true" />
+			<answer value="a pointer." />
+		</question>
+		<question points="2" ask="When we talk about Pascal with a computer scientist, there is a good chance that we will talk about...">
+			<answer value="Blaise Pascal." />
+			<answer value="a 500.00 franc note." />
+			<answer value="a programming language." valid="true" />
+			<answer value="a Pixel Has Calorific Support." />
+			<answer value="a Linear SCYear PAGE." />
+		</question>
+		<question points="4" ask="one of these objects is NOT found in a microprocessor.\nWhich ?">
+			<answer value="UAL." />
+			<answer value="Accumulator." />
+			<answer value="ordinal counter." />
+			<answer value="RAM." valid="true" />
+			<answer value="State register." />
+		</question>
+		<question points="4" ask="The screen of a Macintosh Plus can display...">
+			<answer value="65,536 points" />
+			<answer value="175,104 points" valid="true" />
+			<answer value="131,072 points" />
+			<answer value="262,144 points" />
+			<answer value="1,048,576 points" />
+		</question>
+		<question points="3" ask="How many volumes made up the original Inside Macintosh technical documentation?">
+			<answer value="2 volumes." />
+			<answer value="3 volumes." valid="true" />
+			<answer value="4 volumes." />
+			<answer value="5 volumes." />
+			<answer value="6 volumes." />
+		</question>
+		<question points="2" ask="The designer of the part of the ROM of a Macintosh that processes drawings is...">
+			<answer value="Steve Jobs." />
+			<answer value="Andy Hertzfeld." />
+			<answer value="Steve Wozniak." />
+			<answer value="John Sculley." />
+			<answer value="Bill Atkinson." valid="true" />
+		</question>
+		<question points="4" ask="In France, in September 1988, there was a fleet of Macintoshes installed...">
+			<answer value="70,000 units" />
+			<answer value="100,000 units" />
+			<answer value="130,000 units" />
+			<answer value="160,000 units" valid="true" />
+			<answer value="190,000 units" />
+		</question>
+		<question points="3" ask="HyperTalk is...">
+			<answer value="an expert system." />
+			<answer value="an object-oriented language." valid="true" />
+			<answer value="a machine-oriented language." />
+			<answer value="a Mac II expansion card." />
+			<answer value="a modem." />
+		</question>
+		<question points="2" ask="In an Apple 2e, there was...">
+			<answer value="a 68000" />
+			<answer value="a 6502" valid="true" />
+			<answer value="a 80386" />
+			<answer value="a Z80" />
+			<answer value="an 8088" />
+		</question>
+		<question points="3" ask="In an IBM PC, there was...">
+			<answer value="a 68000" />
+			<answer value="a 6502" />
+			<answer value="an 8086" valid="true" />
+			<answer value="a Z80" />
+			<answer value="a 6809" />
+		</question>
+		<question points="4" ask="The ASCII code generated by the key located at the top left of the numeric keyboard of a Macintosh is...">
+			<answer value="9" />
+			<answer value="13" />
+			<answer value="14" />
+			<answer value="32" />
+			<answer value="27" valid="true" />
+		</question>
+		<question points="2" ask="The first microcomputer was built...">
+			<answer value="in the USA." />
+			<answer value="in England." />
+			<answer value="In France." valid="true" />
+			<answer value="in Canada." />
+		</question>
+		<question points="3" ask="A Macintosh Plus has a ROM of...">
+			<answer value="32K" />
+			<answer value="64K" />
+			<answer value="128K" valid="true" />
+			<answer value="512K" />
+			<answer value="1024K" />
+		</question>
+		<question points="2" ask="A Macintosh Plus has a RAM of ...">
+			<answer value="32K" />
+			<answer value="64K" />
+			<answer value="128K" />
+			<answer value="512K" />
+			<answer value="1024K" valid="true" />
+		</question>
+	</questions>
+	<questions city="Histora">
+		<question points="3" ask="Who is the sovereign of Great Britain who achieved the Entente Cordiale with France?">
+			<answer value="George IV" />
+			<answer value="Edward VII" valid="true" />
+			<answer value="Edward VI" />
+			<answer value="Victoria" />
+			<answer value="Victoria II" />
+		</question>
+		<question points="2" ask="In what year was Marshal Lyautey appointed Resident General of Morocco?">
+			<answer value="1910" />
+			<answer value="1912" valid="true" />
+			<answer value="1905" />
+			<answer value="1919" />
+			<answer value="1918" />
+		</question>
+		<question points="3" ask="Where did King Khufu build his pyramid?">
+			<answer value="Giza" valid="true" />
+			<answer value="Khafre" />
+			<answer value="Saqqara" />
+			<answer value="Memphis" />
+			<answer value="Mausolus" />
+		</question>
+		<question points="4" ask="Was he called the 'ploughman of the seas'? Who is it about?">
+			<answer value="Suffren" />
+			<answer value="La Pérouse" />
+			<answer value="Bougainville" />
+			<answer value="Cook" valid="true" />
+			<answer value="Surcouf" />
+		</question>
+		<question points="3" ask="Which of these Popes was English?">
+			<answer value="Leo" />
+			<answer value="Pius IV" />
+			<answer value="Adrian IV" valid="true" />
+			<answer value="Clement III" />
+			<answer value="Julius II" />
+		</question>
+		<question points="2" ask="Who was nicknamed 'the lame devil'?">
+			<answer value="Talleyrand" valid="true" />
+			<answer value="Saint-Germain" />
+			<answer value="Cagliostro" />
+			<answer value="Father Joseph" />
+			<answer value="Mazarin" />
+		</question>
+		<question points="3" ask="Find the intruder">
+			<answer value="Saint-Exupéry" />
+			<answer value="Bleriot" />
+			<answer value="Gastambide" />
+			<answer value="Renault" valid="true" />
+			<answer value="Latham" />
+		</question>
+		<question points="4" ask="What is Odysseus hiding behind to escape the Cyclops Polyphemus?">
+			<answer value="a rock" />
+			<answer value="a ram" valid="true" />
+			<answer value="a camel" />
+			<answer value="a lion" />
+			<answer value="his bed" />
+		</question>
+		<question points="2" ask="Who was the inventor of the telephone?">
+			<answer value="light" />
+			<answer value="Edison" />
+			<answer value="Chappe" />
+			<answer value="Graham Bell" valid="true" />
+			<answer value="Wonder" />
+		</question>
+		<question points="3" ask="Who is the French head of state who was received at Windsor Castle by Queen Victoria?">
+			<answer value="Napoleon III" valid="true" />
+			<answer value="MacMahon" />
+			<answer value="Louis Philippe" />
+			<answer value="Jules Grevy" />
+			<answer value="Thiers" />
+		</question>
+		<question points="2" ask="Who is the author of the famous black opera 'Porgy and Bess'?">
+			<answer value="Purcell" />
+			<answer value="Ravel" />
+			<answer value="Brahms" />
+			<answer value="Gershwin" valid="true" />
+			<answer value="Haydn" />
+		</question>
+		<question points="3" ask="He had a church built there in honor of Our Lord of Boulogne-sur-mer, on the place which would become Boulogne-sur-Seine. Who is it about?">
+			<answer value="Philip the Long" valid="true" />
+			<answer value="Louis the Fat" />
+			<answer value="St. Louis" />
+			<answer value="Louis XIII" />
+			<answer value="Henry IV" />
+		</question>
+		<question points="2" ask="What city was Maximilien Robespierre from?">
+			<answer value="Lille" />
+			<answer value="Paris" />
+			<answer value="Aix-en-Provence" />
+			<answer value="Montpellier" />
+			<answer value="Arras" valid="true" />
+		</question>
+		<question points="4" ask="On May 14, 1753, an experiment on lightning took place: a kite conducted lightning into a tank filled with water.\nWho is the author?">
+			<answer value="Romas" valid="true" />
+			<answer value="Franklin" />
+			<answer value="Watson" />
+			<answer value="Buffon" />
+			<answer value="Réaumur" />
+		</question>
+		<question points="3" ask="At the end of the Empire, France had 5 to 6 thousand cyclists. Richard Lesclide founded a weekly, 'le Vélocipède illustrated', on April 1, 1869. Whose secretary was this character?">
+			<answer value="Michaux" />
+			<answer value="Victor Hugo" valid="true" />
+			<answer value="Jules Verne" />
+			<answer value="Nicéphore Niepce" />
+			<answer value="Henri Desgrange" />
+		</question>
+		<question points="4" ask="Where is Rouffignac, a favorite place for mammoths and rhinoceroses from the Quaternary era?">
+			<answer value="Cantal" />
+			<answer value="Basque Country" />
+			<answer value="Cevennes" />
+			<answer value="Périgord" valid="true" />
+			<answer value="Dauphiné" />
+		</question>
+		<question points="2" ask="On June 30, 1632, Galileo retracted his famous cosmographic theories while kneeling before the inquisitors. Getting up, he stamped his foot on the ground, exclaiming 'and yet, it moves!'; what was his nationality?">
+			<answer value="Baden" />
+			<answer value="alsacia" />
+			<answer value="Venetian" />
+			<answer value="Greek" />
+			<answer value="Florentine" valid="true" />
+		</question>
+		<question points="3" ask="Which of the taxes listed concerns drinks?">
+			<answer value="Excise duties on drinks" valid="true" />
+			<answer value="the size" />
+			<answer value="the twentieth" />
+			<answer value="the captaincy" />
+			<answer value="the gabelle" />
+		</question>
+		<question points="2" ask="In what year did the Belgians, unhappy with their union with Holland, rise up to proclaim their independence?">
+			<answer value="1815" />
+			<answer value="1830" valid="true" />
+			<answer value="1848" />
+			<answer value="1870" />
+			<answer value="1914" />
+		</question>
+		<question points="3" ask="'A Funeral at Ornans' famous painting from the mid-19th century depicts an aspect of the lives of ordinary men. The painting is in the Louvre Museum. Its author was a native of Ornans in the Jura. Who is it about?">
+			<answer value="Monet" />
+			<answer value="Manet" />
+			<answer value="Renoir" />
+			<answer value="Cezanne" />
+			<answer value="Courbet" valid="true" />
+		</question>
+		<question points="2" ask="Which of these characters was not President of the Republic?">
+			<answer value="Clemenceau" valid="true" />
+			<answer value="Loubet" />
+			<answer value="Deschanel" />
+			<answer value="Poincaré" />
+			<answer value="Grévy" />
+		</question>
+		<question points="3" ask="The first Tour de France cycling race was run in six stages in 1903. It was won by Maurice Garin.\nHow many kilometers had he traveled?">
+			<answer value="1000" />
+			<answer value="1350" />
+			<answer value="1575" />
+			<answer value="1975" />
+			<answer value="2500" valid="true" />
+		</question>
+		<question points="4" ask="In Castillon in Guyenne the last battle of an unfortunately famous war took place.\nWhich?">
+			<answer value="hundred years war" valid="true" />
+			<answer value="seven years war" />
+			<answer value="War of Spanish Succession" />
+			<answer value="War of Austrian Succession" />
+			<answer value="thirty years war" />
+		</question>
+		<question points="2" ask="Saint Agathon is a famous Pope because he is the one who lived the longest. At what age did he die?">
+			<answer value="91 years old" />
+			<answer value="95 years old" />
+			<answer value="99 years old" />
+			<answer value="103 years old" />
+			<answer value="107 years old" valid="true" />
+		</question>
+		<question points="3" ask="On July 13, 1842 the Duke of Orléans died in a car accident. Whose son was he?\n">
+			<answer value="Louis XVIII" />
+			<answer value="Charles X" />
+			<answer value="Louis-Philippe" valid="true" />
+		</question>
+		<question points="4" ask="In 1803 Louisiana was sold to the United States by Bonaparte, First Consul. Many descendants of French settlers still live there and speak our language with an indefinable accent; what is his star in the Union?">
+			<answer value="the 13th" />
+			<answer value="the 15th" />
+			<answer value="the 18th" valid="true" />
+			<answer value="the 20th" />
+			<answer value="the 21st" />
+		</question>
+		<question points="2" ask="He died on July 2, 1778. He was one of the precursors of French Romanticism.\nWho is it?">
+			<answer value="Voltaire" />
+			<answer value="Condorcet" />
+			<answer value="Rousseau" valid="true" />
+			<answer value="Beaumarchais" />
+			<answer value="Montesquieu" />
+		</question>
+		<question points="3" ask="An automobile pioneer, he died at the age of 57, almost completely ruined. This happened on July 3, 1935.\nWho is it about?">
+			<answer value="Henry Ford" />
+			<answer value="André Citroën" valid="true" />
+			<answer value="Louis Renault" />
+			<answer value="Royce" />
+			<answer value="Levassort" />
+		</question>
+		<question points="4" ask="July 4, 1776, Declaration of Independence of the United States. Its author will be the third President of the Federation.\nWhat is his name?">
+			<answer value="Benjamin Franklin" />
+			<answer value="Monroe" />
+			<answer value="Madison" />
+			<answer value="John Adams" />
+			<answer value="Thomas Jefferson" valid="true" />
+		</question>
+		<question points="3" ask="On July 6, 1809 Napoleon won a victory over Archduke Charles. What is the name of the battle?">
+			<answer value="Jena" />
+			<answer value="Austerlitz" />
+			<answer value="Dresden" />
+			<answer value="Eckmuhl" />
+			<answer value="Wagram" valid="true" />
+		</question>
+		<question points="2" ask="Where did Charles Martel succeed in stopping the Saracens in the year 732?">
+			<answer value="Poitiers" valid="true" />
+			<answer value="Barcelona" />
+			<answer value="Pamplona" />
+			<answer value="Toulouse" />
+			<answer value="Zaragoza" />
+		</question>
+		<question points="2" ask="With the Revolution, the famous Guillotin brought his marvelous invention which he described as follows: 'mechanics falls like lightning, the head flies, blood spurts, man is no more'. What was the profession of the brilliant inventor?">
+			<answer value="Lawyer" />
+			<answer value="Prosecutor" />
+			<answer value="Carpenter" />
+			<answer value="Medicine" valid="true" />
+			<answer value="Man of Letters" />
+		</question>
+		<question points="4" ask="On September 22, 1900, the Republic invited the mayors of France to a royal banquet chaired by Emile Loubet.\nWhat was the number of guests?">
+			<answer value="11,875" />
+			<answer value="13,430" />
+			<answer value="17,895" />
+			<answer value="22,695" valid="true" />
+			<answer value="27,850" />
+		</question>
+	</questions>
+	<questions city="Encyclopia">
+		<question points="4" ask="Which of these very famous films was not directed by Fritz LANG?">
+			<answer value="Mr. the Accursed" />
+			<answer value="The Angel of the Accursed" />
+			<answer value="The Bengal Tiger" />
+			<answer value="Nosferatu the Vampire" valid="true" />
+			<answer value="Metropolis" />
+		</question>
+		<question points="3" ask="Which of these very famous films was not directed by Luis BUNUEL?">
+			<answer value="Los Olvidados" />
+			<answer value="Belle de Jour" />
+			<answer value="Cría cuervos" valid="true" />
+			<answer value="An Andalusian Dog" />
+			<answer value="This obscure Object of Desire" />
+		</question>
+		<question points="2" ask="By which director is the American film:\nClose Encounters of the Third Kind?">
+			<answer value="Steven Spielberg" valid="true" />
+			<answer value="Frank Capra" />
+			<answer value="Stanley Kubrick" />
+			<answer value="François Truffaut" />
+			<answer value="Robert Wise" />
+		</question>
+		<question points="4" ask="Which of these very famous films was not directed by Claude Chabrol?">
+			<answer value="The Unfaithful Wife" />
+			<answer value="The Red Wedding" />
+			<answer value="The Butcher" />
+			<answer value="The Prodigious Decade" />
+			<answer value="Married life" valid="true" />
+		</question>
+		<question points="3" ask="He directed:\nLa Strada,\nLa Dolce Vita,\nSatyricon.\nWho is it about?">
+			<answer value="Antonioni" />
+			<answer value="Bertolucci" />
+			<answer value="Comencini" />
+			<answer value="Fellini" valid="true" />
+			<answer value="Pasolini" />
+		</question>
+		<question points="2" ask="Which of these very famous films is not a western?">
+			<answer value="Professionals" />
+			<answer value="The Wild Ride" />
+			<answer value="Judge and Outlaw" />
+			<answer value="War and Peace" valid="true" />
+			<answer value="Alamo" />
+		</question>
+		<question points="4" ask="His real name was André Raimbourg. He died in 1970. He played in:\nThe 3 Musketeers, The Green Mare, The Brain, and many other films.\nWho is it about?">
+			<answer value="Bourvil" valid="true" />
+			<answer value="Pierre Brasseur" />
+			<answer value="Fernandel" />
+			<answer value="Pierre Fresnay" />
+			<answer value="Jean Gabin" />
+		</question>
+		<question points="3" ask="For all of his work, this genius director won 35 Oscars from 1931 to 1969.\nWho is it about?">
+			<answer value="Frank Capra" />
+			<answer value="John Ford" />
+			<answer value="Walt Disney" valid="true" />
+			<answer value="Jean Renoir" />
+			<answer value="Elia Kazan" />
+		</question>
+		<question points="2" ask="This famous 1959 film won 11 Oscars.\nIt had 452 speaking actors and more than 25,000 extras.\nWhat movie is it about?">
+			<answer value="Gone with the Wind" />
+			<answer value="War and Peace" />
+			<answer value="The Ten Commandments" />
+			<answer value="Ben Hur" valid="true" />
+			<answer value="Cleopatra" />
+		</question>
+		<question points="4" ask="The first automobile competition took place in France in 1894. It was the Paris-Rouen race (126km).\nThe price was shared between Panhard and Peugeot.\nAt what average speed did the runners complete the course?">
+			<answer value="18 km/h" valid="true" />
+			<answer value="24 km/h" />
+			<answer value="43 km/h" />
+			<answer value="57 km/h" />
+			<answer value="68 km/h" />
+		</question>
+		<question points="3" ask="This great driver, who died in 1975, held the record for grand prix contested (176).\nWho was this runner from Great Britain?">
+			<answer value="Jack Brabham" />
+			<answer value="Jim Clark" />
+			<answer value="Peter Collins" />
+			<answer value="Graham Hill" valid="true" />
+			<answer value="Bruce McLaren" />
+		</question>
+		<question points="2" ask="He won Milan-San Remo 7 times, Liège-Bastogne-Liège 5 times, the Tour de France 5 times.\nWhich cyclist is this?">
+			<answer value="Anquetil" />
+			<answer value="Bobet" />
+			<answer value="Merckx" valid="true" />
+			<answer value="Aimar" />
+			<answer value="Zoetemelk" />
+		</question>
+		<question points="4" ask="This cyclist, who won the Tour de France five times, wore the yellow jersey during the entire race in 1961.\nWho is it about?">
+			<answer value="Anquetil" valid="true" />
+			<answer value="Bobet" />
+			<answer value="Merckx" />
+			<answer value="Aimar" />
+			<answer value="Zoetemelk" />
+		</question>
+		<question points="3" ask="The most famous rugby teams have very well-known emblems.\nWhat is that of Wales?">
+			<answer value="Rooster" />
+			<answer value="Thistle" />
+			<answer value="Leek" valid="true" />
+			<answer value="Rose" />
+			<answer value="Clover" />
+		</question>
+		<question points="2" ask="The most famous rugby teams have very well-known emblems.\nWhat is that of England?">
+			<answer value="Rooster" />
+			<answer value="Rose" valid="true" />
+			<answer value="Thistle" />
+			<answer value="Clover" />
+			<answer value="Leek" />
+		</question>
+		<question points="4" ask="In 1975, in Beltsville, Maryland, U.S.A., the longest singles tennis match ever played took place on May 10 and 11.\nHow long did this part last?">
+			<answer value="20 hours" />
+			<answer value="25 hours" />
+			<answer value="30 hours" valid="true" />
+			<answer value="35 hours" />
+			<answer value="40 hours" />
+		</question>
+		<question points="3" ask="Which of the following is not a name for a deck of cards?">
+			<answer value="Canasta" />
+			<answer value="Ball" valid="true" />
+			<answer value="Manila" />
+			<answer value="Battle" />
+			<answer value="Whist" />
+		</question>
+		<question points="2" ask="This musician, who died at the age of 35 in 1791, composed more than 600 works.\nWho is it about?">
+			<answer value="Bach" />
+			<answer value="Beethoven" />
+			<answer value="Haydn" />
+			<answer value="Mozart" valid="true" />
+			<answer value="Schubert" />
+		</question>
+		<question points="2" ask="We owe this musician, who died in 1750, numerous pieces for organ and harpsichord. He was a great master of religious music.\nWho is it about?">
+			<answer value="Bach" valid="true" />
+			<answer value="Beethoven" />
+			<answer value="Haydn" />
+			<answer value="Mozart" />
+			<answer value="Schubert" />
+		</question>
+		<question points="3" ask="This composer, who died in 1827, created nine symphonies, including one with choirs, which the whole world knows.\nWho is it about?">
+			<answer value="Bach" />
+			<answer value="Beethoven" valid="true" />
+			<answer value="Haydn" />
+			<answer value="Mozart" />
+			<answer value="Schubert" />
+		</question>
+		<question points="4" ask="This Austrian composer, who died in 1828, is best known for his numerous and wonderful songs (more than 600). His last symphony remained unfinished.\nWho is it about?">
+			<answer value="Bach" />
+			<answer value="Beethoven" />
+			<answer value="Haydn" />
+			<answer value="Mozart" />
+			<answer value="Schubert" valid="true" />
+		</question>
+		<question points="3" ask="How old was the world's oldest tenor to perform in public, Giovanni Martinelli, as Altoum in Turandot, on February 4, 1967?">
+			<answer value="61 years old" />
+			<answer value="71 years old" />
+			<answer value="81 years old" valid="true" />
+			<answer value="91 years old" />
+		</question>
+		<question points="4" ask="Some painters, like Leonardo da Vinci, have left us around fifteen works.\nOthers were much more prolific, like Picasso.\nHow many works did Picasso leave us?">
+			<answer value="5000" />
+			<answer value="10000" />
+			<answer value="15000" />
+			<answer value="20000" />
+			<answer value="25000" valid="true" />
+		</question>
+		<question points="3" ask="Among the following great painters, who was not an impressionist?">
+			<answer value="Géricault" valid="true" />
+			<answer value="Degas" />
+			<answer value="Monet" />
+			<answer value="Cezanne" />
+			<answer value="Manet" />
+		</question>
+		<question points="2" ask="What do the names of:\ndivisionism, fauvism, pointillism, orphism, purism and tachism?">
+			<answer value="groups of painters" valid="true" />
+			<answer value="literary movements" />
+			<answer value="musical trends" />
+			<answer value="sculpture schools" />
+		</question>
+		<question points="4" ask="Which of the following authors has not distinguished himself in science fiction?">
+			<answer value="Jules Verne" />
+			<answer value="René Barjavel" />
+			<answer value="Isaac Asimov" />
+			<answer value="Emily Brontë" valid="true" />
+			<answer value="Mary Shelley" />
+		</question>
+		<question points="2" ask="Among the following authors, which has not distinguished itself in the detective novel?">
+			<answer value="Henri Troyat" valid="true" />
+			<answer value="Edgar Poe" />
+			<answer value="Maurice Leblanc" />
+			<answer value="Gaston Leroux" />
+			<answer value="Georges Simenon" />
+		</question>
+		<question points="3" ask="In 1959, in the magazine “Pilote”, a new comic book character was introduced, Asterix the Gaul.\nWho is its designer?">
+			<answer value="Peyo" />
+			<answer value="Franquin" />
+			<answer value="Goscinny" />
+			<answer value="Sempé" />
+			<answer value="Uderzo" valid="true" />
+		</question>
+		<question points="4" ask="This great statesman wrote a book that sold 800 million copies worldwide. His entire work has had a circulation of 2 billion copies.\nWhich man is this?">
+			<answer value="Mao Tse-tung" valid="true" />
+			<answer value="General de Gaulle" />
+			<answer value="Lenin" />
+			<answer value="Stalin" />
+			<answer value="John F. Kennedy" />
+		</question>
+	</questions>
+</root>

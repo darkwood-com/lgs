@@ -1,0 +1,2272 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+	<inits>
+		<init key="Main">
+			<data key="backgroundImage" value="/datas/images/16653.png" />
+			<data key="startupSound" value="" />
+			<data key="statupCard" value="4101" />
+		</init>
+		<init key="Intro">
+			<data key="intro1Image" value="/datas/images/2398.png" />
+			<data key="intro2Image" value="/datas/images/29463.png" />
+		</init>
+		<init key="Game">
+		</init>
+		<init key="End">
+			<data key="end1Image" value="/datas/images/24517.png" />
+			<data key="end2Image" value="/datas/images/24968.png" />
+		</init>
+	</inits>
+	<sounds>
+		<sound key="aaah" value="/datas/sounds/aaah.mp3" />
+		<sound key="aaaah" value="/datas/sounds/aaaah.mp3" />
+		<sound key="alleluia" value="/datas/sounds/alleluia.mp3" />
+		<sound key="ange" value="/datas/sounds/ange.mp3" />
+		<sound key="angel" value="/datas/sounds/angel.mp3" />
+		<sound key="argn" value="/datas/sounds/argn.mp3" />
+		<sound key="bierre" value="/datas/sounds/bierre.mp3" />
+		<sound key="brasse" value="/datas/sounds/brasse.mp3" />
+		<sound key="brasse_boucle" value="/datas/sounds/brasse_boucle.mp3" />
+		<sound key="chat" value="/datas/sounds/chat.mp3" />
+		<sound key="chute" value="/datas/sounds/chute.mp3" />
+		<sound key="claps" value="/datas/sounds/claps.mp3" />
+		<sound key="claqueporte" value="/datas/sounds/claqueporte.mp3" />
+		<sound key="clochettes" value="/datas/sounds/clochettes.mp3" />
+		<sound key="clochettes2" value="/datas/sounds/clochettes2.mp3" />
+		<sound key="coq" value="/datas/sounds/coq.mp3" />
+		<sound key="corbeau_boucle" value="/datas/sounds/corbeau_boucle.mp3" />
+		<sound key="corbeau" value="/datas/sounds/corbeau.mp3" />
+		<sound key="cot" value="/datas/sounds/cot.mp3" />
+		<sound key="coucou_boucle" value="/datas/sounds/coucou_boucle.mp3" />
+		<sound key="coucou" value="/datas/sounds/coucou.mp3" />
+		<sound key="crincrin" value="/datas/sounds/crincrin.mp3" />
+		<sound key="deogratias" value="/datas/sounds/deogratias.mp3" />
+		<sound key="enclume" value="/datas/sounds/enclume.mp3" />
+		<sound key="ermite" value="/datas/sounds/ermite.mp3" />
+		<sound key="faux1" value="/datas/sounds/faux1.mp3" />
+		<sound key="faux2" value="/datas/sounds/faux2.mp3" />
+		<sound key="faux3" value="/datas/sounds/faux3.mp3" />
+		<sound key="faux4" value="/datas/sounds/faux4.mp3" />
+		<sound key="faux5" value="/datas/sounds/faux5.mp3" />
+		<sound key="faux6" value="/datas/sounds/faux6.mp3" />
+		<sound key="faux7" value="/datas/sounds/faux7.mp3" />
+		<sound key="fermeporte" value="/datas/sounds/fermeporte.mp3" />
+		<sound key="fete" value="/datas/sounds/fete.mp3" />
+		<sound key="flute" value="/datas/sounds/flute.mp3" />
+		<sound key="flute2" value="/datas/sounds/flute2.mp3" />
+		<sound key="gardien" value="/datas/sounds/gardien.mp3" />
+		<sound key="gloria" value="/datas/sounds/gloria.mp3" />
+		<sound key="goutte3" value="/datas/sounds/goutte3.mp3" />
+		<sound key="goutte" value="/datas/sounds/goutte.mp3" />
+		<sound key="grillejardin" value="/datas/sounds/grillejardin.mp3" />
+		<sound key="grincements_armoire" value="/datas/sounds/grincements_armoire.mp3" />
+		<sound key="grincements_coffre" value="/datas/sounds/grincements_coffre.mp3" />
+		<sound key="grognements" value="/datas/sounds/grognements.mp3" />
+		<sound key="haltela" value="/datas/sounds/haltela.mp3" />
+		<sound key="juste1" value="/datas/sounds/juste1.mp3" />
+		<sound key="juste2" value="/datas/sounds/juste2.mp3" />
+		<sound key="juste3" value="/datas/sounds/juste3.mp3" />
+		<sound key="juste4" value="/datas/sounds/juste4.mp3" />
+		<sound key="juste5" value="/datas/sounds/juste5.mp3" />
+		<sound key="juste6" value="/datas/sounds/juste6.mp3" />
+		<sound key="juste7" value="/datas/sounds/juste7.mp3" />
+		<sound key="knock" value="/datas/sounds/knock.mp3" />
+		<sound key="leroi" value="/datas/sounds/leroi.mp3" />
+		<sound key="lgs" value="/datas/sounds/lgs.mp3" />
+		<sound key="mouette" value="/datas/sounds/mouette.mp3" />
+		<sound key="mouette_boucle" value="/datas/sounds/mouette_boucle.mp3" />
+		<sound key="morceau_flute" value="/datas/sounds/morceau_flute.mp3" />
+		<sound key="oiseau" value="/datas/sounds/oiseau.mp3" />
+		<sound key="oiseaux_boucle" value="/datas/sounds/oiseaux_boucle.mp3" />
+		<sound key="ouah5" value="/datas/sounds/ouah5.mp3" />
+		<sound key="ouvreporte" value="/datas/sounds/ouvreporte.mp3" />
+		<sound key="pascourant" value="/datas/sounds/pascourant.mp3" />
+		<sound key="piece_tronc" value="/datas/sounds/piece_tronc.mp3" />
+		<sound key="portes_eglise" value="/datas/sounds/portes_eglise.mp3" />
+		<sound key="piece" value="/datas/sounds/piece.mp3" />
+		<sound key="piu2" value="/datas/sounds/piu2.mp3" />
+		<sound key="piu3" value="/datas/sounds/piu3.mp3" />
+		<sound key="plongeon" value="/datas/sounds/plongeon.mp3" />
+		<sound key="rire1" value="/datas/sounds/rire1.mp3" />
+		<sound key="rire2" value="/datas/sounds/rire2.mp3" />
+		<sound key="rire3" value="/datas/sounds/rire3.mp3" />
+		<sound key="rires_boucle" value="/datas/sounds/rires_boucle.mp3" />
+		<sound key="seagulls_2" value="/datas/sounds/seagulls_2.mp3" />
+		<sound key="seagulls_boucle" value="/datas/sounds/seagulls_boucle.mp3" />
+		<sound key="setson" value="/datas/sounds/setson.mp3" />
+		<sound key="slurp" value="/datas/sounds/slurp.mp3" />
+		<sound key="traite" value="/datas/sounds/traite.mp3" />
+		<sound key="vache" value="/datas/sounds/vache.mp3" />
+		<sound key="versevin" value="/datas/sounds/versevin.mp3" />
+	</sounds>
+	<cards>
+		<card key="4101" imagePath="/datas/images/6487.png" mapX="66" mapY="130">
+			<messages>
+				<message key="position" value="You are at a crossroads in the open countryside. It's warm and pleasant for walking." />
+				<message key="description" value="Four paths are available to you. Three signs, which the wear of time has made almost illegible, give you little information on the direction to take.\nYou can go to..." />
+				<message key="action" value="#north.#\n#south.#\n#east.#\n#west.#" />
+				<message key="angel" value="I am your guardian angel, and I will be there from time to time to give you information about your journey when you need it. Don't hesitate to summon me when I appear. You are now at the starting point of your adventure. You have to make your choice. To the east, you will find a shop where you can buy some useful items. The northern and western paths will allow you to begin your quest." />
+			</messages>
+			<surfaces>
+				<surface action="north." x="280" y="2" width="96" height="119" />
+				<surface action="west." x="167" y="49" width="112" height="113" />
+				<surface action="south." x="193" y="161" width="179" height="59" />
+				<surface action="west." x="375" y="96" width="104" height="25" />
+				<surface action="east." x="373" y="118" width="140" height="91" />
+				<surface action="north." x="372" y="0" width="72" height="91" />
+				<surface action="papillon" x="423" y="38" width="66" height="55" />
+			</surfaces>
+			<actions>
+				<action key="north." type="goCard" value="4929" />
+				<action key="south." type="printMsg" value="Come on, you're not going to return to your monastery without having completed your journey!" />
+				<action key="east." type="goCard" value="4651" />
+				<action key="west." type="goCard" value="5535" />
+				<action key="papillon" type="printMsg" value="This magnificent butterfly seems to bode well for the rest of your journey." />
+			</actions>
+		</card>
+		<card key="4651" imagePath="/datas/images/5233.png" mapX="74" mapY="130">
+			<messages>
+				<message key="position" value="You are in front of a store. What an idea to start a business in such a peaceful place!" />
+				<message key="description" value="Such a shop, quite miserable and also isolated, must belong to an original... This seems unappealing to you. But, after all, you will see many others!\nWhat do you want to do?" />
+				<message key="action" value="#Enter the store.#\n#Head back towards the crossroads.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Enter the store." x="215" y="26" width="244" height="125" />
+				<surface action="Head back towards the crossroads." x="166" y="167" width="347" height="52" />
+				<surface action="oiseau" x="169" y="2" width="54" height="53" />
+			</surfaces>
+			<actions>
+				<action key="Enter the store." type="goCard" value="5725" />
+				<action key="Head back towards the crossroads." type="goCard" value="4101" />
+				<action key="oiseau" type="printMsg" value="The melodious song of this bird charms your ears." />
+			</actions>
+		</card>
+		<card key="4929" imagePath="/datas/images/14659.png" mapX="84" mapY="119">
+			<messages>
+				<message key="position" value="You are at a fork between two mountain roads." />
+				<message key="description" value="The pass road skirts the sparkling mountain which\nstands before you. This passage seems steep\nand stony... but you have good legs.\nA bright glow at the side of the path catches your eye. You can..." />
+				<message key="action" value="#go northwest towards the pass.#\n#go south.#\n#go east.#\n#examine this glow.#" />
+				<message key="angel" value="To the east, you will find Encyclopia Abbey. This is the ultimate goal of your journey. But, to deserve the right to enter this holy abbey, you must have undergone the trials of the two cities of Matem and Litter, as well as those of the island of Histora.\nSo, good luck! May the road be favorable to you!\nDon't forget that I will be there, more often than not, to help you with my informed advice!" />
+			</messages>
+			<surfaces>
+				<surface action="go northwest towards the pass." x="166" y="1" width="101" height="214" />
+				<surface action="go east." x="344" y="0" width="169" height="173" />
+				<surface action="go south." x="264" y="172" width="123" height="47" />
+			</surfaces>
+			<actions>
+				<action key="go northwest towards the pass." type="goCard" value="2149" />
+				<action key="go south." type="goCard" value="4101" />
+				<action key="go east." type="goCard" value="6816" />
+				<action key="examine this glow." type="customAction" value="lueur" />
+			</actions>
+		</card>
+		<card key="5535" imagePath="/datas/images/3098.png" mapX="46" mapY="124">
+			<messages>
+				<message key="position" value="You are at a crossroads. You sit for a moment in the shade of a large fir tree." />
+				<message key="description" value="The green countryside, at the foot of the first rolling foothills, enchants your adventurous spirit. Pleasant walking tones you up.\nTo the south you see an old house.\nYou can go..." />
+				<message key="action" value="#north towards the mountains.#\n#south towards the house.#\n#east.#\n#west.#\n#pick flowers in the fields.#" />
+				<message key="angel" value="The town of Litter is nearby to the northwest. The trials that the inhabitants of this city have in store for you will surely suit you. You can also go and consult the old wise man who lives in this house, to the south.\nIf you feel like it, you can climb towards the pass, towards Matem and the Abbey, or even return to your starting point." />
+			</messages>
+			<surfaces>
+				<surface action="north towards the mountains." x="272" y="0" width="241" height="122" />
+				<surface action="east." x="306" y="122" width="207" height="89" />
+				<surface action="south towards the house." x="167" y="145" width="137" height="71" />
+				<surface action="west." x="166" y="0" width="107" height="145" />
+			</surfaces>
+			<actions>
+				<action key="north towards the mountains." type="goCard" value="2149" />
+				<action key="south towards the house." type="goCard" value="8322" />
+				<action key="east." type="goCard" value="4101" />
+				<action key="west." type="goCard" value="7872" />
+				<action key="pick flowers in the fields." type="customAction" value="fleurs" />
+			</actions>
+		</card>
+		<card key="5725" imagePath="/datas/images/25524.png" mapX="86" mapY="130">
+			<messages>
+				<message key="position" value="You are in an old store. Obviously, they sell mainly things to cultivate the mind." />
+				<message key="description" value="The shopkeeper saw you coming: he is ready to serve you. You feel the greed of his eager gaze weighing on you. Are you going to buy or resell something? You have @gold @pieceor." />
+				<message key="action" value="#buy a glossary.#\n#buy an abacus.#\n#buy an atlas.#\n#talk to the shopkeeper.#\n#leave the store.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="buy a glossary." x="439" y="9" width="72" height="46" />
+				<surface action="buy an abacus." x="441" y="107" width="72" height="46" />
+				<surface action="buy an atlas." x="441" y="59" width="72" height="46" />
+				<surface action="talk to the shopkeeper." x="185" y="18" width="132" height="156" />
+				<surface action="leave the store." x="168" y="178" width="345" height="38" />
+			</surfaces>
+			<actions>
+				<action key="leave the store." type="goCard" value="4651" />
+				<action key="talk to the shopkeeper." type="customAction" value="commerçant" />
+				<action key="buy a glossary." type="customAction" value="lexique" />
+				<action key="buy an abacus." type="customAction" value="boulier" />
+				<action key="buy an atlas." type="customAction" value="atlas" />
+				<action key="resell the lexicon." type="customAction" value="lexique" />
+				<action key="resell the abacus." type="customAction" value="boulier" />
+				<action key="resell the atlas." type="customAction" value="atlas" />
+			</actions>
+		</card>
+		<card key="6816" imagePath="/datas/images/6332.png" mapX="97" mapY="115">
+			<messages>
+				<message key="position" value="You are in front of a fortified abbey. You think of your monastery, so far away, which you miss..." />
+				<message key="description" value="So, this is the domain of Encyclopia! The site is majestic and emotion grips you at the thought that one day, perhaps, you will be the father director of this abbey...\nWhat do you want to do?" />
+				<message key="action" value="#Enter the abbey.#\n#Head back towards the fork.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Enter the abbey." x="283" y="0" width="167" height="148" />
+				<surface action="Head back towards the fork." x="166" y="165" width="347" height="52" />
+			</surfaces>
+			<actions>
+				<action key="Enter the abbey." type="customAction" value="entrer_abbaye" />
+				<action key="Head back towards the fork." type="goCard" value="4929" />
+			</actions>
+		</card>
+		<card key="2149" imagePath="/datas/images/9650.png" mapX="85" mapY="100">
+			<messages>
+				<message key="position" value="You are at the top of a pass. What a climb! Sweat runs down your neck..." />
+				<message key="description" value="The panorama is magnificent, but fatigue is starting to make itself felt.\nOn your left you see an old mountain hut.\nYou can go..." />
+				<message key="action" value="#to the north.#\n#to the southwest.#\n#to the southeast.#\n#east.#\n#towards the mountain shelter.#" />
+				<message key="angel" value="The eastern path goes towards the town of Matem. The northern one leads instead to Litter. Perhaps you would prefer to rest for a few moments in the small shelter you see on the left, or even go visit the Sage who lives to the southwest?\nEncyclopia Abbey is located to the southeast." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="239" y="0" width="167" height="149" />
+				<surface action="to the southeast." x="420" y="161" width="93" height="56" />
+				<surface action="to the southwest." x="230" y="151" width="191" height="66" />
+				<surface action="towards the mountain shelter." x="167" y="20" width="60" height="197" />
+				<surface action="east." x="405" y="107" width="107" height="55" />
+				<surface action="to the north." x="405" y="0" width="105" height="104" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="9383" />
+				<action key="to the southwest." type="goCard" value="5535" />
+				<action key="to the southeast." type="goCard" value="4929" />
+				<action key="east." type="goCard" value="9819" />
+				<action key="towards the mountain shelter." type="goCard" value="10279" />
+			</actions>
+		</card>
+		<card key="7872" imagePath="/datas/images/8541.png" mapX="21" mapY="116">
+			<messages>
+				<message key="position" value="You are in front of the south gate of the town of Litter." />
+				<message key="description" value="The fortified city, which stands proudly on a granite peak, seems rich and lively.\nOn the side of the path, you see some very fragrant herbs growing wild.\nYou can ..." />
+				<message key="action" value="#enter the city.#\n#pick the herbs.#\n#go southeast.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the city." x="239" y="0" width="167" height="149" />
+				<surface action="go southeast." x="240" y="155" width="169" height="62" />
+			</surfaces>
+			<actions>
+				<action key="enter the city." type="goCard" value="2990" />
+				<action key="go southeast." type="goCard" value="5535" />
+				<action key="pick the herbs." type="customAction" value="cueillir_herbes" />
+			</actions>
+		</card>
+		<card key="8322" imagePath="/datas/images/7243.png" mapX="43" mapY="125">
+			<messages>
+				<message key="position" value="You are in front of an old house. The place seems a cool, peaceful refuge..." />
+				<message key="description" value="Built in front of a grove of deciduous trees and surrounded by flowering embankments, the house seems very welcoming. It must be good to stop there.\nYou can ..." />
+				<message key="action" value="#enter the house.#\n#return to the crossroads.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the house." x="239" y="0" width="237" height="176" />
+				<surface action="return to the crossroads." x="167" y="180" width="346" height="36" />
+			</surfaces>
+			<actions>
+				<action key="enter the house." type="goCard" value="11322" />
+				<action key="return to the crossroads." type="goCard" value="5535" />
+			</actions>
+		</card>
+		<card key="8813" imagePath="/datas/images/17715.png" mapX="104" mapY="115">
+			<messages>
+				<message key="position" value="You are within the grounds of Encyclopia Abbey, tired but happy to be close to success." />
+				<message key="description" value="After your hard walk under the blazing sun, you are delighted to find freshness in the paved courtyard. The light scent of flowering rose hips adds to the sweetness of the moment.\nYou can ..." />
+				<message key="action" value="#go to the north tower.#\n#go to the south tower.#\n#go east.#\n#come out of the abbey.#" />
+				<message key="angel" value="Ah! I feel better since you entered the abbey. Believe me, it hasn't always been easy being your guardian angel. But, overall, I have to admit that you're pretty good. If ! If ! I say it like I mean it.\nHere, it's simple: the north tower is reserved for contemplative nuns; the south tower is occupied by the copyist monks. To the east, you will finally find the library." />
+			</messages>
+			<surfaces>
+				<surface action="go to the north tower." x="384" y="0" width="54" height="57" />
+				<surface action="go to the south tower." x="167" y="0" width="116" height="216" />
+				<surface action="go east." x="439" y="0" width="74" height="216" />
+				<surface action="come out of the abbey." x="283" y="179" width="159" height="38" />
+			</surfaces>
+			<actions>
+				<action key="go to the north tower." type="goCard" value="11876" />
+				<action key="go to the south tower." type="goCard" value="12487" />
+				<action key="go east." type="goCard" value="12973" />
+				<action key="come out of the abbey." type="goCard" value="6816" />
+			</actions>
+		</card>
+		<card key="9383" imagePath="/datas/images/13638.png" mapX="74" mapY="75">
+			<messages>
+				<message key="position" value="You are at the junction between a path that descends from the mountain and a wider road." />
+				<message key="description" value="There is an orchard not far in front of you. From here you can see very beautiful red apples, ripe, which only seem to be hanging on the branches waiting for an amateur.\nYou can..." />
+				<message key="action" value="#go south towards the pass.#\n#go east.#\n#go west.#\n#pick some apples.#" />
+				<message key="angel" value="On one side, the town of Matem; on the other, that of Litter. What do you choose?\nOr, perhaps you prefer to return to the pass?\nThe orchard you see belongs to the innkeeper on the main road. He is particularly proud of this type of apple that he grows." />
+			</messages>
+			<surfaces>
+				<surface action="go south towards the pass." x="293" y="159" width="125" height="58" />
+				<surface action="go east." x="388" y="104" width="125" height="58" />
+				<surface action="go west." x="166" y="101" width="162" height="58" />
+			</surfaces>
+			<actions>
+				<action key="go south towards the pass." type="goCard" value="2149" />
+				<action key="go east." type="goCard" value="13563" />
+				<action key="go west." type="goCard" value="13968" />
+				<action key="pick some apples." type="customAction" value="pommes" />
+			</actions>
+		</card>
+		<card key="9819" imagePath="/datas/images/24172.png" mapX="114" mapY="92">
+			<messages>
+				<message key="position" value="You are in sight of the town of Matem which rises below." />
+				<message key="description" value="Fields of rye and oats stretch almost as far as the eye can see in the valley at your feet. Matica, princess of Matem, must be very rich to own so much fertile land.\nYou can ..." />
+				<message key="action" value="#join the main road.#\n#bypass the city#\n#down to the river.#\n#climb towards the pass.#\n#pick flowers in the fields.#" />
+				<message key="angel" value="To the north, you will join the road which connects the two towns of Matem and Litter.\nHave I ever told you that you can only reach the island of Histora from one of these two towns?\nYou can also return to the pass.\nTo the east, you will reach Matem, but is this the right way to enter?" />
+			</messages>
+			<surfaces>
+				<surface action="join the main road." x="168" y="0" width="115" height="152" />
+				<surface action="climb towards the pass." x="167" y="150" width="171" height="66" />
+				<surface action="bypass the city" x="337" y="122" width="174" height="95" />
+			</surfaces>
+			<actions>
+				<action key="join the main road." type="goCard" value="14986" />
+				<action key="bypass the city" type="goCard" value="14394" />
+				<action key="down to the river." type="goCard" value="14394" />
+				<action key="climb towards the pass." type="goCard" value="2149" />
+				<action key="pick flowers in the fields." type="customAction" value="fleurs" />
+			</actions>
+		</card>
+		<card key="10279" imagePath="/datas/images/20812.png" mapX="81" mapY="103">
+			<messages>
+				<message key="position" value="You are in front of a mountain refuge. The coolness of the shade of the trees perks you up." />
+				<message key="description" value="The refuge, immersed in greenery, most certainly served the surrounding lords during hunting periods. The roof, recently redone, oozes resin and smells of cut fir.\nYou can ..." />
+				<message key="action" value="#enter the shelter.#\n#head back towards the pass.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the shelter." x="204" y="27" width="235" height="174" />
+				<surface action="head back towards the pass." x="166" y="202" width="347" height="14" />
+			</surfaces>
+			<actions>
+				<action key="enter the shelter." type="goCard" value="15536" />
+				<action key="head back towards the pass." type="goCard" value="2149" />
+			</actions>
+		</card>
+		<card key="11322" imagePath="/datas/images/7577.png" mapX="36" mapY="130">
+			<messages>
+				<message key="position" value="You are in an old house. Its owner is a learned scholar, a doctor, perhaps?" />
+				<message key="description" value="A venerable sage welcomes you and asks you to enter his abode. He tells you that he is always looking for books to perfect his knowledge of the world.\nYou can ..." />
+				<message key="action" value="#speak with the wise man.#\n#get out of the house.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="speak with the wise man." x="177" y="9" width="164" height="177" />
+				<surface action="get out of the house." x="302" y="185" width="211" height="30" />
+			</surfaces>
+			<actions>
+				<action key="speak with the wise man." type="goCard" value="17027" />
+				<action key="get out of the house." type="goCard" value="8322" />
+				<action key="offer your atlas to the wise." type="customAction" value="atlas_sage" />
+			</actions>
+		</card>
+		<card key="11876" imagePath="/datas/images/13132.png" mapX="104" mapY="106">
+			<messages>
+				<message key="position" value="You are in the north tower of Encyclopia Abbey." />
+				<message key="description" value="This tower, cool and clear, is an oratory. A young nun, who was preparing bouquets to decorate the altar, turns to you. She's waiting for you to introduce yourself.\nYou can..." />
+				<message key="action" value="#talk with the nun.#\n#come out of the tower.#\n#Give your flowers to the nun.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk with the nun." x="355" y="107" width="135" height="108" />
+				<surface action="come out of the tower." x="168" y="184" width="172" height="33" />
+			</surfaces>
+			<actions>
+				<action key="talk with the nun." type="goCard" value="17469" />
+				<action key="come out of the tower." type="goCard" value="8813" />
+				<action key="Give your flowers to the nun." type="customAction" value="fleurs_nonne" />
+			</actions>
+		</card>
+		<card key="12487" imagePath="/datas/images/19910.png" mapX="103" mapY="122">
+			<messages>
+				<message key="position" value="You are in the south tower of Encyclopia Abbey." />
+				<message key="description" value="A smell of ink, leather binding and dried dyes reminds you of your monastery. It is the workshop of the abbey's copyist monks. One of them looks at you kindly.\nYou can ..." />
+				<message key="action" value="#speak with the monk.#\n#come out of the tower.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="speak with the monk." x="239" y="0" width="82" height="197" />
+				<surface action="come out of the tower." x="167" y="194" width="245" height="23" />
+			</surfaces>
+			<actions>
+				<action key="speak with the monk." type="goCard" value="18098" />
+				<action key="come out of the tower." type="goCard" value="8813" />
+			</actions>
+		</card>
+		<card key="12973" imagePath="/datas/images/18415.png" mapX="117" mapY="120">
+			<messages>
+				<message key="position" value="You are in front of the abbey library. Everything is peaceful around you." />
+				<message key="description" value="This is the home of Encyclopia, Keeper of Knowledge! A deep emotion overcomes you... You notice a path which continues towards the east.\nYou can ..." />
+				<message key="action" value="#enter the library.#\n#go east.#\n#go west.#" />
+				<message key="angel" value="Do you have the necessary Talents to be accepted by Encyclopia?\nOtherwise, have you gone to look in the abbey towers?\nThe tower I prefer is the one further away, towards the east. Hmm ! It smells so good inside!" />
+			</messages>
+			<surfaces>
+				<surface action="enter the library." x="256" y="19" width="167" height="149" />
+				<surface action="go east." x="429" y="0" width="84" height="217" />
+				<surface action="go west." x="168" y="0" width="84" height="217" />
+			</surfaces>
+			<actions>
+				<action key="enter the library." type="customAction" value="entrer_bibliotheque" />
+				<action key="go east." type="goCard" value="19126" />
+				<action key="go west." type="goCard" value="8813" />
+			</actions>
+		</card>
+		<card key="13563" imagePath="/datas/images/22984.png" mapX="88" mapY="72">
+			<messages>
+				<message key="position" value="You are on the main road, at a crossroads. The heat is overwhelming." />
+				<message key="description" value="The long walk has exhausted you and the muscles in your calves, strained to the extreme, are making you suffer torture. You sit on the side of the road for a moment. A path leads to an inn. You can go..." />
+				<message key="action" value="#to the inn.#\n#east.#\n#west.#" />
+				<message key="angel" value="No ! Go your way! You are not going to enter this place of debauchery, you, a pious and sober monk.\nLitter and Matem are very close. The road is beautiful, safe, and ideal weather for walking.\nFinally ! What I say about it is only advice from a guardian angel." />
+			</messages>
+			<surfaces>
+				<surface action="to the inn." x="276" y="0" width="130" height="155" />
+				<surface action="east." x="333" y="155" width="180" height="62" />
+				<surface action="east." x="410" y="74" width="103" height="127" />
+				<surface action="west." x="168" y="89" width="108" height="127" />
+				<surface action="west." x="170" y="154" width="163" height="64" />
+			</surfaces>
+			<actions>
+				<action key="to the inn." type="goCard" value="19631" />
+				<action key="east." type="goCard" value="14986" />
+				<action key="west." type="goCard" value="9383" />
+			</actions>
+		</card>
+		<card key="13968" imagePath="/datas/images/6090.png" mapX="59" mapY="75">
+			<messages>
+				<message key="position" value="You are in front of the east gate of Litter. You start to feel tired." />
+				<message key="description" value="The sea is not very far away and you can smell its acrid scent. Litter impresses you: you have never seen a city this big. A narrow road crosses the moor towards the north.\nYou can ..." />
+				<message key="action" value="#go north.#\n#go east.#\n#enter Litter.#" />
+				<message key="angel" value="Here you are in sight of Litter. You can enter right away, there are no guards at the entrance to this city.\nYou can also go towards Matem, either directly or along the coast.\nHave you purchased all the necessary items?" />
+			</messages>
+			<surfaces>
+				<surface action="enter Litter." x="167" y="4" width="284" height="114" />
+				<surface action="go north." x="365" y="121" width="148" height="55" />
+				<surface action="go north." x="451" y="0" width="62" height="150" />
+				<surface action="go east." x="172" y="156" width="180" height="61" />
+				<surface action="enter Litter." x="320" y="22" width="45" height="129" />
+			</surfaces>
+			<actions>
+				<action key="go north." type="goCard" value="20556" />
+				<action key="go east." type="goCard" value="9383" />
+				<action key="enter Litter." type="goCard" value="3901" />
+			</actions>
+		</card>
+		<card key="14394" imagePath="/datas/images/3515.png" mapX="159" mapY="90">
+			<messages>
+				<message key="position" value="You are at the edge of the river which crosses Matem." />
+				<message key="description" value="The waves flow quickly towards the city. You are really hesitant about what to do: water is not your favorite element, but, on the other hand, going up this long path through fields hardly inspires you... What to do?" />
+				<message key="action" value="#Dive into the river and swim#\n#to enter Matem.#\n#Retrace your steps.#" />
+				<message key="angel" value="Oh, there! there ! The current is fast!\nOf course, he would drag you into Matem's heart in less time than it takes to say it... But, in your place, I would be wary.\nFinally ! You do as you want. If you sink, I'm here.\nBrr! I hope the water isn't too cold. I hate getting my wings wet!" />
+			</messages>
+			<surfaces>
+				<surface action="Dive into the river and swim" x="201" y="47" width="312" height="145" />
+				<surface action="Retrace your steps." x="322" y="191" width="176" height="26" />
+			</surfaces>
+			<actions>
+				<action key="Dive into the river and swim" type="goCard" value="31118" />
+				<action key="to enter Matem." type="goCard" value="31118" />
+				<action key="Retrace your steps." type="goCard" value="9819" />
+			</actions>
+		</card>
+		<card key="14986" imagePath="/datas/images/15198.png" mapX="113" mapY="65">
+			<messages>
+				<message key="position" value="You are in front of Matem Gate, on the main road." />
+				<message key="description" value="The city of Matem, imposing by the harmony and power of its fortifications, seems invincible. The surrounding countryside exudes serenity. The nearby sea fills the air with salty smells.\nYou can ..." />
+				<message key="action" value="#follow the coast towards the northwest.#\n#bypass Matem from the south.#\n#enter Matem.#\n#go west.#" />
+				<message key="angel" value="Here you are in sight of Matem. You can go straight in. But maybe you prefer to go through the south entrance?\nYou can also go towards Litter, either directly or along the coast.\nHave you collected any Talents yet? Don't forget that they are essential to you." />
+			</messages>
+			<surfaces>
+				<surface action="follow the coast towards the northwest." x="167" y="71" width="126" height="85" />
+				<surface action="bypass Matem from the south." x="356" y="126" width="157" height="34" />
+				<surface action="enter Matem." x="293" y="19" width="148" height="107" />
+				<surface action="go west." x="204" y="160" width="230" height="58" />
+				<surface action="bypass Matem from the south." x="441" y="98" width="72" height="37" />
+			</surfaces>
+			<actions>
+				<action key="follow the coast towards the northwest." type="goCard" value="20556" />
+				<action key="bypass Matem from the south." type="goCard" value="9819" />
+				<action key="enter Matem." type="goCard" value="3573" />
+				<action key="go west." type="goCard" value="13563" />
+			</actions>
+		</card>
+		<card key="15536" imagePath="/datas/images/23111.png" mapX="74" mapY="103">
+			<messages>
+				<message key="position" value="You are in a deserted mountain refuge which must not have been used for several weeks." />
+				<message key="description" value="The furnishings are basic: an old chest, a solid oak wardrobe, a rickety table and a bed of dubious quality.\nThe unique room smells musty and damp wood." />
+				<message key="action" value="#You lie down on the bed.#\n#You search the cupboard.#\n#You search the trunk.#\n#You come out of the shelter.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="You lie down on the bed." x="488" y="124" width="25" height="68" />
+				<surface action="You search the cupboard." x="353" y="0" width="160" height="116" />
+				<surface action="You search the trunk." x="167" y="73" width="179" height="138" />
+				<surface action="You come out of the shelter." x="348" y="191" width="165" height="25" />
+			</surfaces>
+			<actions>
+				<action key="You lie down on the bed." type="customAction" value="lit" />
+				<action key="You search the cupboard." type="customAction" value="armoire" />
+				<action key="You search the trunk." type="customAction" value="coffre" />
+				<action key="You come out of the shelter." type="goCard" value="10279" />
+			</actions>
+		</card>
+		<card key="17027" imagePath="/datas/images/10703.png" mapX="36" mapY="130">
+			<messages>
+				<message key="position" value="You can answer the wise old man's questions." />
+				<message key="description" value="Hello @user. You can earn Talents by answering my questions. To do this, you need to answer my question." />
+				<message key="action" value="@question,8322,Encyclopia,20" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="17469" imagePath="/datas/images/12060.png" mapX="104" mapY="106">
+			<messages>
+				<message key="position" value="You can answer the nun's questions." />
+				<message key="description" value="@user, before reaching your supreme goal, do you still need Talents? If so, I can get some for you at your convenience." />
+				<message key="action" value="@question,8813,Encyclopia,24" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="18098" imagePath="/datas/images/12640.png" mapX="103" mapY="122">
+			<messages>
+				<message key="position" value="You can answer the monk's questions." />
+				<message key="description" value="@user, you come from far away. But you are reaching the goal and your efforts will soon be rewarded. I would be happy, brother, to help you earn some Talents, if you want them." />
+				<message key="action" value="@question,8813,Encyclopia,25" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="18460" imagePath="/datas/images/21295.png" mapX="118" mapY="112">
+			<messages>
+				<message key="position" value="You are in the Abbey library, opposite Encyclopia." />
+				<message key="description" value="Finally, you encounter Encyclopia in its rich library. Through your eyelashes, humbly lowered, you perceive his gaze full of kindness and wisdom. She sizes you up with a smile, assessing your abilities to succeed her." />
+				<message key="action" value="#Hello Encyclopia.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Hello Encyclopia." x="168" y="0" width="345" height="216" />
+			</surfaces>
+			<actions>
+				<action key="Hello Encyclopia." type="customAction" value="saluer_encyclopia" />
+			</actions>
+		</card>
+		<card key="19126" imagePath="/datas/images/17395.png" mapX="127" mapY="115">
+			<messages>
+				<message key="position" value="You are in front of the east tower of Encyclopia Abbey." />
+				<message key="description" value="The noises and fumes coming from the open window will quickly inform you: you are, without a doubt, facing the entrance to the abbey kitchens. \nYou can ..." />
+				<message key="action" value="#enter the tower.#\n#go west.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the tower." x="319" y="48" width="132" height="169" />
+				<surface action="go west." x="166" y="0" width="94" height="217" />
+			</surfaces>
+			<actions>
+				<action key="enter the tower." type="goCard" value="25754" />
+				<action key="go west." type="goCard" value="12973" />
+			</actions>
+		</card>
+		<card key="19631" imagePath="/datas/images/23971.png" mapX="88" mapY="62">
+			<messages>
+				<message key="position" value="You are in a hostel where the temperature seems more pleasant than outside." />
+				<message key="description" value="The room is light but smoky. The innkeeper, who wonders about your presence in these places, looks at you with a strange look.\nYou can..." />
+				<message key="action" value="#talk to the innkeeper.#\n#leave the inn.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the innkeeper." x="209" y="0" width="167" height="149" />
+				<surface action="leave the inn." x="167" y="174" width="346" height="43" />
+			</surfaces>
+			<actions>
+				<action key="talk to the innkeeper." type="goCard" value="26291" />
+				<action key="leave the inn." type="goCard" value="13563" />
+			</actions>
+		</card>
+		<card key="20556" imagePath="/datas/images/10068.png" mapX="60" mapY="53">
+			<messages>
+				<message key="position" value="You are on the rocky coast. The sea is calm. A strong wind whips your face." />
+				<message key="description" value="The coast is very steep. On the horizon, the tormented relief of the island of Histora can be seen. A cave is visible to your left. A road runs along the coast to the east. Another goes south.\nYou can ..." />
+				<message key="action" value="#enter the cave.#\n#go south.#\n#follow the coast towards the east.#" />
+				<message key="angel" value="Hmm, is it really safe to head towards this cave?\nA good surprise, or a bad one, can await you there. It's up to you to make your choice.\nTo the south, you will find the path to Litter.\nTo the east, that of Matem." />
+			</messages>
+			<surfaces>
+				<surface action="enter the cave." x="164" y="86" width="41" height="88" />
+				<surface action="go south." x="166" y="176" width="347" height="41" />
+				<surface action="follow the coast towards the east." x="341" y="39" width="172" height="137" />
+			</surfaces>
+			<actions>
+				<action key="enter the cave." type="goCard" value="27845" />
+				<action key="go south." type="goCard" value="13968" />
+				<action key="follow the coast towards the east." type="goCard" value="14986" />
+			</actions>
+		</card>
+		<card key="22179" imagePath="/datas/images/14270.png" mapX="74" mapY="103">
+			<messages>
+				<message key="position" value="You open the trunk.\nA gnome was sleeping very soundly there." />
+				<message key="description" value="The gnome jumps to the bottom of the chest, very dissatisfied with this unexpected awakening. Despite his visible anger, you can't help but smile at this surprising appearance.\nYou can ..." />
+				<message key="action" value="#talk to the gnome.#\n#grab the gnome and #\n#put it back in the trunk.#\n#come out of the shelter.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the gnome." x="173" y="13" width="121" height="200" />
+			</surfaces>
+			<actions>
+				<action key="talk to the gnome." type="goCard" value="29783" />
+				<action key="come out of the shelter." type="goCard" value="10279" />
+				<action key="grab the gnome and " type="customAction" value="saisir_gnome" />
+				<action key="put it back in the trunk." type="customAction" value="saisir_gnome" />
+			</actions>
+		</card>
+		<card key="22568" imagePath="/datas/images/15650.png" mapX="74" mapY="104">
+			<messages>
+				<message key="position" value="You open the cupboard whose door creaks. \nInside you see a bag." />
+				<message key="description" value="Feverishly you take the bag and open it. Joy! You find 20 gold coins inside.\nThese are added to your fortune." />
+				<message key="action" value="#Continue...#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Continue..." x="165" y="0" width="348" height="216" />
+			</surfaces>
+			<actions>
+				<action key="Continue..." type="goCard" value="15536" />
+			</actions>
+		</card>
+		<card key="25754" imagePath="/datas/images/11056.png" mapX="133" mapY="114">
+			<messages>
+				<message key="position" value="You are in the east tower of Encyclopia Abbey." />
+				<message key="description" value="Good smells pleasantly tickle your nostrils. The sister cook works at the other end of the room, preparing poultry for dinner the next day. She grumbles about the milkman who didn't come by today. You can..." />
+				<message key="action" value="#talk to the sister.#\n#come out of the tower.#\n#give your pot of milk#\n#to the cook.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+				<action key="talk to the sister." type="goCard" value="34390" />
+				<action key="come out of the tower." type="goCard" value="19126" />
+				<action key="give your pot of milk" type="customAction" value="donner_lait" />
+				<action key="to the cook." type="customAction" value="donner_lait" />
+			</actions>
+		</card>
+		<card key="26291" imagePath="/datas/images/21914.png" mapX="88" mapY="62">
+			<messages>
+				<message key="position" value="You can answer the innkeeper's questions." />
+				<message key="description" value="To tell the truth, I'm not used to receiving monks here. Especially your type, @user! Finally, I can do you a favor by helping you earn some Talents, if you answer my question..." />
+				<message key="action" value="@question,13563,Encyclopia,23" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="27845" imagePath="/datas/images/20206.png" mapX="52" mapY="48">
+			<messages>
+				<message key="position" value="You are in a high and deep cave, at the entrance to which a man stands." />
+				<message key="description" value="A holy hermit greets you. His great age and reserved attitude fill you with admiration and humility. What terrible moments must this man have experienced!\nYou can ..." />
+				<message key="action" value="#talk to the hermit.#\n#come out of the cave.#\n#give your apples to the hermit.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the hermit." x="171" y="60" width="167" height="149" />
+				<surface action="come out of the cave." x="370" y="0" width="143" height="216" />
+			</surfaces>
+			<actions>
+				<action key="talk to the hermit." type="goCard" value="35976" />
+				<action key="come out of the cave." type="goCard" value="20556" />
+				<action key="give your apples to the hermit." type="customAction" value="pommes_ermite" />
+			</actions>
+		</card>
+		<card key="29783" imagePath="/datas/images/20304.png" mapX="74" mapY="103">
+			<messages>
+				<message key="position" value="The gnome asks you his questions." />
+				<message key="description" value="I hate being woken up in my first sleep! Finally, since the damage is done... I have some questions to ask you: if you answer, not only will I no longer hold it against you, but I will also offer you Talents." />
+				<message key="action" value="@question,15536,Encyclopia,21" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="34390" imagePath="/datas/images/18812.png" mapX="133" mapY="114">
+			<messages>
+				<message key="position" value="You can respond to the kitchen guardian sister." />
+				<message key="description" value="So, it's you, @user. You seem to like the aroma of my soup. I am very happy about it. Hold ! I suggest you glean some Talents." />
+				<message key="action" value="@question,19126,Encyclopia,26" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="35976" imagePath="/datas/images/8145.png" mapX="52" mapY="48">
+			<messages>
+				<message key="position" value="You can answer the hermit's questions." />
+				<message key="description" value="God bless you, @user! I'm just a poor old hermit, but maybe I can help you. I have some Talents for you, if you answer my question." />
+				<message key="action" value="@question,20556,Encyclopia,22" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="2921" imagePath="/datas/images/16836.png" mapX="139" mapY="63">
+			<messages>
+				<message key="position" value="You are against one of the pillars of the Matem bridge, in the center of the city." />
+				<message key="description" value="The current continues to pull you along despite yourself. Arriving in the center of Matem, you finally manage to cling to the pillar of a bridge and you get out of the water.\nYou can go to..." />
+				<message key="action" value="#east.#\n#west.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="west." x="167" y="1" width="172" height="216" />
+				<surface action="east." x="339" y="3" width="174" height="216" />
+			</surfaces>
+			<actions>
+				<action key="east." type="goCard" value="5064" />
+				<action key="west." type="goCard" value="4141" />
+			</actions>
+		</card>
+		<card key="31118" imagePath="/datas/images/32723.png" mapX="157" mapY="81">
+			<messages>
+				<message key="position" value="You are in the Matem river." />
+				<message key="description" value="" />
+				<message key="action" value="" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="3573" imagePath="/datas/images/24546.png" mapX="125" mapY="66">
+			<messages>
+				<message key="position" value="You are at a crossroads, near the Matem city gate." />
+				<message key="description" value="Very close to the Matem gate, four streets appear before you. There is apparently no one to tell you... So let yourself be guided by instinct!\nYou can take the street..." />
+				<message key="action" value="#from the north.#\n#South.#\n#from the east.#\n#from the west.#" />
+				<message key="angel" value="To the west is the main gate of Matem. So you can leave the city... But have you accomplished everything you had to do there?\nDo you have the Talisman of Matica with you?\nRemember that it is essential for you to enter the abbey!" />
+			</messages>
+			<surfaces>
+				<surface action="from the north." x="167" y="5" width="178" height="74" />
+				<surface action="from the east." x="341" y="0" width="166" height="116" />
+				<surface action="South." x="254" y="163" width="259" height="54" />
+				<surface action="from the west." x="165" y="80" width="87" height="134" />
+			</surfaces>
+			<actions>
+				<action key="from the north." type="goCard" value="3704" />
+				<action key="South." type="goCard" value="4058" />
+				<action key="from the east." type="goCard" value="4141" />
+				<action key="from the west." type="goCard" value="14986" />
+			</actions>
+		</card>
+		<card key="3704" imagePath="/datas/images/17421.png" mapX="125" mapY="64">
+			<messages>
+				<message key="position" value="You are west of Matem, in front of a jeweler's shop." />
+				<message key="description" value="The house which houses the jeweler's shop is tall and solidly built. Of course, you are not possessed by the thirst for gold, but you are likely to glean some information inside...\nYou can..." />
+				<message key="action" value="#enter the jewelry store.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the jewelry store." x="304" y="1" width="209" height="216" />
+				<surface action="return to the intersection." x="166" y="2" width="71" height="214" />
+				<surface action="return to the intersection." x="227" y="0" width="72" height="85" />
+				<surface action="return to the intersection." x="225" y="166" width="76" height="51" />
+				<surface action="enter the jewelry store." x="235" y="82" width="87" height="83" />
+			</surfaces>
+			<actions>
+				<action key="enter the jewelry store." type="goCard" value="4548" />
+				<action key="return to the intersection." type="goCard" value="3573" />
+			</actions>
+		</card>
+		<card key="4058" imagePath="/datas/images/17824.png" mapX="125" mapY="70">
+			<messages>
+				<message key="position" value="You are in front of a house in the western district of Matem." />
+				<message key="description" value="You follow a miserable alley and, to your great surprise, come out on a pretty square, in front of a large opulent house.\nYou can..." />
+				<message key="action" value="#return to the intersection.#\n#enter the house.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the house." x="167" y="0" width="180" height="161" />
+				<surface action="return to the intersection." x="227" y="161" width="212" height="56" />
+			</surfaces>
+			<actions>
+				<action key="enter the house." type="goCard" value="4686" />
+				<action key="return to the intersection." type="goCard" value="3573" />
+			</actions>
+		</card>
+		<card key="4141" imagePath="/datas/images/20721.png" mapX="136" mapY="66">
+			<messages>
+				<message key="position" value="You are in front of the bridge which spans the Matem River." />
+				<message key="description" value="The smell of the nearby river is pestilential and you hold your nose, taking the time to examine the neighborhood. You see a bridge to the east; an alley leading south and to the west, a crossroads.\nYou can go..." />
+				<message key="action" value="#south.#\n#east.#\n#west.#" />
+				<message key="angel" value="Here you are in the center of Matem. The bridge that spans the river will take you to the eastern districts of this city, the only way for you to access the island of Histora.\nThe southern street, so I don't advise you to follow it at all.\nYou can also go back west, towards Litter. Perhaps, then, you will stop at the jeweler (if you still have a few gold coins)." />
+			</messages>
+			<surfaces>
+				<surface action="south." x="293" y="179" width="136" height="38" />
+				<surface action="west." x="166" y="0" width="122" height="180" />
+				<surface action="west." x="247" y="127" width="84" height="54" />
+				<surface action="south." x="332" y="139" width="108" height="68" />
+				<surface action="east." x="357" y="0" width="156" height="134" />
+			</surfaces>
+			<actions>
+				<action key="south." type="goCard" value="5261" />
+				<action key="east." type="goCard" value="5064" />
+				<action key="west." type="goCard" value="3573" />
+			</actions>
+		</card>
+		<card key="4548" imagePath="/datas/images/18701.png" mapX="125" mapY="61">
+			<messages>
+				<message key="position" value="You are in a jeweler's shop in the town of Matem." />
+				<message key="description" value="In fact, the shop is more miserable than one might expect: crude furnishings, lousy dog... The jeweler is hard at work, artfully chiseling a beaded gold chain.\nYou can..." />
+				<message key="action" value="#talk to the jeweler.#\n#come out of the jewelry store.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the jeweler." x="312" y="5" width="146" height="143" />
+				<surface action="come out of the jewelry store." x="290" y="171" width="223" height="46" />
+				<surface action="buy a necklace." x="209" y="52" width="31" height="51" />
+				<surface action="buy a necklace." x="298" y="1" width="25" height="55" />
+				<surface action="buy a necklace." x="395" y="0" width="40" height="47" />
+				<surface action="pet the cat." x="170" y="104" width="67" height="92" />
+				<surface action="voir de diplôme." x="270" y="0" width="31" height="51" />
+			</surfaces>
+			<actions>
+				<action key="talk to the jeweler." type="goCard" value="5685" />
+				<action key="come out of the jewelry store." type="goCard" value="3704" />
+				<action key="show your nugget to the jeweler." type="customAction" value="pepite_joaillier" />
+				<action key="buy a necklace." type="customAction" value="acheter_collier" />
+				<action key="pet the cat." type="customAction" value="chat" />
+				<action key="voir de diplôme." type="customAction" value="diplome" />
+			</actions>
+		</card>
+		<card key="4686" imagePath="/datas/images/19108.png" mapX="125" mapY="74">
+			<messages>
+				<message key="position" value="You are in a spacious house in the town of Matem." />
+				<message key="description" value="A servant cleans the floor vigorously and does not hear you enter. Bent over her work, she is only attentive to her task, and the state of the room proves that her masters like cleanliness.\nYou can..." />
+				<message key="action" value="#come out.#\n#talk to the servant.#\n#give a gold coin#\n#to the maid.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the servant." x="309" y="59" width="140" height="157" />
+				<surface action="come out." x="437" y="0" width="76" height="149" />
+				<surface action="come out." x="449" y="147" width="64" height="70" />
+				<surface action="come out." x="379" y="0" width="73" height="60" />
+				<surface action="regarder par la fenêtre." x="167" y="40" width="131" height="102" />
+			</surfaces>
+			<actions>
+				<action key="talk to the servant." type="goCard" value="6111" />
+				<action key="come out." type="goCard" value="4058" />
+				<action key="give a gold coin" type="customAction" value="pieceor_servante" />
+				<action key="to the maid." type="customAction" value="pieceor_servante" />
+				<action key="regarder par la fenêtre." type="customAction" value="fenetre" />
+			</actions>
+		</card>
+		<card key="5064" imagePath="/datas/images/17383.png" mapX="144" mapY="60">
+			<messages>
+				<message key="position" value="You are at a crossroads, in the center of the town of Matem." />
+				<message key="description" value="This very important crossroads, on the banks of the river, is visibly the heart of the city. To the east you see a brick building; to the northeast, the path to the port, and, to the north, a large church.\nYou can go..." />
+				<message key="action" value="#northeast towards the port.#\n#northwest towards the church.#\n#east.#\n#west.#" />
+				<message key="angel" value="You are in Matem near the bridge that crosses the river. Two streets open before you towards the north: one will take you towards the port or the lighthouse passing in front of Matica's house, the other goes up towards the church of Matem. To the east you can see a barracks.\nDo you still have some gold coins?" />
+			</messages>
+			<surfaces>
+				<surface action="northeast towards the port." x="287" y="0" width="131" height="141" />
+				<surface action="northwest towards the church." x="167" y="0" width="118" height="152" />
+				<surface action="east." x="340" y="136" width="173" height="80" />
+				<surface action="west." x="165" y="148" width="172" height="66" />
+			</surfaces>
+			<actions>
+				<action key="northeast towards the port." type="goCard" value="6581" />
+				<action key="northwest towards the church." type="goCard" value="6697" />
+				<action key="east." type="goCard" value="6197" />
+				<action key="west." type="goCard" value="4141" />
+			</actions>
+		</card>
+		<card key="5261" imagePath="/datas/images/21285.png" mapX="136" mapY="77">
+			<messages>
+				<message key="position" value="You are in front of the famous “boatman’s inn” in Matem." />
+				<message key="description" value="The street is a dead end which leads to a disreputable inn. Heavy laughter emitted by drunken voices reaches you, coming out in waves from this place.\nYou can..." />
+				<message key="action" value="#return to the bridge.#\n#enter the inn.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the inn." x="169" y="0" width="344" height="215" />
+				<surface action="return to the bridge." x="168" y="117" width="64" height="100" />
+			</surfaces>
+			<actions>
+				<action key="enter the inn." type="goCard" value="7100" />
+				<action key="return to the bridge." type="goCard" value="4141" />
+			</actions>
+		</card>
+		<card key="2183" imagePath="/datas/images/22691.png" mapX="154" mapY="41">
+			<messages>
+				<message key="position" value="You are in the palace of Matica, queen of Matem." />
+				<message key="description" value="Matica gives you an hourglass of precious wood, made by one of the many artists she surrounds herself with in her palace. It is a talisman that will allow you to enter Encyclopia Abbey." />
+				<message key="action" value="#Continue...#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Continue..." x="167" y="0" width="346" height="217" />
+			</surfaces>
+			<actions>
+				<action key="Continue..." type="goCard" value="7855" />
+			</actions>
+		</card>
+		<card key="5497" imagePath="/datas/images/22294.png" mapX="147" mapY="18">
+			<messages>
+				<message key="position" value="You are at the top of the Matem lighthouse. From there, your gaze sweeps over an immense panorama." />
+				<message key="description" value="You climb to the top of the lighthouse without meeting a soul. In the turret, you see a parchment nailed to one of the roof posts.\nYou can..." />
+				<message key="action" value="#read the parchment.#\n#exit the lighthouse.#\n#lean over the railing#\n#to watch Histora.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="lean over the railing" x="166" y="0" width="347" height="145" />
+				<surface action="read the parchment." x="170" y="62" width="57" height="61" />
+				<surface action="exit the lighthouse." x="167" y="140" width="345" height="76" />
+			</surfaces>
+			<actions>
+				<action key="read the parchment." type="goCard" value="7409" />
+				<action key="exit the lighthouse." type="goCard" value="9432" />
+				<action key="lean over the railing" type="customAction" value="pencher_rambarde" />
+				<action key="to watch Histora." type="customAction" value="pencher_rambarde" />
+			</actions>
+		</card>
+		<card key="5685" imagePath="/datas/images/16978.png" mapX="125" mapY="61">
+			<messages>
+				<message key="position" value="You can answer the jeweler's questions." />
+				<message key="description" value="Is that you, @user? You scared my poor old dog As I have no hard feelings, I offer you some Talents, in exchange for a good answer to my question." />
+				<message key="action" value="@question,3704,Matem,14" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="6111" imagePath="/datas/images/19813.png" mapX="125" mapY="74">
+			<messages>
+				<message key="position" value="You can answer the servant's questions." />
+				<message key="description" value="Are you speaking to me, a humble servant, @user? What an honor you do me! In return, I can earn you some Talents." />
+				<message key="action" value="@question,4058,Matem,15" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="6197" imagePath="/datas/images/20367.png" mapX="148" mapY="59">
+			<messages>
+				<message key="position" value="You are in front of the barracks of the town of Matem." />
+				<message key="description" value="An irrascible guard watches the barracks door. Your monk's robe, however, inspires respect and confidence in him. Obviously, he wonders what you are doing in such a place.\nYou can..." />
+				<message key="action" value="#enter the barracks.#\n#return to the crossroads.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the barracks." x="343" y="0" width="170" height="218" />
+				<surface action="return to the crossroads." x="163" y="166" width="115" height="52" />
+			</surfaces>
+			<actions>
+				<action key="enter the barracks." type="customAction" value="entrer_caserne" />
+				<action key="return to the crossroads." type="goCard" value="5064" />
+			</actions>
+		</card>
+		<card key="6581" imagePath="/datas/images/21021.png" mapX="147" mapY="43">
+			<messages>
+				<message key="position" value="You are at a crossroads, in the northern district of the town of Matem." />
+				<message key="description" value="This area is very quiet and you stop to get your bearings: to the north, the street should lead to the seaside; to the south you see the bridge and, to the east, a sumptuous palace.\nYou can go..." />
+				<message key="action" value="#to the north.#\n#south.#\n#east.#" />
+				<message key="angel" value="Let's imagine that you obtained enough Talents in this city, that you went to visit Matica, that you gave her an abacus, that she gave you a Talisman for Encyclopia... Well, well! One of two things: either you've already been to the island of Histora, or you haven't. In the first case, leave the town to the west to reach Litter or the abbey; in the other case, take the northern street, towards the port." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="253" y="0" width="146" height="143" />
+				<surface action="south." x="169" y="162" width="227" height="55" />
+				<surface action="east." x="396" y="82" width="117" height="131" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="8027" />
+				<action key="south." type="goCard" value="5064" />
+				<action key="east." type="goCard" value="7855" />
+			</actions>
+		</card>
+		<card key="6697" imagePath="/datas/images/30364.png" mapX="146" mapY="48">
+			<messages>
+				<message key="position" value="You are in front of the imposing church in the town of Matem." />
+				<message key="description" value="The church raises its wide and high facade of pink sandstone in the middle of an esplanade covered with white sand. The place, meticulously maintained, is a guarantee of the devotion of the inhabitants of Matem.\nYou can..." />
+				<message key="action" value="#return to the crossroads.#\n#enter the church.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the church." x="202" y="5" width="185" height="210" />
+				<surface action="enter the church." x="368" y="0" width="145" height="177" />
+				<surface action="return to the crossroads." x="167" y="0" width="39" height="216" />
+				<surface action="enter the church." x="359" y="177" width="54" height="28" />
+				<surface action="enter the church." x="379" y="172" width="54" height="28" />
+				<surface action="enter the church." x="405" y="168" width="54" height="28" />
+				<surface action="enter the church." x="430" y="157" width="54" height="28" />
+				<surface action="enter the church." x="443" y="155" width="54" height="28" />
+				<surface action="return to the crossroads." x="459" y="183" width="54" height="34" />
+				<surface action="return to the crossroads." x="426" y="195" width="55" height="21" />
+				<surface action="return to the crossroads." x="397" y="204" width="51" height="13" />
+				<surface action="return to the crossroads." x="414" y="200" width="24" height="13" />
+				<surface action="return to the crossroads." x="389" y="206" width="25" height="13" />
+			</surfaces>
+			<actions>
+				<action key="return to the crossroads." type="goCard" value="5064" />
+				<action key="enter the church." type="goCard" value="82770" />
+			</actions>
+		</card>
+		<card key="7100" imagePath="/datas/images/18222.png" mapX="136" mapY="83">
+			<messages>
+				<message key="position" value="You are in the smoky room of the “boatman’s inn”." />
+				<message key="description" value="The room is very lively: it is obvious that this place is the meeting place for sailors. Moreover, one of them apostrophes you:\n-Hey! monillon, will you down a beer with me?\nYou can..." />
+				<message key="action" value="#accept the invitation.#\n#come out.#\n#buy a bottle of wine.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="accept the invitation." x="167" y="0" width="146" height="143" />
+				<surface action="come out." x="167" y="172" width="346" height="47" />
+				<surface action="buy a bottle of wine." x="477" y="19" width="25" height="41" />
+				<surface action="acheter le tonneau." x="371" y="15" width="105" height="45" />
+				<surface action="acheter le tonneau." x="276" y="17" width="68" height="45" />
+			</surfaces>
+			<actions>
+				<action key="accept the invitation." type="goCard" value="8494" />
+				<action key="come out." type="goCard" value="5261" />
+				<action key="buy a bottle of wine." type="customAction" value="acheter_bouteille" />
+				<action key="acheter le tonneau." type="customAction" value="acheter_tonneau" />
+			</actions>
+		</card>
+		<card key="7409" imagePath="/datas/images/18508.png" mapX="147" mapY="18">
+			<messages>
+				<message key="position" value="You can answer the questions written on the parchment." />
+				<message key="description" value="You thank heaven for the kindness of the people of Matem who go out of their way to help you. On the parchment, the lighthouse watchman has written several questions for you. You can try your luck and choose..." />
+				<message key="action" value="@question,9432,Matem,16" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="7533" imagePath="/datas/images/19204.png" mapX="153" mapY="59">
+			<messages>
+				<message key="position" value="You are in the courtyard of the Matem barracks." />
+				<message key="description" value="In the large courtyard, two knights practice using the combat staff. The vanquished begs for mercy, promising that he will soon have his revenge.\nAre you going..." />
+				<message key="action" value="#dare to speak to the victorious knight.#\n#leave the barracks.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="dare to speak to the victorious knight." x="204" y="11" width="146" height="143" />
+				<surface action="leave the barracks." x="293" y="165" width="220" height="53" />
+				<surface action="Aaaarghh!" x="166" y="153" width="129" height="66" />
+				<surface action="Aaaarghh!" x="166" y="118" width="39" height="51" />
+			</surfaces>
+			<actions>
+				<action key="dare to speak to the victorious knight." type="goCard" value="8856" />
+				<action key="leave the barracks." type="goCard" value="6197" />
+				<action key="Aaaarghh!" type="customAction" value="aaarghh" />
+			</actions>
+		</card>
+		<card key="7855" imagePath="/datas/images/2375.png" mapX="150" mapY="41">
+			<messages>
+				<message key="position" value="You are in front of the palace of Matica, queen of Matem." />
+				<message key="description" value="You only have 0 Talent. This is not enough to enter Matica's home.\nYou can ..." />
+				<message key="action" value="#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="retourner ou entrer." x="167" y="0" width="346" height="217" />
+			</surfaces>
+			<actions>
+				<action key="return to the intersection." type="goCard" value="6581" />
+				<action key="Enter the residence." type="goCard" value="9150" />
+				<action key="retourner ou entrer." type="customAction" value="retourner_entrer" />
+			</actions>
+		</card>
+		<card key="8027" imagePath="/datas/images/17924.png" mapX="147" mapY="37">
+			<messages>
+				<message key="position" value="You are at the crossroads of two streets, not far from the coast." />
+				<message key="description" value="To the north, you see the tip of the Matem lighthouse; to the south a crossroads. Towards the west is the city's port. You feel that you are being observed without restraint...\nYou can go..." />
+				<message key="action" value="#to the north.#\n#south.#\n#west.#\n#Give your flowers#\n#to the woman at the window.#" />
+				<message key="angel" value="Towards the west you will find the port, from where you could embark for Histora or, if you have not been there yet, for Litter.\nYou can also visit the lighthouse watchman, if he is there, which would be surprising given that it is broad daylight.\nTowards the south, you will find yourself in the center of Matem." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="253" y="0" width="196" height="77" />
+				<surface action="south." x="271" y="123" width="242" height="92" />
+				<surface action="west." x="206" y="30" width="84" height="92" />
+				<surface action="Parler à la dame." x="165" y="22" width="38" height="106" />
+				<surface action="Caresser le chien." x="221" y="175" width="96" height="41" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="9432" />
+				<action key="south." type="goCard" value="6581" />
+				<action key="west." type="goCard" value="9627" />
+				<action key="Parler à la dame." type="customAction" value="parler_dame" />
+				<action key="Caresser le chien." type="customAction" value="caresser_chien" />
+				<action key="Give your flowers" type="customAction" value="fleurs_dame" />
+				<action key="to the woman at the window." type="customAction" value="fleurs_dame" />
+			</actions>
+		</card>
+		<card key="82770" imagePath="/datas/images/22823.png" mapX="141" mapY="48">
+			<messages>
+				<message key="position" value="You are in the church of Matem, in front of a resplendent stained glass window." />
+				<message key="description" value="Everything here encourages prayer and meditation...\nYou seem to recognize Father Clément, who has already been your Abbot's guest. Clément, priest of Matem, puts on his surplice for the evening service.\nYou can..." />
+				<message key="action" value="#speak with the priest.#\n#attend vespers.#\n#come out.#\n#offer your glossary to the priest.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="come out." x="166" y="192" width="347" height="25" />
+				<surface action="speak with the priest." x="166" y="51" width="72" height="166" />
+				<surface action="speak with the priest." x="165" y="51" width="82" height="166" />
+				<surface action="attend vespers." x="385" y="8" width="128" height="178" />
+			</surfaces>
+			<actions>
+				<action key="speak with the priest." type="goCard" value="9807" />
+				<action key="attend vespers." type="customAction" value="vepres" />
+				<action key="come out." type="goCard" value="6697" />
+				<action key="offer your glossary to the priest." type="customAction" value="lexique_prete" />
+			</actions>
+		</card>
+		<card key="8277" imagePath="/datas/images/16807.png" mapX="40" mapY="83">
+			<messages>
+				<message key="position" value="You are in an herbalist. The bell rings lightly." />
+				<message key="description" value="All kinds of herbs hang from the ceiling and perfume the room. The shopkeeper, an old man, greets you from his back room.\nYou can ..." />
+				<message key="action" value="#talk to the herbalist.#\n#leave the herbalist's shop.#\n#show your herbs.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the herbalist." x="164" y="0" width="128" height="176" />
+				<surface action="leave the herbalist's shop." x="167" y="171" width="341" height="46" />
+				<surface action="leave the herbalist's shop." x="427" y="14" width="86" height="178" />
+				<surface action="sonner les clochettes." x="384" y="0" width="43" height="70" />
+			</surfaces>
+			<actions>
+				<action key="talk to the herbalist." type="goCard" value="10465" />
+				<action key="leave the herbalist's shop." type="goCard" value="5683" />
+				<action key="show your herbs." type="customAction" value="montrer_herbes" />
+				<action key="sonner les clochettes." type="customAction" value="sonner_clochettes" />
+			</actions>
+		</card>
+		<card key="8494" imagePath="/datas/images/20212.png" mapX="136" mapY="83">
+			<messages>
+				<message key="position" value="You can answer the sailor's questions." />
+				<message key="description" value="You, @user, I like your courage! Hey, that makes me decide to help you! If you answer my question, you will be able to leave here richer in Talents." />
+				<message key="action" value="@question,5261,Matem,18" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="8856" imagePath="/datas/images/32136.png" mapX="153" mapY="59">
+			<messages>
+				<message key="position" value="You can answer the knight's questions." />
+				<message key="description" value="Wouldn't you be @user, who is talked about everywhere in this town? You don't look like you want to fight. Maybe you prefer a more intellectual fight. I have Talents for you, if you're interested..." />
+				<message key="action" value="@question,6197,Matem,19" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="9150" imagePath="/datas/images/20814.png" mapX="154" mapY="41">
+			<messages>
+				<message key="position" value="You are in the palace of Matica, queen of Matem." />
+				<message key="description" value="The queen impresses you with her wise gaze and her exquisite beauty. Matica is renowned in the surrounding region for its taste for art and fine literature.\nYou can..." />
+				<message key="action" value="#talk to Matica.#\n#come out.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to Matica." x="301" y="0" width="143" height="217" />
+				<surface action="come out." x="167" y="157" width="136" height="59" />
+				<surface action="come out." x="443" y="158" width="70" height="60" />
+				<surface action="come out." x="445" y="0" width="68" height="119" />
+			</surfaces>
+			<actions>
+				<action key="talk to Matica." type="customAction" value="matica" />
+				<action key="come out." type="goCard" value="7855" />
+			</actions>
+		</card>
+		<card key="9432" imagePath="/datas/images/21681.png" mapX="147" mapY="24">
+			<messages>
+				<message key="position" value="You are in front of the lighthouse, on a peninsula in the far north of Matem." />
+				<message key="description" value="The lighthouse stands straight and majestic, facing a sea of ​​silver. It's broad daylight, and there's a good chance the lighthouse keeper isn't on duty.\nYou can..." />
+				<message key="action" value="#climb into the lighthouse.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="climb into the lighthouse." x="296" y="3" width="76" height="203" />
+				<surface action="return to the intersection." x="168" y="204" width="345" height="13" />
+				<surface action="return to the intersection." x="167" y="168" width="131" height="39" />
+				<surface action="return to the intersection." x="371" y="169" width="142" height="40" />
+			</surfaces>
+			<actions>
+				<action key="climb into the lighthouse." type="goCard" value="5497" />
+				<action key="return to the intersection." type="goCard" value="8027" />
+			</actions>
+		</card>
+		<card key="9627" imagePath="/datas/images/28938.png" mapX="138" mapY="34">
+			<messages>
+				<message key="position" value="You are in the port of the city of Matem." />
+				<message key="description" value="A caravel anchors in the port, sails raised, in quarantine. On the other hand, a merchant ship is about to set sail.\nYou can..." />
+				<message key="action" value="#board the boat.#\n#go to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="board the boat." x="167" y="0" width="346" height="170" />
+				<surface action="go to the intersection." x="245" y="168" width="268" height="48" />
+			</surfaces>
+			<actions>
+				<action key="board the boat." type="goCard" value="10567" />
+				<action key="go to the intersection." type="goCard" value="8027" />
+			</actions>
+		</card>
+		<card key="9807" imagePath="/datas/images/22083.png" mapX="141" mapY="48">
+			<messages>
+				<message key="position" value="You can answer the questions of Father Clément, parish priest of Matem." />
+				<message key="description" value="Hold ! It's you, @user! I actually heard from my flock that you were in Matem. I can get you Talents if you want." />
+				<message key="action" value="@question,6697,Matem,17" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="10084" imagePath="/datas/images/3128.png" mapX="68" mapY="21">
+			<messages>
+				<message key="position" value="You are on Histora beach. The site is enchanting." />
+				<message key="description" value="Histora is an island of wild beauty. Its tortured landscape has always impressed its rare visitors. Two paths are available to you. A boat is attached to a pontoon.\nYou can..." />
+				<message key="action" value="#take the boat to Litter.#\n#take the boat to Matem.#\n#go northwest.#\n#go northeast.#" />
+				<message key="angel" value="Here you are on the beach of Histora, the island of the fierce Kronolos. The island is small, and only one road runs from east to west.\nThe dolmen, which is at the eastern end of the island, is interesting to visit.\nKronolos is looking for a very specific item... Did you bring it to him?\nBy the way, I didn't lie to you about the price of the crossing." />
+			</messages>
+			<surfaces>
+				<surface action="go northeast." x="320" y="0" width="192" height="158" />
+				<surface action="go northwest." x="169" y="2" width="152" height="156" />
+				<surface action="take the boat to Litter." x="168" y="156" width="175" height="59" />
+				<surface action="take the boat to Matem." x="342" y="156" width="171" height="59" />
+			</surfaces>
+			<actions>
+				<action key="go northwest." type="goCard" value="11042" />
+				<action key="go northeast." type="goCard" value="10877" />
+				<action key="take the boat to Litter." type="customAction" value="barque_litter" />
+				<action key="take the boat to Matem." type="customAction" value="barque_matem" />
+			</actions>
+		</card>
+		<card key="10308" imagePath="/datas/images/23538.png" mapX="25" mapY="50">
+			<messages>
+				<message key="position" value="You are on a large ship in Litter Harbor." />
+				<message key="description" value="The captain looks at you from head to toe in silence. Perhaps he imagines that you are looking for a job as a foam worker? You have to admit that you don't have the chops for the job!\nYou can..." />
+				<message key="action" value="#talk to the captain.#\n#leave the ship.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="leave the ship." x="301" y="90" width="212" height="127" />
+				<surface action="talk to the captain." x="167" y="61" width="133" height="155" />
+			</surfaces>
+			<actions>
+				<action key="talk to the captain." type="goCard" value="11340" />
+				<action key="leave the ship." type="goCard" value="7004" />
+			</actions>
+		</card>
+		<card key="10567" imagePath="/datas/images/16182.png" mapX="138" mapY="28">
+			<messages>
+				<message key="position" value="You are on a merchant ship, in the port of Matem." />
+				<message key="description" value="You are taken near the commander who you find carefully scanning the sea. This story of the caravel's quarantine must intrigue him.\nYou can..." />
+				<message key="action" value="#talk to the commander.#\n#leave the boat.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the commander." x="376" y="45" width="111" height="162" />
+				<surface action="leave the boat." x="166" y="77" width="209" height="136" />
+			</surfaces>
+			<actions>
+				<action key="talk to the commander." type="goCard" value="11590" />
+				<action key="leave the boat." type="goCard" value="9627" />
+			</actions>
+		</card>
+		<card key="10877" imagePath="/datas/images/21847.png" mapX="80" mapY="17">
+			<messages>
+				<message key="position" value="You are on your way east, to the island of Histora." />
+				<message key="description" value="At the top of a small hill, to the north, you see a fisherman's hut. The appearance of this dwelling is not very inviting and the path that leads to it seems steep and poorly maintained.\nYou can go to..." />
+				<message key="action" value="#north.#\n#south towards the beach.#\n#east.#\n#west.#" />
+				<message key="angel" value="The fisherman who lives in this cabin is very fearful: try not to impress him too much if you go to see him.\nTo the east, you will head towards the famous dolmen.\nTo the west, you will find the path to Histora beach." />
+			</messages>
+			<surfaces>
+				<surface action="north." x="284" y="1" width="123" height="140" />
+				<surface action="west." x="167" y="120" width="104" height="96" />
+				<surface action="east." x="399" y="142" width="114" height="75" />
+				<surface action="south towards the beach." x="270" y="180" width="131" height="37" />
+			</surfaces>
+			<actions>
+				<action key="north." type="goCard" value="11997" />
+				<action key="south towards the beach." type="goCard" value="10084" />
+				<action key="east." type="goCard" value="12274" />
+				<action key="west." type="goCard" value="11042" />
+			</actions>
+		</card>
+		<card key="11042" imagePath="/datas/images/25381.png" mapX="67" mapY="18">
+			<messages>
+				<message key="position" value="You are on the way west to the island of Histora." />
+				<message key="description" value="A house with a large shed, certainly a blacksmith's workshop, is at the end of a path towards the north. The pleasant surroundings testify to the ease of the owner.\nYou can go..." />
+				<message key="action" value="#to the north.#\n#south towards the beach.#\n#east.#\n#west.#" />
+				<message key="angel" value="The blacksmith is hard at work. I think it's better not to disturb him.\nTo the south is Histora Beach. To the west, you will find the castle of the master of these places or, depending on your next choice, a cave of great interest.\nHave you harvested all the talents you need?\nHave a good trip! Enjoy the wonderful landscapes of this island!" />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="238" y="0" width="194" height="131" />
+				<surface action="south towards the beach." x="236" y="186" width="155" height="30" />
+				<surface action="west." x="166" y="96" width="70" height="121" />
+				<surface action="east." x="389" y="134" width="124" height="82" />
+				<surface action="to the north." x="244" y="28" width="140" height="156" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="12302" />
+				<action key="south towards the beach." type="goCard" value="10084" />
+				<action key="east." type="goCard" value="10877" />
+				<action key="west." type="goCard" value="12591" />
+			</actions>
+		</card>
+		<card key="11340" imagePath="/datas/images/31311.png" mapX="25" mapY="50">
+			<messages>
+				<message key="position" value="You can answer the captain's questions." />
+				<message key="description" value="Ah! You are @user. It seemed to me that you didn't look like a sailor. How about some Talents? If you answer my question, you will win." />
+				<message key="action" value="@question,15930,Histora,8" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11590" imagePath="/datas/images/19475.png" mapX="138" mapY="28">
+			<messages>
+				<message key="position" value="You can answer the commander's questions." />
+				<message key="description" value="Hello @user. I was waiting for your passage: news travels quickly in a small port like this... I have Talents to offer you if you answer my question. Does this tempt you to try?" />
+				<message key="action" value="@question,12941,Histora,9" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11997" imagePath="/datas/images/23836.png" mapX="80" mapY="15">
+			<messages>
+				<message key="position" value="You are in front of the house of a poor fisherman from Histora." />
+				<message key="description" value="The closer you get to the cabin, the more it reveals its miserable appearance. The fisherman who lives here is really not rolling in gold!\nYou can..." />
+				<message key="action" value="#enter the house.#\n#knock on the door.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="return to the intersection." x="166" y="185" width="347" height="31" />
+				<surface action="return to the intersection." x="301" y="169" width="67" height="42" />
+				<surface action="knock on the door." x="327" y="112" width="67" height="57" />
+				<surface action="enter the house." x="256" y="28" width="228" height="157" />
+			</surfaces>
+			<actions>
+				<action key="knock on the door." type="customAction" value="frapper_porte" />
+				<action key="enter the house." type="goCard" value="13183" />
+				<action key="return to the intersection." type="goCard" value="10877" />
+			</actions>
+		</card>
+		<card key="12274" imagePath="/datas/images/27583.png" mapX="88" mapY="17">
+			<messages>
+				<message key="position" value="You are at the end of the eastern path, on the island of Histora." />
+				<message key="description" value="The path disappears under the dense vegetation. Below you see an old dolmen. You think you can see someone there.\nYou can..." />
+				<message key="action" value="#go towards the dolmen.#\n#go west.#\n#pick up a handful of these rushes#\n#which line the path.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="go towards the dolmen." x="217" y="11" width="258" height="162" />
+				<surface action="go west." x="168" y="0" width="51" height="189" />
+				<surface action="pick up a handful of these rushes" x="168" y="188" width="84" height="29" />
+				<surface action="pick up a handful of these rushes" x="373" y="184" width="90" height="32" />
+			</surfaces>
+			<actions>
+				<action key="go towards the dolmen." type="goCard" value="13399" />
+				<action key="go west." type="goCard" value="10877" />
+				<action key="pick up a handful of these rushes" type="customAction" value="joncs" />
+			</actions>
+		</card>
+		<card key="12302" imagePath="/datas/images/33367.png" mapX="67" mapY="17">
+			<messages>
+				<message key="position" value="You are in front of the Histora blacksmith's workshop." />
+				<message key="description" value="The hangar doors are wide open. The cow, curious and gentle, comes to meet you. Obviously, your presence intrigues him. Maybe it's milking time?\nYou can..." />
+				<message key="action" value="#enter the workshop.#\n#milk the cow.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the workshop." x="183" y="0" width="168" height="173" />
+				<surface action="return to the intersection." x="166" y="172" width="168" height="44" />
+				<surface action="milk the cow." x="388" y="110" width="125" height="107" />
+			</surfaces>
+			<actions>
+				<action key="enter the workshop." type="goCard" value="13659" />
+				<action key="milk the cow." type="customAction" value="traire_vache" />
+				<action key="return to the intersection." type="goCard" value="11042" />
+			</actions>
+		</card>
+		<card key="12591" imagePath="/datas/images/27908.png" mapX="60" mapY="16">
+			<messages>
+				<message key="position" value="You are at the crossroads of two paths, on the island of Histora." />
+				<message key="description" value="The landscape that stretches out before you is one of the most beautiful you have seen in your life. Sensitive to the magnificence of the site, you meditate for a few moments on the wonders of the world. \nYou can go..." />
+				<message key="action" value="#to the north.#\n#east.#\n#west.#" />
+				<message key="angel" value="Kronolos Castle is not far away now. So take the northern path if you want to meet this shady lord.\nThe western path seems to get lost in the dunes, below a steep wall. This must be the path that leads to the cave.\nTo the east, you will find the beach." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="274" y="0" width="239" height="168" />
+				<surface action="east." x="273" y="169" width="240" height="47" />
+				<surface action="west." x="167" y="94" width="109" height="123" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="13877" />
+				<action key="east." type="goCard" value="11042" />
+				<action key="west." type="goCard" value="14174" />
+			</actions>
+		</card>
+		<card key="12941" imagePath="/datas/images/23612.png" mapX="138" mapY="28">
+			<messages>
+				<message key="position" value="You are on a merchant ship ready to maneuver." />
+				<message key="description" value="The commander agrees to transport you and lets you choose the direction of travel. The boat is so gigantic that you barely feel the roll.\nYou can..." />
+				<message key="action" value="#get off the boat.#\n#go north.#\n#go west.#" />
+				<message key="angel" value="Have you ever been to Litter? Otherwise, this ship is a good way to achieve this, although the price to pay seems somewhat excessive to me.\nYou can go to the island of Histora... Don't worry about your return: a boat is permanently moored on the island's beach.\nHave a good crossing! You will excuse me, I will accompany you by air: the water and me..." />
+			</messages>
+			<surfaces>
+				<surface action="get off the boat." x="306" y="80" width="207" height="137" />
+				<surface action="go north." x="167" y="1" width="346" height="68" />
+				<surface action="go west." x="167" y="83" width="141" height="133" />
+			</surfaces>
+			<actions>
+				<action key="get off the boat." type="goCard" value="8027" />
+				<action key="go north." type="customAction" value="aller_nord" />
+				<action key="go west." type="customAction" value="aller_ouest" />
+			</actions>
+		</card>
+		<card key="13183" imagePath="/datas/images/24840.png" mapX="80" mapY="11">
+			<messages>
+				<message key="position" value="You are in the house of a fisherman in Histora." />
+				<message key="description" value="The fisherman, a frustrated and solitary man, frightened by your intrusion, cowers in a corner of his poor cabin.\nYou can..." />
+				<message key="action" value="#talk to the fisherman.#\n#come out.#\n#give a gold coin to the fisherman#\n#to comfort him.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the fisherman." x="167" y="73" width="146" height="143" />
+				<surface action="come out." x="359" y="67" width="146" height="143" />
+			</surfaces>
+			<actions>
+				<action key="talk to the fisherman." type="goCard" value="14452" />
+				<action key="come out." type="goCard" value="11997" />
+				<action key="give a gold coin to the fisherman" type="customAction" value="piece_or" />
+				<action key="to comfort him." type="customAction" value="piece_or" />
+			</actions>
+		</card>
+		<card key="13399" imagePath="/datas/images/25142.png" mapX="88" mapY="14">
+			<messages>
+				<message key="position" value="You are at the foot of the dolmen, at the eastern tip of the island of Histora." />
+				<message key="description" value="You notice a young, poorly dressed trouvère who, in fact, plays the flute. The music he draws from his simple instrument is as clear as a spring.\nYou can..." />
+				<message key="action" value="#talk to the minstrel.#\n#come out.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the minstrel." x="236" y="33" width="125" height="183" />
+				<surface action="come out." x="362" y="55" width="151" height="164" />
+				<surface action="come out." x="166" y="61" width="66" height="155" />
+			</surfaces>
+			<actions>
+				<action key="talk to the minstrel." type="goCard" value="14698" />
+				<action key="come out." type="goCard" value="12274" />
+			</actions>
+		</card>
+		<card key="13659" imagePath="/datas/images/23112.png" mapX="67" mapY="13">
+			<messages>
+				<message key="position" value="You are in the blacksmith's workshop." />
+				<message key="description" value="A hellish fire roars in the huge chimney of the blacksmith who is working and does not hear you enter. The changing shadows, projected by the bright glow of the flames, envelope the entire workshop. \n\nYou can..." />
+				<message key="action" value="#talk to the blacksmith.#\n#come out.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the blacksmith." x="410" y="10" width="103" height="165" />
+				<surface action="come out." x="168" y="175" width="345" height="42" />
+			</surfaces>
+			<actions>
+				<action key="talk to the blacksmith." type="goCard" value="14945" />
+				<action key="come out." type="goCard" value="12302" />
+			</actions>
+		</card>
+		<card key="13877" imagePath="/datas/images/25631.png" mapX="60" mapY="10">
+			<messages>
+				<message key="position" value="You are in front of the castle where Kronolos, the king of this island, lives." />
+				<message key="description" value="You only have 0 Talent. This is not enough to enter Kronolos's home.\nYou can ..." />
+				<message key="action" value="#go south.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="retourner ou entrer." x="167" y="0" width="346" height="217" />
+			</surfaces>
+			<actions>
+				<action key="go south." type="goCard" value="12591" />
+				<action key="Enter the residence." type="goCard" value="15213" />
+				<action key="retourner ou entrer." type="customAction" value="retourner_entrer" />
+			</actions>
+		</card>
+		<card key="14174" imagePath="/datas/images/27003.png" mapX="58" mapY="18">
+			<messages>
+				<message key="position" value="You are in front of a very old prehistoric cave." />
+				<message key="description" value="The path, which runs along a rock wall, leads to a gigantic cave. The desolate panorama is not very reassuring. A strong wind blows and the crisp sea air whips your face.\nYou can..." />
+				<message key="action" value="#enter the cave.#\n#go east.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the cave." x="209" y="17" width="146" height="143" />
+				<surface action="go east." x="370" y="0" width="143" height="215" />
+			</surfaces>
+			<actions>
+				<action key="enter the cave." type="goCard" value="15565" />
+				<action key="go east." type="goCard" value="12591" />
+			</actions>
+		</card>
+		<card key="14452" imagePath="/datas/images/26218.png" mapX="80" mapY="11">
+			<messages>
+				<message key="position" value="You can answer the fisherman's questions." />
+				<message key="description" value="Phew, you scared me, @user! I took you for one of Kronolos' fierce guards. Since it's you, I can help you gain some Talents: all you have to do is answer my question..." />
+				<message key="action" value="@question,11997,Histora,11" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="14698" imagePath="/datas/images/26621.png" mapX="88" mapY="14">
+			<messages>
+				<message key="position" value="You can answer the young minstrel's questions." />
+				<message key="description" value="Hold ! A music lover! Wouldn't you be @user, whose presence is reported here and there? If so, I have some Talents for you, in exchange for an answer to my question." />
+				<message key="action" value="@question,12274,Histora,10" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="14945" imagePath="/datas/images/26704.png" mapX="67" mapY="13">
+			<messages>
+				<message key="position" value="You can answer the blacksmith's questions." />
+				<message key="description" value="Hello @user. I'm very happy to see you. A little rest won't do me any harm. Let's talk for a few minutes: I have Talents for you, if you answer my question." />
+				<message key="action" value="@question,12302,Histora,12" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="15213" imagePath="/datas/images/27691.png" mapX="55" mapY="10">
+			<messages>
+				<message key="position" value="You are in front of King Kronolos. Banners embroidered with gold thread adorn the room." />
+				<message key="description" value="King Kronolos, who returns from the Crusade, agrees to receive you. Upon entering, a heavy silence falls in the large council room and all eyes converge on you.\nYou can..." />
+				<message key="action" value="#talk to Kronolos.#\n#come out.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to Kronolos." x="319" y="88" width="61" height="120" />
+				<surface action="come out." x="282" y="73" width="38" height="113" />
+				<surface action="come out." x="282" y="56" width="98" height="37" />
+			</surfaces>
+			<actions>
+				<action key="talk to Kronolos." type="customAction" value="kronolos" />
+				<action key="come out." type="goCard" value="13877" />
+			</actions>
+		</card>
+		<card key="15565" imagePath="/datas/images/28699.png" mapX="52" mapY="18">
+			<messages>
+				<message key="position" value="You are in an ancient cave, on the island of Histora." />
+				<message key="description" value="The cave, high and humid, is impressive. Long, tapered stalactites almost reach the ground. Barely lit by daylight, strange inscriptions catch your eye. You can..." />
+				<message key="action" value="#decipher the inscriptions.#\n#come out.#\n#make a torch#\n#with your rushes.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="decipher the inscriptions." x="352" y="11" width="161" height="92" />
+				<surface action="come out." x="167" y="156" width="346" height="60" />
+			</surfaces>
+			<actions>
+				<action key="decipher the inscriptions." type="customAction" value="dechiffrer_inscriptions" />
+				<action key="come out." type="goCard" value="14174" />
+				<action key="make a torch" type="customAction" value="confectionner_torche" />
+				<action key="with your rushes." type="customAction" value="confectionner_torche" />
+			</actions>
+		</card>
+		<card key="15762" imagePath="/datas/images/28510.png" mapX="52" mapY="18">
+			<messages>
+				<message key="position" value="You can answer questions." />
+				<message key="description" value="You raise your torch and then understand, in view of the old inscriptions, that you can answer a question, if you wish. In this way, you would gain some additional Talents. Do you want..." />
+				<message key="action" value="@question,14174,Histora,13" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="15930" imagePath="/datas/images/24589.png" mapX="25" mapY="50">
+			<messages>
+				<message key="position" value="You are on a large ship in Litter Harbor." />
+				<message key="description" value="The captain shows you his ship of which he is rightly proud. This superb building, chartered by the Lord of Litter, is the pride of the entire people of the city.\nYou can..." />
+				<message key="action" value="#get off the ship.#\n#go north.#\n#go east.#" />
+				<message key="angel" value="Here, you have the choice: you go to Histora, the beautiful island over which King Kronolos reigns, or you follow the coast towards Matem (it's even a relaxing way to get there, and pleasant, if you like the sea).\nIn both cases, it will cost you a few coins. Oh, yes! There is a limit to the helpfulness of Captain de Litter!" />
+			</messages>
+			<surfaces>
+				<surface action="get off the ship." x="167" y="187" width="346" height="30" />
+				<surface action="go north." x="167" y="0" width="346" height="50" />
+				<surface action="go east." x="413" y="48" width="100" height="147" />
+			</surfaces>
+			<actions>
+				<action key="get off the ship." type="goCard" value="7004" />
+				<action key="go north." type="customAction" value="aller_nord" />
+				<action key="go east." type="customAction" value="aller_est" />
+			</actions>
+		</card>
+		<card key="29757" imagePath="/datas/images/28250.png" mapX="55" mapY="10">
+			<messages>
+				<message key="position" value="You are in the stronghold of King Kronolos." />
+				<message key="description" value="You receive from the hands of Kronolos a centerpiece of this famous chess game, popular at court since the last Crusade." />
+				<message key="action" value="#Continue...#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Continue..." x="165" y="0" width="347" height="216" />
+			</surfaces>
+			<actions>
+				<action key="Continue..." type="goCard" value="13877" />
+			</actions>
+		</card>
+		<card key="2990" imagePath="/datas/images/14501.png" mapX="15" mapY="96">
+			<messages>
+				<message key="position" value="You are in Litter, at the crossroads between two streets." />
+				<message key="description" value="The city seems to be celebrating. Perhaps it's a wedding at some bourgeoisie's house. You imagined the atmosphere of a large city like Litter, so famous for its commerce, very differently.\nYou can head to..." />
+				<message key="action" value="#north.#\n#south.#\n#east.#" />
+				<message key="angel" value="You are very close to the south exit of Litter. If you leave this city, do you have the Talisman of Lord Lingus in your bag?\nDue north is the direction of the port. You never know, you might have a boat to catch... Going east would bring you closer to the church.\nBehind the walls of one of these houses, a wedding is in full swing. Go your way." />
+			</messages>
+			<surfaces>
+				<surface action="north." x="340" y="0" width="173" height="41" />
+				<surface action="east." x="407" y="40" width="106" height="97" />
+				<surface action="south." x="166" y="137" width="347" height="80" />
+			</surfaces>
+			<actions>
+				<action key="north." type="goCard" value="3814" />
+				<action key="south." type="goCard" value="7872" />
+				<action key="east." type="goCard" value="3515" />
+			</actions>
+		</card>
+		<card key="3515" imagePath="/datas/images/12359.png" mapX="27" mapY="95">
+			<messages>
+				<message key="position" value="You are at a crossroads, in the southern district of Litter." />
+				<message key="description" value="This neighborhood is more affluent judging by the imposing size of the bourgeois residences that we see there.\nThe square is to the north, the church to the south, and to the east there is a tavern.\nYou can go..." />
+				<message key="action" value="#to the north.#\n#south.#\n#east.#\n#west.#" />
+				<message key="angel" value="This neighborhood is more recommendable than the one you would find if you went east. But I'm sure that a good monk like you doesn't frequent taverns...\nTo the west, your steps will bring you closer to the southern exit of Litter.\nIf you go to church, don't forget that a blessing is never lost... Just like in the square, in fact." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="280" y="0" width="156" height="71" />
+				<surface action="to the north." x="314" y="17" width="77" height="140" />
+				<surface action="east." x="449" y="0" width="64" height="218" />
+				<surface action="west." x="167" y="0" width="64" height="218" />
+				<surface action="south." x="229" y="160" width="223" height="59" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="4269" />
+				<action key="south." type="goCard" value="4519" />
+				<action key="east." type="goCard" value="4710" />
+				<action key="west." type="goCard" value="2990" />
+			</actions>
+		</card>
+		<card key="3814" imagePath="/datas/images/21559.png" mapX="19" mapY="78">
+			<messages>
+				<message key="position" value="You are at the intersection of four streets that all seem to you to be similar." />
+				<message key="description" value="It's not about getting lost. So many streets! You are far from the tranquility of the cloister of your monastery which has hardly accustomed you to these joyful dances that you hear in the distance.\nYou can go..." />
+				<message key="action" value="#to the north.#\n#south.#\n#east.#\n#west.#" />
+				<message key="angel" value="Let's imagine that you obtained enough Talents in this city, that you went to visit Lingus, that you gave him a lexicon, that he gave you a Talisman for Encyclopia... Well, well! One of two things: either you've already been to the island of Histora, or you haven't. In the first case, leave the town to the east to reach Matem or the abbey; in the other case, take the northern street, towards the port." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="316" y="0" width="87" height="153" />
+				<surface action="east." x="426" y="0" width="87" height="218" />
+				<surface action="west." x="166" y="0" width="87" height="218" />
+				<surface action="south." x="252" y="153" width="174" height="65" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="5079" />
+				<action key="south." type="goCard" value="2990" />
+				<action key="east." type="goCard" value="4269" />
+				<action key="west." type="goCard" value="5204" />
+			</actions>
+		</card>
+		<card key="3901" imagePath="/datas/images/17403.png" mapX="40" mapY="77">
+			<messages>
+				<message key="position" value="You are in Litter at a crossroads. Everything is very calm around you." />
+				<message key="description" value="It is a shopping district of the city. Where to go? To the west, the square; at the end of the street to the north, a large house; to the south, shops...\nYou can go..." />
+				<message key="action" value="#to the north.#\n#south.#\n#east.#\n#west.#" />
+				<message key="angel" value="How calm here, don't you think?\nTo the north, you will mainly see stately residences. Indeed, it is the district where the cousins ​​of the noble Lingus, master of this city, live.\nTo the south, the city's most important merchants and artisans are established.\nAlong the way, did you happen to pick up any fragrant herbs?" />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="314" y="0" width="123" height="133" />
+				<surface action="east." x="447" y="4" width="66" height="212" />
+				<surface action="west." x="165" y="4" width="66" height="212" />
+				<surface action="south." x="235" y="159" width="203" height="58" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="5463" />
+				<action key="south." type="goCard" value="5683" />
+				<action key="east." type="goCard" value="13968" />
+				<action key="west." type="goCard" value="4269" />
+			</actions>
+		</card>
+		<card key="4269" imagePath="/datas/images/12660.png" mapX="29" mapY="82">
+			<messages>
+				<message key="position" value="You are on Litter's Square. The sun is beating down and you are starting to feel thirsty." />
+				<message key="description" value="The square where you emerge, very vast, welcomes, on market days, countless farmers who sell their products there. At the moment, it is almost empty. A beggar looks at you imploringly.\nYou can ..." />
+				<message key="action" value="#go north.#\n#go south.#\n#go east.#\n#go west.#\n#talk to the beggar.#" />
+				<message key="angel" value="This poor beggar makes me feel sorry, really. He seems like a nice guy deep down. It is true that, nowadays, we sometimes have surprises... After all, don't they teach us charity?\nIf you continue north, you will arrive in front of Lingus Palace.\nDid you go to church to pray? Otherwise, I would point out to you that it is located towards the south." />
+			</messages>
+			<surfaces>
+				<surface action="go north." x="297" y="0" width="84" height="105" />
+				<surface action="go east." x="429" y="3" width="84" height="153" />
+				<surface action="go west." x="166" y="0" width="82" height="73" />
+				<surface action="go south." x="167" y="185" width="346" height="31" />
+				<surface action="talk to the beggar." x="177" y="73" width="76" height="140" />
+			</surfaces>
+			<actions>
+				<action key="go north." type="goCard" value="5974" />
+				<action key="go south." type="goCard" value="3515" />
+				<action key="go east." type="goCard" value="3901" />
+				<action key="go west." type="goCard" value="3814" />
+				<action key="talk to the beggar." type="goCard" value="6164" />
+			</actions>
+		</card>
+		<card key="4519" imagePath="/datas/images/12262.png" mapX="27" mapY="99">
+			<messages>
+				<message key="position" value="You are in front of the church, at the far south of Litter." />
+				<message key="description" value="The portal of the stripped church of Litter is colossal. However, it doesn't seem to be locked. It might be good to meditate for a few moments in the cool of this holy place...\nYou can ..." />
+				<message key="action" value="#enter the church.#\n#go north.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the church." x="297" y="13" width="91" height="149" />
+				<surface action="go north." x="168" y="183" width="344" height="35" />
+			</surfaces>
+			<actions>
+				<action key="enter the church." type="goCard" value="6640" />
+				<action key="go north." type="goCard" value="3515" />
+			</actions>
+		</card>
+		<card key="4710" imagePath="/datas/images/13944.png" mapX="32" mapY="95">
+			<messages>
+				<message key="position" value="You are in front of Litter's most famous tavern.\nThe sight of it rekindles your thirst." />
+				<message key="description" value="At the end of the street, a large tavern faces you. Is this a recommendable place for a youngster like you? Ah! If only your Abbot were there to advise you!\nYou can ..." />
+				<message key="action" value="#enter the tavern.#\n#go west.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the tavern." x="248" y="37" width="165" height="144" />
+				<surface action="go west." x="167" y="0" width="62" height="216" />
+			</surfaces>
+			<actions>
+				<action key="enter the tavern." type="goCard" value="6740" />
+				<action key="go west." type="goCard" value="3515" />
+			</actions>
+		</card>
+		<card key="5079" imagePath="/datas/images/13364.png" mapX="19" mapY="64">
+			<messages>
+				<message key="position" value="You are at a crossroads.\nYou sense, from the scents of iodine, that the sea is close." />
+				<message key="description" value="To the north, the street leads to the port. To the west, towards the lighthouse.\nA cat and a dog are fighting on the sidewalk.\nYou can ..." />
+				<message key="action" value="#go north.#\n#go south.#\n#go west.#\n#pet the cat.#\n#kick the dog.#" />
+				<message key="angel" value="Brother, don't forget that all of God's creatures are lovable! That they are a mangy cat and an angry dog ​​doesn't change anything.\nYou will have noticed that this street is the only paved one in the city: this dates from the time when Litter was only a passage for unloading heavy goods coming by sea from distant countries. This means that these paving stones are old!" />
+			</messages>
+			<surfaces>
+				<surface action="go north." x="296" y="0" width="92" height="79" />
+				<surface action="go south." x="314" y="170" width="199" height="46" />
+				<surface action="go west." x="432" y="0" width="81" height="169" />
+				<surface action="go west." x="166" y="0" width="121" height="122" />
+				<surface action="pet the cat." x="214" y="125" width="66" height="31" />
+				<surface action="kick the dog." x="228" y="169" width="67" height="43" />
+			</surfaces>
+			<actions>
+				<action key="go north." type="goCard" value="7004" />
+				<action key="go south." type="goCard" value="3814" />
+				<action key="go west." type="goCard" value="7367" />
+				<action key="pet the cat." type="customAction" value="caresser_chat" />
+				<action key="kick the dog." type="customAction" value="coup_de_pied_chien" />
+			</actions>
+		</card>
+		<card key="5204" imagePath="/datas/images/21786.png" mapX="8" mapY="78">
+			<messages>
+				<message key="position" value="You are in the western district, near the Litter compound." />
+				<message key="description" value="The street leads to the western district. You feel like the focus of some furtive glances from the occupants of these houses. Obviously, people are wondering about you. \nYou can go..." />
+				<message key="action" value="#to the north.#\n#south.#\n#east.#" />
+				<message key="angel" value="Both streets heading north and south are dead ends. To the north live rich magistrates and advisors to Lord Lingus. The southern district, on the other hand, is inhabited by pitiful poor people. However, that is where these dancing sounds come from. Ah! How strange and unfair the world is!\nTo go to the center of Litter, the only solution is to take the eastern street." />
+			</messages>
+			<surfaces>
+				<surface action="to the north." x="166" y="0" width="271" height="115" />
+				<surface action="south." x="166" y="148" width="286" height="68" />
+				<surface action="east." x="430" y="0" width="83" height="217" />
+			</surfaces>
+			<actions>
+				<action key="to the north." type="goCard" value="7548" />
+				<action key="south." type="goCard" value="7729" />
+				<action key="east." type="goCard" value="3814" />
+			</actions>
+		</card>
+		<card key="5463" imagePath="/datas/images/18799.png" mapX="40" mapY="75">
+			<messages>
+				<message key="position" value="You are in front of a house that is taller than the others." />
+				<message key="description" value="The house which ends the street is a vast stone residence, surrounded by a large garden enclosed by a thick wall. The half-open portal seems to invite you to enter.\nYou can ..." />
+				<message key="action" value="#enter the house.#\n#return to the crossroads.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the house." x="272" y="0" width="241" height="157" />
+				<surface action="return to the crossroads." x="167" y="158" width="346" height="58" />
+			</surfaces>
+			<actions>
+				<action key="enter the house." type="goCard" value="8034" />
+				<action key="return to the crossroads." type="goCard" value="3901" />
+			</actions>
+		</card>
+		<card key="5683" imagePath="/datas/images/2072.png" mapX="40" mapY="79">
+			<messages>
+				<message key="position" value="The alley takes you under arcades, past an herbalist's shop." />
+				<message key="description" value="The shop you are standing in front of is, by far, the oldest in town. However, it seems well maintained: the trade in herbs and spices is... flourishing in Litter.\nYou can ..." />
+				<message key="action" value="#enter the store.#\n#return to the crossroads.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the store." x="164" y="0" width="262" height="162" />
+				<surface action="return to the crossroads." x="167" y="161" width="346" height="56" />
+			</surfaces>
+			<actions>
+				<action key="enter the store." type="goCard" value="8277" />
+				<action key="return to the crossroads." type="goCard" value="3901" />
+			</actions>
+		</card>
+		<card key="5974" imagePath="/datas/images/16071.png" mapX="31" mapY="71">
+			<messages>
+				<message key="position" value="You are in front of the home of Lingus, the lord of Litter." />
+				<message key="description" value="You only have Talent. This is not enough to enter Lingus's home.\nYou can ..." />
+				<message key="action" value="#return to the square.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="return to the square." x="164" y="188" width="349" height="25" />
+				<surface action="Enter the residence." x="229" y="11" width="156" height="181" />
+			</surfaces>
+			<actions>
+				<action key="return to the square." type="goCard" value="4269" />
+				<action key="Enter the residence." type="customAction" value="entrer" />
+			</actions>
+		</card>
+		<card key="6164" imagePath="/datas/images/14769.png" mapX="29" mapY="82">
+			<messages>
+				<message key="position" value="You are talking to the beggar, a very pitiful poor fellow." />
+				<message key="description" value="He implores you to give him alms.\n“Spare a gold coin or two, kind sir. I have not eaten for three days...”\nYou can ..." />
+				<message key="action" value="#give a coin to the beggar.#\n#give two coins to the beggar.#\n#tell the beggar that he#\n#better work.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+				<action key="give a coin to the beggar." type="customAction" value="une_piece" />
+				<action key="give two coins to the beggar." type="customAction" value="deux_pieces" />
+				<action key="tell the beggar that he" type="customAction" value="travailler" />
+				<action key="better work." type="customAction" value="travailler" />
+			</actions>
+		</card>
+		<card key="6640" imagePath="/datas/images/19803.png" mapX="27" mapY="105">
+			<messages>
+				<message key="position" value="You are in Litter's church. Its interior is very bare." />
+				<message key="description" value="The beadle, who was busy lighting the candles for the next service, is very surprised by your entry. You should have held the door to stop it from slamming!\nYou can ..." />
+				<message key="action" value="#talk to the beadle.#\n#pray for success#\n#of your quest.#\n#put a coin in the collection box.#\n#come out of the church.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the beadle." x="371" y="86" width="96" height="131" />
+				<surface action="pray for success" x="225" y="50" width="105" height="125" />
+				<surface action="put a coin in the collection box." x="168" y="156" width="32" height="38" />
+				<surface action="come out of the church." x="167" y="192" width="204" height="25" />
+			</surfaces>
+			<actions>
+				<action key="talk to the beadle." type="goCard" value="8954" />
+				<action key="pray for success" type="customAction" value="prier" />
+				<action key="of your quest." type="customAction" value="prier" />
+				<action key="put a coin in the collection box." type="customAction" value="piece_tronc" />
+				<action key="come out of the church." type="goCard" value="4519" />
+			</actions>
+		</card>
+		<card key="6740" imagePath="/datas/images/13238.png" mapX="38" mapY="96">
+			<messages>
+				<message key="position" value="You are in the tavern, among other customers, accustomed to this kind of place." />
+				<message key="description" value="As you enter, all conversations abruptly stop. Embarrassment invades you and the blush of shame rises to your cheeks. A soldier drinks a beer, already looking very tipsy.\nYou can ..." />
+				<message key="action" value="#talk to the soldier.#\n#order a drink.#\n#come out of the tavern.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the soldier." x="171" y="29" width="87" height="174" />
+				<surface action="order a drink." x="259" y="4" width="37" height="104" />
+				<surface action="order a drink." x="355" y="4" width="145" height="104" />
+				<surface action="order a drink." x="296" y="46" width="59" height="58" />
+				<surface action="come out of the tavern." x="246" y="164" width="267" height="52" />
+				<surface action="S'assoir." x="255" y="138" width="71" height="68" />
+				<surface action="Voir le spiritueux." x="296" y="3" width="59" height="46" />
+			</surfaces>
+			<actions>
+				<action key="talk to the soldier." type="goCard" value="8996" />
+				<action key="order a drink." type="customAction" value="commander_boire" />
+				<action key="come out of the tavern." type="goCard" value="4710" />
+				<action key="Voir le spiritueux." type="customAction" value="spiritueux" />
+				<action key="S'assoir." type="customAction" value="assoir" />
+			</actions>
+		</card>
+		<card key="7004" imagePath="/datas/images/2480.png" mapX="25" mapY="55">
+			<messages>
+				<message key="position" value="You are on the pier of the port of Litter... What if you left for other skies?" />
+				<message key="description" value="A ship, ready to set sail, faces you, flown over by countless seagulls in search of food. \nYou can ..." />
+				<message key="action" value="#get on the ship.#\n#go towards the city.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="get on the ship." x="244" y="0" width="262" height="162" />
+				<surface action="go towards the city." x="220" y="163" width="293" height="52" />
+			</surfaces>
+			<actions>
+				<action key="get on the ship." type="goCard" value="10308" />
+				<action key="go towards the city." type="goCard" value="5079" />
+			</actions>
+		</card>
+		<card key="7367" imagePath="/datas/images/15750.png" mapX="10" mapY="54">
+			<messages>
+				<message key="position" value="You are in front of the Litter lighthouse. A seagull soars in the sky and flies over you." />
+				<message key="description" value="The panorama is remarkable: the bare rocky coast is illuminated by the warm colors of the sunset. You thank heaven that it is given to you to contemplate such a spectacle.\nYou can ..." />
+				<message key="action" value="#enter the lighthouse.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the lighthouse." x="224" y="0" width="82" height="214" />
+				<surface action="return to the intersection." x="305" y="174" width="208" height="42" />
+				<surface action="return to the intersection." x="167" y="174" width="57" height="42" />
+			</surfaces>
+			<actions>
+				<action key="enter the lighthouse." type="goCard" value="9464" />
+				<action key="return to the intersection." type="goCard" value="5079" />
+			</actions>
+		</card>
+		<card key="7548" imagePath="/datas/images/18457.png" mapX="7" mapY="76">
+			<messages>
+				<message key="position" value="You are in front of the opulent house of a notable person from Litter." />
+				<message key="description" value="This magnificent house must belong, at the very least, to the alderman or bailiff of the city. What splendor! It is certain that a cleric would be received with kindness.\nYou can ..." />
+				<message key="action" value="#enter the house.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the house." x="219" y="0" width="240" height="218" />
+				<surface action="return to the intersection." x="164" y="0" width="55" height="216" />
+				<surface action="return to the intersection." x="458" y="0" width="55" height="216" />
+			</surfaces>
+			<actions>
+				<action key="enter the house." type="goCard" value="9635" />
+				<action key="return to the intersection." type="goCard" value="5204" />
+			</actions>
+		</card>
+		<card key="7729" imagePath="/datas/images/3321.png" mapX="7" mapY="80">
+			<messages>
+				<message key="position" value="You are in front of a dilapidated hovel in the town of Litter." />
+				<message key="description" value="The last residence on this street is a house in name only. Your charitable heart sinks before such a pitiful hovel. What distress hides this miserable door?\nYou can ..." />
+				<message key="action" value="#enter the hut.#\n#return to the intersection.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="enter the hut." x="164" y="59" width="143" height="157" />
+				<surface action="return to the intersection." x="310" y="167" width="203" height="51" />
+				<surface action="return to the intersection." x="446" y="0" width="67" height="215" />
+			</surfaces>
+			<actions>
+				<action key="enter the hut." type="goCard" value="9914" />
+				<action key="return to the intersection." type="goCard" value="5204" />
+			</actions>
+		</card>
+		<card key="8034" imagePath="/datas/images/20281.png" mapX="40" mapY="73">
+			<messages>
+				<message key="position" value="You are in a Litter house. The room where you are received is cool." />
+				<message key="description" value="A gentleman, intrigued by your intrusion, looks at you anxiously. The nobility of his appearance leaves no doubt about the young man's high origins.\nYou can ..." />
+				<message key="action" value="#talk to the gentleman.#\n#get out of the house.#\n#Sell ​​your jar of milk.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the gentleman." x="167" y="0" width="100" height="185" />
+				<surface action="get out of the house." x="166" y="183" width="347" height="34" />
+				<surface action="regarder le mirroir." x="427" y="16" width="78" height="79" />
+			</surfaces>
+			<actions>
+				<action key="talk to the gentleman." type="goCard" value="10078" />
+				<action key="get out of the house." type="goCard" value="5463" />
+				<action key="Sell ​​your jar of milk." type="customAction" value="vendre_lait" />
+				<action key="regarder le mirroir." type="customAction" value="regarder_mirroir" />
+			</actions>
+		</card>
+		<card key="8607" imagePath="/datas/images/16931.png" mapX="31" mapY="64">
+			<messages>
+				<message key="position" value="You are in the home of Lingus, Lord of Litter." />
+				<message key="description" value="You are introduced to Lingus who you find busy reading. A guard of the lord watches your movements out of the corner of his eye.\nYou can ..." />
+				<message key="action" value="#talk to Lingus.#\n#come out of the fortress.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to Lingus." x="188" y="36" width="133" height="178" />
+				<surface action="come out of the fortress." x="321" y="162" width="192" height="53" />
+				<surface action="come out of the fortress." x="468" y="0" width="45" height="192" />
+			</surfaces>
+			<actions>
+				<action key="talk to Lingus." type="customAction" value="lingus" />
+				<action key="come out of the fortress." type="goCard" value="5974" />
+			</actions>
+		</card>
+		<card key="8954" imagePath="/datas/images/14973.png" mapX="27" mapY="105">
+			<messages>
+				<message key="position" value="You can answer the questions of the beadle who has regained courage by recognizing you." />
+				<message key="description" value="Well, we can say that you surprised me, @user! Come on, I don't blame you. I can even earn you some Talents, if you need them. How much ?" />
+				<message key="action" value="@question,4519,Litter,1" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="8996" imagePath="/datas/images/17464.png" mapX="38" mapY="96">
+			<messages>
+				<message key="position" value="The soldier is delighted to speak: his alcohol is cheerful. You can answer his questions." />
+				<message key="description" value="Ah, there, there! I meet some weird people, you have no idea. You, @user, seem brave to me. I want to help you: do you want to answer a question and earn Talents?" />
+				<message key="action" value="@question,4710,Litter,2" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="9464" imagePath="/datas/images/20769.png" mapX="11" mapY="45">
+			<messages>
+				<message key="position" value="You have entered the Litter Lighthouse. Your eyes slowly adjust to the darkness." />
+				<message key="description" value="It is very dark in the lighthouse. You hear that someone is coming: it is certainly the guard who is coming down to meet you.\nYou can ..." />
+				<message key="action" value="#talk to the lighthouse keeper.#\n#come out of the lighthouse.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="talk to the lighthouse keeper." x="383" y="0" width="130" height="216" />
+				<surface action="come out of the lighthouse." x="239" y="69" width="78" height="147" />
+			</surfaces>
+			<actions>
+				<action key="talk to the lighthouse keeper." type="goCard" value="10950" />
+				<action key="come out of the lighthouse." type="goCard" value="7367" />
+			</actions>
+		</card>
+		<card key="9635" imagePath="/datas/images/18136.png" mapX="7" mapY="70">
+			<messages>
+				<message key="position" value="You are in the hall of a wealthy house." />
+				<message key="description" value="The interior of the residence confirms your first impression: everything here exudes good fortune... The notable, informed of your presence, comes towards you, a benevolent smile on his lips.\nYou can ..." />
+				<message key="action" value="#speak to the notable.#\n#leave the house.#\n#Offer your abacus to the notable.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="speak to the notable." x="164" y="0" width="90" height="217" />
+				<surface action="leave the house." x="385" y="0" width="117" height="218" />
+			</surfaces>
+			<actions>
+				<action key="speak to the notable." type="goCard" value="11219" />
+				<action key="leave the house." type="goCard" value="7548" />
+				<action key="Offer your abacus to the notable." type="customAction" value="boulier_notable" />
+			</actions>
+		</card>
+		<card key="9914" imagePath="/datas/images/18240.png" mapX="7" mapY="86">
+			<messages>
+				<message key="position" value="You are in the single room of a dilapidated house." />
+				<message key="description" value="A wrinkled old woman, in her surprise at receiving a visitor, drops her dish. The suffocating smell of this tiny, dirty room bothers you greatly.\nYou can ..." />
+				<message key="action" value="#run out of the hut.#\n#talk to the old woman.#\n#give a gold coin#\n#to the old woman.#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="run out of the hut." x="377" y="40" width="128" height="176" />
+				<surface action="talk to the old woman." x="169" y="40" width="128" height="176" />
+			</surfaces>
+			<actions>
+				<action key="run out of the hut." type="goCard" value="7729" />
+				<action key="talk to the old woman." type="goCard" value="11296" />
+				<action key="give a gold coin" type="customAction" value="pieceor_femme" />
+				<action key="to the old woman." type="customAction" value="pieceor_femme" />
+			</actions>
+		</card>
+		<card key="10078" imagePath="/datas/images/15121.png" mapX="40" mapY="73">
+			<messages>
+				<message key="position" value="You can answer the gentleman's questions." />
+				<message key="description" value="What an honor to welcome you, @user! I want to do everything I can to help you. I have some Talents in store for you, if you answer my question..." />
+				<message key="action" value="@question,5463,Litter,4" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="10465" imagePath="/datas/images/14294.png" mapX="40" mapY="83">
+			<messages>
+				<message key="position" value="You can answer the herbalist's questions." />
+				<message key="description" value="Hello @user. I was wondering if you would come by my house: they only talk about you in town! If you need a few more Talents, nothing could be simpler: you just have to answer my question." />
+				<message key="action" value="@question,5683,Litter,3" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="sonner les clochettes." x="467" y="2" width="46" height="75" />
+			</surfaces>
+			<actions>
+				<action key="sonner les clochettes." type="customAction" value="sonner_clochettes" />
+			</actions>
+		</card>
+		<card key="10697" imagePath="/datas/images/19213.png" mapX="31" mapY="64">
+			<messages>
+				<message key="position" value="You are in front of Lingus,\nlord of Litter." />
+				<message key="description" value="He gave you Litter's Talisman, a magnificent Celtic cross. It is one of the three sacred objects that will allow you to enter Encyclopia Abbey." />
+				<message key="action" value="#Continue...#" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+				<surface action="Continue..." x="167" y="0" width="346" height="217" />
+			</surfaces>
+			<actions>
+				<action key="Continue..." type="goCard" value="5974" />
+			</actions>
+		</card>
+		<card key="10950" imagePath="/datas/images/19107.png" mapX="11" mapY="45">
+			<messages>
+				<message key="position" value="You can answer the lighthouse keeper's questions." />
+				<message key="description" value="I seemed to hear some noise. So it’s you, @user, who’s the talk of the town? It won't be said that you brought me down for nothing: answer my question, and I'll give you some Talents..." />
+				<message key="action" value="@question,7367,Litter,7" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11219" imagePath="/datas/images/19654.png" mapX="7" mapY="70">
+			<messages>
+				<message key="position" value="You can answer the notable's questions." />
+				<message key="description" value="Peace be with you, @user! It's nice to meet you. And I can prove it to you by earning you some Talents. Do you want to answer my question?" />
+				<message key="action" value="@question,7548,Litter,5" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11296" imagePath="/datas/images/20103.png" mapX="7" mapY="86">
+			<messages>
+				<message key="position" value="You can answer the old woman's questions." />
+				<message key="description" value="Well true, gosh! You, @user, took the trouble to visit a poor old woman like me. You won't regret it, because, if you answer my question, I have Talents for you." />
+				<message key="action" value="@question,7729,Litter,6" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11594" imagePath="/datas/images/13702.png" mapX="29" mapY="82">
+			<messages>
+				<message key="position" value="You are on Litter's Square. It's getting hotter and hotter!" />
+				<message key="description" value="The beggar has disappeared.\nThe rooster drinks on the edge of the well. He seems to be the only one to notice your presence in the square. Don't be fooled, many residents are watching you from half-closed windows!" />
+				<message key="action" value="#go north.#\n#go south.#\n#go east.#\n#go west.#" />
+				<message key="angel" value="Really, Litter must house a large market, during fair times... How vast this place is!\nWhere do you want to go now? At Lingus? So, head north. But don't forget the essential Talents... Are you thirsty? Towards the south, you will find a tavern. Attention ! If you go there, be careful! These places of perdition are not safe..." />
+			</messages>
+			<surfaces>
+				<surface action="go north." x="253" y="0" width="174" height="132" />
+				<surface action="go south." x="168" y="162" width="345" height="54" />
+				<surface action="go west." x="167" y="0" width="85" height="188" />
+				<surface action="go east." x="428" y="0" width="85" height="188" />
+			</surfaces>
+			<actions>
+				<action key="go north." type="goCard" value="5974" />
+				<action key="go south." type="goCard" value="3515" />
+				<action key="go east." type="goCard" value="3901" />
+				<action key="go west." type="goCard" value="3814" />
+			</actions>
+		</card>
+		<card key="11660" imagePath="/datas/images/16289.png" mapX="0" mapY="0">
+			<messages>
+				<message key="position" value="You are in conversation with your guardian angel." />
+				<message key="description" value="Ah @user!  This time, you have to earn the right to get information. You will have to answer a question. If you succeed, I will help you and even give you Encyclopia Talents." />
+				<message key="action" value="@question,last,Encyclopia,ange" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11661" imagePath="/datas/images/16289.png" mapX="0" mapY="0">
+			<messages>
+				<message key="position" value="You are in conversation with your guardian angel." />
+				<message key="description" value="Ah @user!  This time, you have to earn the right to get information. You will have to answer a question. If you succeed, I will help you and even give you Matem Talents." />
+				<message key="action" value="@question,last,Matem,ange" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11662" imagePath="/datas/images/16289.png" mapX="0" mapY="0">
+			<messages>
+				<message key="position" value="You are in conversation with your guardian angel." />
+				<message key="description" value="Ah @user!  This time, you have to earn the right to get information. You will have to answer a question. If you succeed, I will help you and, even, I will give you Litter Talents." />
+				<message key="action" value="@question,last,Litter,ange" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+		<card key="11663" imagePath="/datas/images/16289.png" mapX="0" mapY="0">
+			<messages>
+				<message key="position" value="You are in conversation with your guardian angel." />
+				<message key="description" value="Ah @user!  This time, you have to earn the right to get information. You will have to answer a question. If you succeed, I will help you and even give you Histora Talents." />
+				<message key="action" value="@question,last,Histora,ange" />
+				<message key="angel" value="" />
+			</messages>
+			<surfaces>
+			</surfaces>
+			<actions>
+			</actions>
+		</card>
+	</cards>
+</root>

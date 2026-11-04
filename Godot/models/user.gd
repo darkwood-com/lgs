@@ -1,4 +1,4 @@
-class_name User extends Object
+class_name User extends RefCounted
 
 var name: String
 var nbSteps: int
@@ -99,14 +99,23 @@ func _init():
 	}
 
 func load() -> Dictionary:
-	if not FileAccess.file_exists("user://lgs.save"):
-		return {'success': false}
-	
-	var save_game = FileAccess.open("user://lgs.save", FileAccess.READ)
+	var saved_text = ""
+	if OS.has_feature("web"):
+		var stored = JavaScriptBridge.get_interface("localStorage").getItem("lgs.save.v1")
+		if stored != null:
+			saved_text = str(stored)
+	# Keep older browser saves readable while moving new saves to the
+	# localStorage slot synchronized by the GamePix SDK.
+	if saved_text == "":
+		if not FileAccess.file_exists("user://lgs.save"):
+			return {"success": false}
+		var save_game = FileAccess.open("user://lgs.save", FileAccess.READ)
+		if save_game == null:
+			return {"success": false}
+		saved_text = save_game.get_as_text()
 	var json = JSON.new()
-	var parse_result = json.parse(save_game.get_as_text())
-	save_game.close()
-	
+	var parse_result = json.parse(saved_text)
+
 	if not parse_result == OK:
 		return {'success': false}
 	var json_data = json.get_data()
@@ -119,6 +128,7 @@ func load() -> Dictionary:
 	adventures = json_data['user']['adventures']
 	nbQuestionsCharacter = json_data['user']['nbQuestionsCharacter']
 	
+	askedQuestions.clear()
 	for questionData in json_data['user']['askedQuestions']:
 		var question = Question.new()
 		question.points = questionData.points
@@ -132,7 +142,6 @@ func load() -> Dictionary:
 	}
 	
 func save():
-	var save_game = FileAccess.open("user://lgs.save", FileAccess.WRITE)
 	
 	var askedQuestionsData = []
 	for question in askedQuestions:
@@ -156,8 +165,13 @@ func save():
 		}
 	})
 	
-	save_game.store_string(json_string)
-	save_game.close()
+	if OS.has_feature("web"):
+		JavaScriptBridge.get_interface("localStorage").setItem("lgs.save.v1", json_string)
+	else:
+		var save_game = FileAccess.open("user://lgs.save", FileAccess.WRITE)
+		if save_game != null:
+			save_game.store_string(json_string)
+			save_game.close()
 
 func goCard(aCardId: String):
 	nbSteps += 1

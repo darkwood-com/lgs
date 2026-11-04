@@ -87,7 +87,7 @@
 	</question>
 	<question points="2" ask="Combien de planètes comporte le système solaire ?">
 	  <answer value="4 planètes" />
-	  <answer value="9 planètes" valid="true" />
+	  <answer value="8 planets" valid="true" />
 	  <answer value="12 planètes" />
 	  <answer value="1 planète" />
 	  <answer value="18 planètes" />
@@ -151,8 +151,8 @@
 	</question>
 	<question points="2" ask="Quelle est la pesanteur lunaire ?">
 	  <answer value="La même que la pesanteur terrestre." />
-	  <answer value="1/6 de la pesanteur terrestre." />
-	  <answer value="Le double de la pesanteur terrestre." valid="true" />
+	  <answer value="1/6 de la pesanteur terrestre." valid="true" />
+	  <answer value="Le double de la pesanteur terrestre." />
 	</question>
 	<question points="4" ask="Combien y a-t-il de lois de Képler ?">
 	  <answer value="2 Lois." />
@@ -168,11 +168,11 @@
 	  <answer value="Saturne" />
 	  <answer value="Mars" />
 	</question>
-	<question points="4" ask="Qu'est ce qu'une planète rétrogade ?">
-	  <answer value="Une planète qui ralenti." />
-	  <answer value="Une planète qui accélère." />
-	  <answer value="Une planète qui tourne dans le sens des aiguilles d'une montre." valid="true" />
-	  <answer value="Une planète qui ne tourne pas." valid="true" />
+	<question points="4" ask="What is the apparent retrograde motion of a planet?">
+	  <answer value="A planet becoming smaller." />
+	  <answer value="A planet leaving the Solar System." />
+	  <answer value="A planet appearing to move backwards against the background stars." valid="true" />
+	  <answer value="A planet no longer rotating." />
 	</question>
 	<question points="3" ask="Qu'est ce que la magnitude d'une étoile ?">
 	  <answer value="Sa taille." />
@@ -408,7 +408,7 @@
 	<question points="3" ask="Lequel de ces Papes était anglais?">
 	  <answer value="Léon X" />
 	  <answer value="Pie IV" />
-	  <answer value="Adrien VI" valid="true" />
+	  <answer value="Adrian IV" valid="true" />
 	  <answer value="Clément III" />
 	  <answer value="Jules II" />
 	</question>

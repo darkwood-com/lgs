@@ -12,15 +12,17 @@ func set_rect(x: int, y: int, width: int, height: int):
 		no_view.set_rect(rect.x - 132, rect.y - 34, 60, 27)
 
 func _ready():
+	content_bottom = 40
+	super._ready()
 	yes_view = BoxScene.instantiate()
-	yes_view.text = "Ok"
+	yes_view.text = "OK"
 	yes_view.type = 'button'
 	yes_view.clicked.connect(_on_yes_view_clicked)
 	add_child(yes_view)
 	
 	if type == 'bool':
 		no_view = BoxScene.instantiate()
-		no_view.text = "Annuler"
+		no_view.text = "Cancel"
 		no_view.type = 'button'
 		no_view.clicked.connect(_on_no_view_clicked)
 		add_child(no_view)

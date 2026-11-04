@@ -18,6 +18,24 @@ func _ready():
 	var background = Sprite.new("res:/" + root.data.getInit("Main").backgroundImage)
 	background.bubbleEvent = true
 	add_child(background)
+	# Replace only the baked French title; keep the original castle illustration.
+	var title_background = ColorRect.new()
+	title_background.position = Vector2(400, 12)
+	title_background.size = Vector2(112, 180)
+	title_background.color = Color.WHITE
+	title_background.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(title_background)
+	var title = Label.new()
+	title.text = "THE\nKEEPER\nOF\nKNOWLEDGE"
+	title.position = Vector2(402, 26)
+	title.size = Vector2(106, 156)
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_override("font", preload("res://datas/fonts/lgsfont.ttf"))
+	title.add_theme_font_size_override("font_size", 16)
+	title.add_theme_color_override("font_color", Color.BLACK)
+	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(title)
 
 	info = Sprite.new("res://datas/images/19678.png")
 	info.clicked.connect(_on_action)
@@ -25,13 +43,13 @@ func _ready():
 	
 	info_message = BoxScene.instantiate()
 	info_message.text = "\n".join([
-		"Le gardien du Savoir                 Version 1.0",
+		"The Keeper of Knowledge Version 1.0",
 		"",
-		"      Adapté sur Mac OS X, iPhone et iPad",
-		"              par Mathieu Ledru",
+		"      Adapted to Mac OS X, iPhone and iPad",
+		"              by Mathieu Ledru",
 		"",
-		"    Version originale sur Hypercard (Mac OS 9)",
-		"       par Monic et Bernard Grienenberger"
+		"    Original version on Hypercard (Mac OS 9)",
+		"       by Monic and Bernard Grienenberger"
 	])
 	info_message.visible = false
 	info_message.clicked.connect(_on_action)
@@ -44,13 +62,13 @@ func _ready():
 	add_child(student_view)
 	
 	student_menu_view = BoxScene.instantiate()
-	student_menu_view.text = "#Commencer une nouvelle aventure.#\n#Reprendre une ancienne.#\n\n#Annuler.#"
+	student_menu_view.text = "#Start a new adventure.#\n#Resume a saved adventure.#\n\n#Cancel.#"
 	student_menu_view.visible = false
 	student_menu_view.clicked.connect(_on_action)
 	add_child(student_menu_view)
 	
 	new_user_prompt_view = PromptTextScene.instantiate()
-	new_user_prompt_view.text = "Quel est ton prénom, aventurier."
+	new_user_prompt_view.text = "What is your name, adventurer?"
 	new_user_prompt_view.visible = false
 	new_user_prompt_view.bubbleEvent = true
 	new_user_prompt_view.clicked.connect(_on_action)
@@ -74,14 +92,14 @@ func _on_action(senderAction, sender):
 		
 		student_menu_view.visible = !student_menu_view.visible
 	elif sender == student_menu_view:
-		if senderAction == "Commencer une nouvelle aventure.":
+		if senderAction == "Start a new adventure.":
 			new_user_prompt_view.visible = true
-		elif senderAction == "Reprendre une ancienne.":
+		elif senderAction == "Resume a saved adventure.":
 			var user = User.new()
 			var loadResult = user.load()
 			if loadResult['success']:
 				# load success
-				var promptValue = "Voulez vous charger le périple du "
+				var promptValue = "Load your adventure saved on "
 				promptValue += str(loadResult['savedate']['day'])
 				promptValue += '/'
 				promptValue += str(loadResult['savedate']['month'])
@@ -92,13 +110,13 @@ func _on_action(senderAction, sender):
 				load_user_prompt_view.text = promptValue
 			else:
 				# load fail
-				load_user_prompt_view.text = "Aucune sauvegarde n'a été trouvée."
+				load_user_prompt_view.text = "No saved game was found."
 			
 			load_user_prompt_view.visible = true
 		
 		student_menu_view.visible = false
 	elif sender == new_user_prompt_view:
-		if senderAction == "Ok" and new_user_prompt_view.text_field.text != "":
+		if senderAction == "OK" and new_user_prompt_view.text_field.text != "":
 			root.user = User.new()
 			root.user.name = new_user_prompt_view.text_field.text
 			root.user.cardId = root.data.getInit("Main").statupCard
@@ -106,13 +124,13 @@ func _on_action(senderAction, sender):
 	elif sender == load_user_prompt_view:
 		load_user_prompt_view.visible = false
 		
-		if senderAction == "Ok" and root.user.load()['success']:
+		if senderAction == "OK" and root.user.load()['success']:
 			root.set_current_scene('game')
 
 func update_layout(_is_mobile: bool):
 	info.position = Vector2i(512 - 24, 342 - 20)
 	info_message.set_rect(185, 185, 300, 125)
 	student_view.set_rect(12, 311, 113, 27)
-	student_menu_view.set_rect(12, 227, 208, 71)
+	student_menu_view.set_rect(12, 220, 230, 84)
 	new_user_prompt_view.set_rect(106, 131, 300, 110)
 	load_user_prompt_view.set_rect(106, 131, 300, 80)

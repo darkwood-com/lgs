@@ -8,7 +8,7 @@ rm -rf "$OUT" && mkdir -p "$OUT"
 cd "$ROOT/Godot"
 "$GODOT" --headless --import
 "$GODOT" --headless --export-release GamePix "$OUT/index.html"
-python3 -c "from PIL import Image;Image.open('$ROOT/gamepix/cover-1360x850.png').convert('RGB').save('$OUT/background.jpg',quality=88)"
+cp "$ROOT/gamepix/loading-background.jpg" "$OUT/background.jpg"
 rm -f "$ROOT/Exports/lgs-gamepix.zip"
 (cd "$OUT" && python3 -m zipfile -c "$ROOT/Exports/lgs-gamepix.zip" *)
 echo "$ROOT/Exports/lgs-gamepix.zip"

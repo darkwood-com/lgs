@@ -17,9 +17,11 @@ func stopSound(sound: String):
 	var soundPath = root.data.getSound(sound)
 	if sounds.has(soundPath):
 		remove_child(sounds[soundPath])
+		sounds[soundPath].queue_free()
 		sounds.erase(soundPath)
 
 func stopSounds():
 	for sound in sounds:
 		remove_child(sounds[sound])
+		sounds[sound].queue_free()
 		sounds.erase(sound)

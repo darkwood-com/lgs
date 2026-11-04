@@ -8,7 +8,7 @@ func _init(texturePath: String):
 	centered = false
 	texture = load(texturePath)
 	
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and get_rect().has_point(to_local(event.position)) and is_visible_in_tree():
 			if bubbleEvent == false:

@@ -1,31 +1,18 @@
 class_name EndScene extends Node2D
 
 var root: RootScene
-var currentState: String
-var currentSprite: Sprite = null
+var story: Box
 
 func _ready():
-	change_image("end1Image")
-
 	root.soundManager.play("alleluia")
+	story = preload("res://entities/box.tscn").instantiate()
+	story.text = "THE KEEPER OF KNOWLEDGE\n\nCongratulations, " + root.user.name + "!\n\nYou have completed your quest and brought the three Talismans to Encyclopia. Your knowledge and perseverance have earned you the right to become the new Keeper of Knowledge.\n\nEncyclopia places the Great Book of Knowledge in your hands, the symbol of your new responsibility.\n\n#Return to the main menu#"
+	story.clicked.connect(_on_action)
+	add_child(story)
 
-func change_image(key: String):
-	currentState = key
-	
-	if currentSprite != null:
-		remove_child(currentSprite)
-	
-	currentSprite = Sprite.new("res:/" + root.data.getInit("End")[key])
-	currentSprite.clicked.connect(_on_action)
-	add_child(currentSprite)
-
-func _on_action(_action, sender):
-	if sender == currentSprite:
-		if currentState == "end1Image":
-			root.soundManager.stopSounds()
-			
-			#return to the main menu
-			root.set_current_scene("main")
+func _on_action(_action, _sender):
+	root.soundManager.stopSounds()
+	root.set_current_scene("main")
 
 func update_layout(_is_mobile: bool):
-	currentSprite.position = Vector2i(0, 0)
+	story.set_rect(16, 16, 480, 310)

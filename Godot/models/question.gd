@@ -1,4 +1,4 @@
-class_name Question extends Object
+class_name Question extends RefCounted
 
 var points: int #points given for this question
 var ask: String #asking question

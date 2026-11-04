@@ -108,10 +108,11 @@ func goCard(cardId: String):
 	
 	root.user.goCard(cardId)
 	
-	actions = card.actions
+	actions = card.actions.duplicate()
 	
 	for surface in surfacesView:
 		remove_child(surface)
+		surface.queue_free()
 	surfacesView.clear()
 	
 	boxViewMessages = {
@@ -139,18 +140,18 @@ func goCard(cardId: String):
 		
 		if root.user.nbQuestionsCharacter[mode["character"]] > 3:
 			#4 questions max by characters
-			boxViewMessages["description"] = "Désolé, @user ! Il n'y a plus de Talents pour toi ici."
-			boxViewMessages["action"] = "#Suite...#"
+			boxViewMessages["description"] = "Sorry, @user! There are no more Talents for you here."
+			boxViewMessages["action"] = "#Continue...#"
 			
-			actions["Suite..."] = Action.new("goCard", mode["cardReturnId"])
+			actions["Continue..."] = Action.new("goCard", mode["cardReturnId"])
 		else:
-			boxViewMessages["description"] += "\nQue choisis-tu ?"
-			boxViewMessages["action"] = "#2 Talents#\n#3 Talents#\n#4 Talents#\n#Ne pas répondre.#"
+			boxViewMessages["description"] += "\nWhat do you choose?"
+			boxViewMessages["action"] = "#2 Talents#\n#3 Talents#\n#4 Talents#\n#Do not answer.#"
 			
 			actions["2 Talents"] = Action.new("question", "2")
 			actions["3 Talents"] = Action.new("question", "3")
 			actions["4 Talents"] = Action.new("question", "4")
-			actions["Ne pas répondre."] = Action.new("goCard", mode["cardReturnId"])
+			actions["Do not answer."] = Action.new("goCard", mode["cardReturnId"])
 	
 	customActions("OpenCard", null)
 	
@@ -170,6 +171,8 @@ func goCard(cardId: String):
 	else:
 		cameraView.texture = load("res:/" + card.imagePath)
 	
+	ArtLabels.apply(cameraView, card.imagePath)
+
 	for surface in card.surfaces:
 		for surfaceRect in card.surfaces[surface]:
 			var surfaceView = Surface.new(surface)
@@ -179,32 +182,23 @@ func goCard(cardId: String):
 			surfacesView.append(surfaceView)
 	
 func refreshTextViews():
-	#update and replace keywords in boxviews
-	for boxView in boxViewMessages:
-		var textValue: String = boxViewMessages[boxView]
-		textValue = textValue.replace("@user", root.user.name)
-		textValue = textValue.replace("@gold", str(root.user.gold))
-		if root.user.gold > 1:
-			textValue = textValue.replace("@pieceor", "pièces d'or")
-		else:
-			textValue = textValue.replace("@pieceor", "pièce d'or")
-		
-		var totalPoints: int = 0
-		for city in root.user.points:
-			totalPoints += root.user.points[city]
-			
-			var pointKey: String = "@point" + city
-			var talentKey: String = "@talent" + city
-			
-			textValue = textValue.replace(pointKey, str(root.user.points[city]))
-			if int(root.user.points[city]) > 1:
-				textValue = textValue.replace(talentKey, "talents")
-			else:
-				textValue = textValue.replace(talentKey, "talent")
-		textValue = textValue.replace("@totalPoints", str(totalPoints))
-		
-		boxViews[boxView].text = textValue
-		boxViews[boxView].queue_redraw()
+	# Translate original phrases before interpolating values. Choice metadata
+	# keeps the original action key so translated labels cannot break navigation.
+	var replacements = {
+		"@user": root.user.name,
+		"@gold": str(root.user.gold),
+		"@pieceor": "gold coins" if root.user.gold != 1 else "gold coin",
+	}
+	var total_points = 0
+	for city in root.user.points:
+		total_points += root.user.points[city]
+		replacements["@point" + city] = str(root.user.points[city])
+		replacements["@talent" + city] = "Talents" if root.user.points[city] != 1 else "Talent"
+	replacements["@totalPoints"] = str(total_points)
+	for key in boxViewMessages:
+		boxViews[key].display_replacements = replacements
+		boxViews[key].text = boxViewMessages[key]
+		boxViews[key].queue_redraw()
 
 func _on_action(senderAction, sender):
 	#print("action: " + senderAction)
@@ -239,25 +233,25 @@ func _on_action(senderAction, sender):
 				root.soundManager.play("angel", true)
 	elif sender == bagView:
 		var objectsTranslation = {
-			"lexique": "un lexique",
-			"boulier": "un boulier",
-			"atlas": "un atlas",
-			"croix_celtique": "le Talisman de Litter",
-			"sablier": "le Talisman de Matem",
-			"piece_roi": "le Talisman de Histora",
-			"sac_or": "une bourse",
-			"herbes": "quelques herbes",
-			"pepite": "une pépite",
-			"pommes": "des pommes",
-			"bouteille": "une bouteille",
-			"lait": "un pot de lait",
-			"joncs": "des joncs",
-			"fleurs": "un bouquet de fleurs",
-			"collier": "un collier",
-			"torche": "une torche"
+			"lexique": "a lexicon",
+			"boulier": "an abacus",
+			"atlas": "an atlas",
+			"croix_celtique": "Litter's Talisman",
+			"sablier": "Matem's Talisman",
+			"piece_roi": "Histora's Talisman",
+			"sac_or": "a coin purse",
+			"herbes": "some herbs",
+			"pepite": "a nugget",
+			"pommes": "apples",
+			"bouteille": "a bottle",
+			"lait": "a pot of milk",
+			"joncs": "rushes",
+			"fleurs": "a bouquet of flowers",
+			"collier": "a necklace",
+			"torche": "a torch"
 		}
-		var msgValue = "Talents : Litter @pointLitter @talentLitter, Matem @pointMatem @talentMatem, Histora @pointHistora @talentHistora, Encyclopia @pointEncyclopia @talentEncyclopia.\n"
-		msgValue += "Vous possédez @gold @pieceor "
+		var msgValue = "Talents: Litter @pointLitter @talentLitter, Matem @pointMatem @talentMatem, Histora @pointHistora @talentHistora, Encyclopia @pointEncyclopia @talentEncyclopia.\n"
+		msgValue += "You own @gold @pieceor "
 		
 		var objectsDesc = []
 		for object in root.user.objects:
@@ -265,18 +259,18 @@ func _on_action(senderAction, sender):
 				objectsDesc.append(objectsTranslation[object])
 		
 		if objectsDesc.size() > 0:
-			msgValue += "et il y a dans votre sac :\n"
+			msgValue += "and there is in your bag:\n"
 			msgValue += ", ".join(objectsDesc)
 			msgValue += "."
 		else:
-			msgValue += "et il n'y a rien dans votre sac."
+			msgValue += "and there is nothing in your bag."
 		
 		boxViewMessages['msg'] = msgValue
 		msgView.visible = true
 	elif sender == saveView:
 		root.user.save()
 		
-		boxViewMessages['msg'] = "@user, ton périple a été enregistré."
+		boxViewMessages['msg'] = "@user, your journey has been recorded."
 		msgView.visible = true
 	elif sender == mapButtonView or (sender == mapView and mapButtonView.visible):
 		mapView.visible = !mapView.visible
@@ -321,43 +315,43 @@ func _on_action(senderAction, sender):
 					mode['chosenQuestion'] = chosenQuestion
 				else:
 					#no more question found for that kind of points
-					var description: String = "@user, tu as déjà vu toutes les questions de "
+					var description: String = "@user, you have already seen all the questions of "
 					description += action.value
-					description += " talents pour "
+					description += " talents for "
 					description += mode["city"]
 					
 					boxViewMessages['description'] = description
-					boxViewMessages['action'] = "#Suite...#"
+					boxViewMessages['action'] = "#Continue...#"
 					
-					actions["Suite..."] = Action.new("goCard", mode["cardReturnId"])
+					actions["Continue..."] = Action.new("goCard", mode["cardReturnId"])
 			elif action.type == "answer" and mode['mode'] == 'question':
 				var responseSounds: Array = []
 				var result = root.user.answer(action.value, mode["chosenQuestion"], mode["character"], mode["city"])
 				
 				if result.isValid:
 					responseSounds = ["juste1", "juste2", "juste3", "juste4", "juste5", "juste6", "juste7"]
-					var description: String = "Bravo, @user !\n«"
+					var description: String = "Well done, @user!\n“"
 					description += result.validAnswer
-					description += "» est en effet la bonne réponse.\nJe t'accorde donc les "
+					description += "” is correct.\nYou earn "
 					description += str(result.points)
-					description += " Talents que tu mérites."
+					description += " Talents."
 					
 					boxViewMessages['description'] = description
 				else:
 					responseSounds = ["faux1", "faux2", "faux3", "faux4", "faux5", "faux6", "faux7"]
-					var description: String = "Non, tu fais erreur, @user.\nUne bonne réponse était: «"
+					var description: String = "No, you're wrong, @user.\nThe correct answer was: “"
 					description += result.validAnswer
-					description += "»"
+					description += "”"
 					if result.points < 0:
-						description += "\nJe te retire un Talent."
+						description += "\nI'm taking away a Talent from you."
 					
 					boxViewMessages['description'] = description
 				
 				var responseSound: String = responseSounds[randi() % responseSounds.size()]
 				root.soundManager.play(responseSound, false)
 				
-				boxViewMessages['action'] = "#Suite...#"
-				actions["Suite..."] = Action.new("goCard", mode["cardReturnId"])
+				boxViewMessages['action'] = "#Continue...#"
+				actions["Continue..."] = Action.new("goCard", mode["cardReturnId"])
 	
 	customActions('Current', currentAction)
 	
@@ -374,7 +368,7 @@ func customActions(actionEvent: String, currentAction):
 				root.user.adventures["nbStepsCat"] = nbStepsCat - 1
 				
 				if randi_range(0, 2):
-					boxViewMessages["msg"] = "Les puces de ce satané chat vous dévorent. Cela vous démange sur tout le corps. Allez-vous finir par vous en débarrasser ?"
+					boxViewMessages["msg"] = "That damn cat's fleas are eating you. It itch all over your body. Will you end up getting rid of it?"
 					msgView.visible = true
 		
 		if root.user.cardId == "4651":
@@ -385,16 +379,16 @@ func customActions(actionEvent: String, currentAction):
 			root.soundManager.play("fermeporte", false)
 			if root.user.objects["atlas"]:
 				var actionValue: String = boxViewMessages["action"]
-				actionValue += "\n#proposer votre atlas au sage.#"
+				actionValue += "\n#offer your atlas to the wise.#"
 				boxViewMessages["action"] = actionValue
 		elif root.user.cardId == "4929":
 			if !root.user.adventures["lueur_pepite"]:
 				var description: String = boxViewMessages["description"]
-				description = description.replace("Une vive lueur sur le bord du chemin attire votre attention. ", "")
+				description = description.replace("A bright glow at the side of the path catches your eye. ", "")
 				boxViewMessages["description"] = description
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#examiner cette lueur.#", "")
+				action = action.replace("\n#examine this glow.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "10279":
 			root.soundManager.play("coucou_boucle", false)
@@ -413,16 +407,16 @@ func customActions(actionEvent: String, currentAction):
 				root.user.objects["pommes"] = false
 				
 				var msgValue: String = ""
-				msgValue += "En entrant dans l'auberge, vous trébuchez et le contenu de votre sac se répand sur le sol. Les pommes que vous avez cueillies"
-				msgValue += " roulent sur le sol. A leur vue, le patron de l'auberge se met en colère et vous traite de voleur."
-				msgValue += " En effet, ces pommes proviennent de son verger et vous les avez cueillies sans autorisation."
-				msgValue += " Vous vous sortez de ce mauvais pas en "
+				msgValue += "As you enter the inn, you trip and the contents of your bag spill onto the floor. The apples you picked"
+				msgValue += " roll on the ground. When he sees them, the hostel owner gets angry and calls you a thief."
+				msgValue += " Indeed, these apples come from his orchard and you picked them without authorization."
+				msgValue += " You get out of this mess by "
 				
 				if root.user.gold > 1:
-					msgValue += "lui rendant les pommes accompagnées d'une pièce d'or."
+					msgValue += "returning the apples to him along with a gold coin."
 					root.user.gold = root.user.gold - 1
 				else:
-					msgValue += "lui rendant les pommes responsables de sa colère."
+					msgValue += "making the apples responsible for his anger."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -432,19 +426,19 @@ func customActions(actionEvent: String, currentAction):
 			root.soundManager.play("ermite", false)
 			if !root.user.objects["pommes"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner vos pommes à l'ermite.#", "")
+				action = action.replace("\n#give your apples to the hermit.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "31118":
 			root.soundManager.play("brasse_boucle", true)
 			
 			var msgValue: String = ""
-			msgValue += "La rivière est très agitée. Vous êtes entraîné par un courant furieux. Plusieurs fois,"
-			msgValue += " vous vous croyez perdu. Heureusement, les cours de natation que vous avez suivis,"
-			msgValue += " pourtant avec réticence, au monastère, vous permettent de surnager sans trop de dommage."
+			msgValue += "The river is very rough. You are carried by a furious current. Several times,"
+			msgValue += " you think you are lost. Fortunately, the swimming lessons you took,"
+			msgValue += " yet reluctantly, at the monastery, allow you to float without too much harm."
 			
 			if root.user.gold > 1:
 				root.user.gold = floor(root.user.gold / 2.0)
-				msgValue += " Pendant que vous nagez, vous sentez que vous perdez une partie de vos pièces d'or."
+				msgValue += " As you swim, you feel that you are losing some of your gold coins."
 			
 			boxViewMessages["msg"] = msgValue
 			msgView.visible = true
@@ -453,29 +447,29 @@ func customActions(actionEvent: String, currentAction):
 		elif root.user.cardId == "4548":
 			if root.user.objects["pepite"]:
 				var action: String = boxViewMessages["action"]
-				action += "\n#montrer votre pépite au joaillier.#"
+				action += "\n#show your nugget to the jeweler.#"
 				boxViewMessages["action"] = action
 			elif !root.user.objects["collier"]:
 				var action: String = boxViewMessages["action"]
-				action += "\n#acheter un collier.#"
+				action += "\n#buy a necklace.#"
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "4686":
 			if root.user.gold == 0:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner une pièce d'or#\n#à la servante.#", "")
+				action = action.replace("\n#give a gold coin#\n#to the maid.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "5261":
 			root.soundManager.play("rires_boucle", true)
 		elif root.user.cardId == "7100":
 			if root.user.gold == 0 or root.user.objects["bouteille"]:
 				var action: String = boxViewMessages["action"]
-				action += "\n#acheter une bouteille de vin.#"
+				action += "\n#buy a bottle of wine.#"
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "82770":
 			root.soundManager.play("fermeporte", false)
 			if !root.user.objects["lexique"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#proposer votre lexique au prêtre.#", "")
+				action = action.replace("\n#offer your glossary to the priest.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "6197":
 			root.soundManager.play("haltela", false)
@@ -483,13 +477,13 @@ func customActions(actionEvent: String, currentAction):
 			var description: String = ""
 			
 			if root.user.points["Matem"] > 20:
-				description = "Vous avez @pointMatem @talentMatem. Cela vous permet d'entrer dans la demeure de Matica."
+				description = "You have @pointMatem @talentMatem. This allows you to enter Matica's abode."
 				
 				var action: String = boxViewMessages["action"]
-				action += "\n#Entrer dans la demeure.#"
+				action += "\n#Enter the residence.#"
 				boxViewMessages["action"] = action
 			else:
-				description = "Vous n'avez que @pointMatem @talentMatem. Cela n'est pas suffisant pour entrer dans la demeure de Matica."
+				description = "You only have @pointMatem @talentMatem. This is not enough to enter Matica's home."
 
 			
 			boxViewMessages["description"] = description
@@ -498,7 +492,7 @@ func customActions(actionEvent: String, currentAction):
 		elif root.user.cardId == "8027":
 			if !root.user.objects["fleurs"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Donner vos fleurs#\n#à la dame de la fenêtre.#", "")
+				action = action.replace("\n#Give your flowers#\n#to the woman at the window.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "9432" or root.user.cardId == "9627" or root.user.cardId == "10567" or root.user.cardId == "11590" or root.user.cardId == "12941" or root.user.cardId == "7004" or root.user.cardId == "10308" or root.user.cardId == "11340" or root.user.cardId == "15930":
 			root.soundManager.play("seagulls_boucle", true)
@@ -506,26 +500,26 @@ func customActions(actionEvent: String, currentAction):
 			root.soundManager.play("aaaah", false)
 			if root.user.gold == 0:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner une pièce d'or au pêcheur#\n#pour le réconforter.#", "")
+				action = action.replace("\n#give a gold coin to the fisherman#\n#to comfort him.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "15565":
 			root.soundManager.play("goutte", true)
 			
 			if !root.user.objects["joncs"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#confectionner une torche#\n#avec vos joncs.#", "")
+				action = action.replace("\n#make a torch#\n#with your rushes.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "13877":
 			var description: String = ""
 			
 			if root.user.points["Histora"] > 20:
-				description = "Vous avez @pointHistora @talentHistora. Cela vous permet d'entrer dans la demeure de Kronolos."
+				description = "You have @pointHistora @talentHistora. This allows you to enter Kronolos' home."
 				
 				var action: String = boxViewMessages["action"]
-				action += "\n#Entrer dans la demeure.#"
+				action += "\n#Enter the residence.#"
 				boxViewMessages["action"] = action
 			else:
-				description = "Vous n'avez que @pointHistora @talentHistora. Cela n'est pas suffisant pour entrer dans la demeure de Kronolos."
+				description = "You only have @pointHistora @talentHistora. This is not enough to enter Kronolos's home."
 			
 			boxViewMessages["description"] = description
 		elif root.user.cardId == "15213":
@@ -549,61 +543,61 @@ func customActions(actionEvent: String, currentAction):
 		elif root.user.cardId == "9635":
 			if !root.user.objects["boulier"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Proposer votre boulier au notable.#", "")
+				action = action.replace("\n#Offer your abacus to the notable.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "9914":
 			if root.user.gold == 0:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner une pièce d'or#\n#à la vieille femme.#", "")
+				action = action.replace("\n#give a gold coin#\n#to the old woman.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "5974":
 			var description: String = ""
 			
 			if root.user.points["Litter"] > 20:
-				description = "Vous avez @pointLitter @talentLitter. Cela vous permet d'entrer dans la demeure de Lingus."
+				description = "You have @pointLitter @talentLitter. This allows you to enter Lingus' abode."
 				
 				var action: String = boxViewMessages["action"]
-				action += "\n#Entrer dans la demeure.#"
+				action += "\n#Enter the residence.#"
 				boxViewMessages["action"] = action
 			else:
-				description = "Vous n'avez que @pointLitter @talentLitter. Cela n'est pas suffisant pour entrer dans la demeure de Lingus."
+				description = "You only have @pointLitter @talentLitter. This is not enough to enter Lingus's home."
 			
 			boxViewMessages["description"] = description
 		elif root.user.cardId == "8034":
 			root.soundManager.play("grillejardin", false)
 			if !root.user.objects["lait"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Vendre votre pot de lait.#", "")
+				action = action.replace("\n#Sell ​​your jar of milk.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "8277":
 			root.soundManager.play("clochettes2", false)
 			if !root.user.objects["herbes"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#montrer vos herbes.#", "")
+				action = action.replace("\n#show your herbs.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "11876":
 			if !root.user.objects["fleurs"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Donner vos fleurs à la nonne.#", "")
+				action = action.replace("\n#Give your flowers to the nun.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "25754":
 			if !root.user.objects["lait"]:
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner votre pot de lait#\n#à la cuisinière.#", "")
+				action = action.replace("\n#give your pot of milk#\n#to the cook.#", "")
 				boxViewMessages["action"] = action
 	elif actionEvent == 'Current':
 		if root.user.cardId == "5725":
-			if currentAction == "commerçant":
-				var msgValue: String = "C'est toi, @user"
+			if currentAction == "trader":
+				var msgValue: String = "It's you, @user"
 
 				var nbAdviceBoutique: int = root.user.adventures["nbAdviceBoutique"]
 				if nbAdviceBoutique < 4:
-					msgValue += "?\nJe peux te dire qu'"
+					msgValue += "?\nI can tell you that"
 
 					var msgChoice = {
-						1: "un lexique te sera bien utile dans la ville de Litter.",
-						2: "un boulier te sera bien utile dans la ville de Matem.",
-						3: "un atlas te sera bien utile dans la ville d'Histora."
+						1: "a glossary will come in handy in the town of Litter.",
+						2: "an abacus will be very useful to you in the town of Matem.",
+						3: "an atlas will be very useful to you in the city of Histora."
 					}
 
 					msgValue += msgChoice[nbAdviceBoutique]
@@ -611,12 +605,12 @@ func customActions(actionEvent: String, currentAction):
 					root.user.adventures["nbAdviceBoutique"] = nbAdviceBoutique + 1
 
 					if !(root.user.objects["lexique"] and root.user.objects["boulier"] and root.user.objects["atlas"]):
-						msgValue += "\nQue vas-tu m'acheter ?"
+						msgValue += "\nWhat are you going to buy me?"
 				else:
-					msgValue += ".\nTu m'as déjà suffisamment dérangé comme cela ! Finiras-tu par me laisser travailler en paix ?"
+					msgValue += ".\nYou've already bothered me enough! Will you end up letting me work in peace?"
 
 					if !(root.user.objects["lexique"] and root.user.objects["boulier"] and root.user.objects["atlas"]):
-						msgValue += "\nAchète-moi plutôt quelque chose !"
+						msgValue += "\nBuy me something instead!"
 
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -639,27 +633,27 @@ func customActions(actionEvent: String, currentAction):
 			#update actionView 'buy' or 'sell'
 			var actionTextView: String = ""
 			if root.user.objects["lexique"]:
-				actionTextView += "#revendre le lexique.#\n"
+				actionTextView += "#resell the lexicon.#\n"
 			else:
-				actionTextView += "#acheter un lexique.#\n"
+				actionTextView += "#buy a glossary.#\n"
 			if root.user.objects["boulier"]:
-				actionTextView += "#revendre le boulier.#\n"
+				actionTextView += "#resell the abacus.#\n"
 			else:
-				actionTextView += "#acheter un boulier.#\n"
+				actionTextView += "#buy an abacus.#\n"
 			if root.user.objects["atlas"]:
-				actionTextView += "#revendre l'atlas.#\n"
+				actionTextView += "#resell the atlas.#\n"
 			else:
-				actionTextView += "#acheter un atlas.#\n"
-			actionTextView += "#parler au commerçant.#\n#sortir de la boutique.#"
+				actionTextView += "#buy an atlas.#\n"
+			actionTextView += "#talk to the shopkeeper.#\n#leave the store.#"
 			boxViewMessages["action"] = actionTextView
 		elif root.user.cardId == "5535" or root.user.cardId == "9819":
 			if currentAction == "fleurs":
 				var msgValue: String = ""
 				
 				if root.user.objects["fleurs"]:
-					msgValue = "Il y a déjà suffisamment de fleurs dans votre sac ! Elles vont finir par se faner."
+					msgValue = "There are already enough flowers in your bag! They will eventually wither."
 				else:
-					msgValue = "Vous passez un agréable moment dans les champs à choisir les plus jolies fleurs que vous ayez vues depuis bien longtemps. Leurs couleurs et leur odeur vous enchantent."
+					msgValue = "You spend a pleasant time in the fields choosing the prettiest flowers you have seen in a long time. Their colors and smell enchant you."
 					root.user.objects["fleurs"] = true
 				
 				boxViewMessages["msg"] = msgValue
@@ -668,23 +662,23 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "atlas_sage" and root.user.objects["atlas"]:
 				var msgValue: String = ""
 				if root.user.adventures["atlas_sage"]:
-					msgValue += "Vous n'avez guère de mémoire ! Vous avez déjà vendu un atlas "
-					msgValue += "semblable au sage il n'y a pas si longtemps. Il vous explique qu'un "
-					msgValue += "deuxième exemplaire du même ouvrage ne présente guère d'intérêt "
-					msgValue += "pour lui et vous conseille de garder ce falseuvel atlas pour un "
-					msgValue += "meilleur usage. Il pense d'ailleurs que cela pourrait vous "
-					msgValue += "servir sur l'île d'Histora."
+					msgValue += "You have little memory! You have already sold an atlas "
+					msgValue += "similar to the wise man not so long ago. He explains to you that a "
+					msgValue += "second copy of the same work is of little interest "
+					msgValue += "for him and advises you to keep this false atlas for a "
+					msgValue += "best use. He also thinks that this could "
+					msgValue += "serve on the island of Histora."
 				else:
-					msgValue += "Votre atlas intéresse le sage au plus haut point. Il vous en "
-					msgValue += "donne 5 pièces d'or, ce qui vous fait un bon bénéfice. Il formule "
-					msgValue += "l'espoir que cet atlas ne vous manquera pas dans le reste de votre périple."
+					msgValue += "Your atlas interests the wise to the greatest extent. It gives you "
+					msgValue += "gives 5 gold coins, which gives you a good profit. He formulates "
+					msgValue += "the hope that you will not miss this atlas during the rest of your journey."
 					
 					root.user.objects["atlas"] = false
 					root.user.gold = root.user.gold + 5
 					root.user.adventures["atlas_sage"] = true
 					
 					var actionValue: String = boxViewMessages["action"]
-					actionValue = actionValue.replace("\n#proposer votre atlas au sage.#", "")
+					actionValue = actionValue.replace("\n#offer your atlas to the wise.#", "")
 					boxViewMessages["action"] = actionValue
 
 				boxViewMessages["msg"] = msgValue
@@ -695,36 +689,36 @@ func customActions(actionEvent: String, currentAction):
 				root.user.objects["pepite"] = true
 				
 				var description: String = boxViewMessages["description"]
-				description = description.replace("Une vive lueur sur le bord du chemin attire votre attention. ", "")
+				description = description.replace("A bright glow at the side of the path catches your eye. ", "")
 				boxViewMessages["description"] = description
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#examiner cette lueur.#", "")
+				action = action.replace("\n#examine this glow.#", "")
 				boxViewMessages["action"] = action
 				
-				var msgValue: String = "En fouillant bien le fossé, vous découvrez ce qui avait attiré votre attention : une pépite !"
-				msgValue += " Cette découverte vous paraît suffisamment intéressante et vous la mettez dans votre sac."
+				var msgValue: String = "By searching the ditch carefully, you discover what had caught your attention: a nugget!"
+				msgValue += " This discovery seems interesting enough to you and you put it in your bag."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 		elif root.user.cardId == "15536":
 			if currentAction == "lit":
-				var msgValue: String = "A peine allongé, vous vous endormez. Vous êtes victime d'un affreux cauchemar dans lequel un professeur sadique vous oblige"
-				msgValue += " à accomplir un périlleux voyage dans un pays imaginaire."
-				msgValue += " Heureusement, l'air frais vous réveille et vous réalisez que tout ceci n'était qu'un rêve."
+				var msgValue: String = "As soon as you lie down, you fall asleep. You are the victim of a horrible nightmare in which a sadistic professor forces you"
+				msgValue += " to make a perilous journey into an imaginary country."
+				msgValue += " Luckily, the fresh air wakes you up and you realize it was all a dream."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "armoire":
 				if root.user.objects["sac_or"]:
-					var msgValue: String = "Vous avez déjà fouillé cette armoire et vous avez déjà pris le sac d'or qui s'y trouve. Il n'y a plus rien à l'intérieur."
-					msgValue += "\nVous n'espériez tout de même pas en trouver un deuxième, non ?"
+					var msgValue: String = "You've already searched this cupboard and you've already taken the bag of gold inside. There's nothing left inside."
+					msgValue += "\nYou weren't hoping to find a second one, were you?"
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
 					goCard("22568")
 			elif currentAction == "coffre":
 				if root.user.adventures["gnome"] > 1:
-					var msgValue: String = "Vous avez fait fuir le gnome ! Ne vous en souvenez-vous pas ? Il aurait fallu être un peu plus gentil avec lui."
-					msgValue += " Maintenant, il n'y a plus personne dans le coffre. Il est donc parfaitement inutile de vous escrimer dessus."
+					var msgValue: String = "You scared the gnome away! Do not you remember ? Should have been a little nicer to him."
+					msgValue += " Now there's no one in the trunk. There is therefore no point in fighting over it."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
@@ -738,30 +732,30 @@ func customActions(actionEvent: String, currentAction):
 				if nbSaisie > 0:
 					root.soundManager.play("pascourant", false)
 					
-					description += "Cette fois-ci, le gnome vous a vu arriver à temps, il s'est mis rapidement hors de votre portée, puis il s'est sauvé au plus"
-					description += " profond de la forêt environnante. Vous risquez de ne jamais le revoir !"
+					description += "This time, the gnome saw you arrive in time, he quickly moved out of your reach, then he ran away as quickly as possible."
+					description += " deep in the surrounding forest. You might never see him again!"
 					boxViewMessages["description"] = description
 				elif nbSaisie == 0:
 					root.soundManager.play("argn", false)
 					
-					description += "Le gnome ne s'est pas laissé faire facilement ! Il vous a mordu le petit doigt pendant la bagarre.\nVous allez souffrir pendant "
-					description += "plusieurs heures. Il vaudrait mieux ne pas recommencer ce genre de plaisanteries !"
+					description += "The gnome did not give in easily! He bit your little finger during the fight.\nYou will suffer during "
+					description += "several hours. It would be better not to start these kinds of jokes again!"
 					boxViewMessages["description"] = description
 				
 				root.user.adventures["gnome"] = (nbSaisie+1)
 				
 				boxViewMessages["description"] = description
-				boxViewMessages["action"] = "#Suite...#"
+				boxViewMessages["action"] = "#Continue...#"
 				
-				actions["Suite..."] = Action.new("goCard", "15536")
+				actions["Continue..."] = Action.new("goCard", "15536")
 		elif root.user.cardId == "9383":
 			if currentAction == "pommes":
 				if root.user.objects["pommes"]:
-					var msgValue: String = "Vous avez déjà plusieurs de ces pommes dans votre sac. Il n'est pas nécessaire de tout prendre !"
+					var msgValue: String = "You already have several of these apples in your bag. There is no need to take everything!"
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
-					var msgValue: String = "Après avoir goûté un de ces merveilleux fruits, vous décidez d'en emporter avec vous pour le reste de votre périple. Vous mettez quelques pommes au fond de votre sac."
+					var msgValue: String = "After tasting one of these wonderful fruits, you decide to take some with you for the rest of your journey. You put a few apples at the bottom of your bag."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 					
@@ -771,12 +765,12 @@ func customActions(actionEvent: String, currentAction):
 				root.user.objects["pommes"] = false
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner vos pommes à l'ermite.#", "")
+				action = action.replace("\n#give your apples to the hermit.#", "")
 				boxViewMessages["action"] = action
 				
-				var msgValue: String = "Le vieil ermite vous remercie de votre don et range soigneusement les pommes dans un coin de sa grotte."
-				msgValue += " Pour vous remercier de votre générosité, il vous promet de choisir parmi les questions les plus faciles"
-				msgValue += " si vous décidez de tenter votre chance auprès de lui."
+				var msgValue: String = "The old hermit thanks you for your gift and carefully stores the apples in a corner of his cave."
+				msgValue += " To thank you for your generosity, he promises to choose from the easiest questions"
+				msgValue += " if you decide to try your luck with him."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -789,42 +783,42 @@ func customActions(actionEvent: String, currentAction):
 				root.user.objects["collier"] = true
 				root.user.gold = root.user.gold + 3
 				
-				var msgValue: String = "Le joaillier confirme ce que vous pensiez : il s'agit bien d'une pépite d'or ! Elle semble d'ailleurs contenir une masse "
-				msgValue += "importante du précieux métal. En échange, le joaillier vous remet"
-				msgValue += " trois pièces d'or et un collier de pierres serties."
+				var msgValue: String = "The jeweler confirms what you thought: it is indeed a gold nugget! It also seems to contain a mass "
+				msgValue += "importance of the precious metal. In exchange, the jeweler gives you"
+				msgValue += " three gold coins and a necklace of set stones."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#montrer votre pépite au joaillier.#", "")
+				action = action.replace("\n#show your nugget to the jeweler.#", "")
 				boxViewMessages["action"] = action
 			elif currentAction == "acheter_collier":
 				var msgValue: String = ""
 				
 				if root.user.gold >= 2:
-					msgValue += "Le joaillier vous montre une impressionnante collection de"
-					msgValue += " superbes colliers de pierres serties qu'il a créés lui-même."
-					msgValue += " vous en choisissez un, aux reflets argentés, que vous payez deux pièces d'or."
+					msgValue += "The jeweler shows you an impressive collection of"
+					msgValue += " superb necklaces of set stones that he created himself."
+					msgValue += " you choose one, with silver highlights, for which you pay two gold coins."
 					
 					root.user.objects["collier"] = true
 					root.user.gold = root.user.gold - 2
 				else:
-					msgValue += "Vous n'avez pas assez de pièces d'or pour cela."
+					msgValue += "You don't have enough gold coins for this."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#acheter un collier.#", "")
+				action = action.replace("\n#buy a necklace.#", "")
 				boxViewMessages["action"] = action
 			elif currentAction == "chat":
-				var msgValue: String = "Miiiaaaahhhhhh !"
+				var msgValue: String = "Miaaaaahhhhhh!"
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "diplome":
-				var msgValue: String = "Ceci est un diplôme du meilleur bijoutier de Matem. Aucun intérêt pour vous."
+				var msgValue: String = "This is a diploma from the best jeweler in Matem. No interest for you."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -832,19 +826,19 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "pieceor_servante" and root.user.gold >= 1:
 				root.user.gold = root.user.gold - 1
 				
-				var msgValue: String = "La servante vous remercie de votre générosité. Elle va pouvoir enfin s'acheter les bijoux dont elle rêvait et"
-				msgValue += " qu'elle a vu chez son voisin le joaillier. Pour vous remercier, elle vous "
-				msgValue += "indique qu'on peut trouver un boulier dans la boutique qui "
-				msgValue += "se trouve au sud de l'abbaye d'Encyclopia."
+				var msgValue: String = "The servant thanks you for your generosity. She will finally be able to buy the jewelry she dreamed of and"
+				msgValue += " that she saw at her neighbor's jeweler's house. To thank you, she "
+				msgValue += "indicates that you can find an abacus in the store which "
+				msgValue += "is located south of Encyclopia Abbey."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner une pièce d'or#\n#à la servante.#", "")
+				action = action.replace("\n#give a gold coin#\n#to the maid.#", "")
 				boxViewMessages["action"] = action
 			elif currentAction == "fenetre":
-				var msgValue: String = "Par la fenêtre, vous voyez une place de Matem."
+				var msgValue: String = "Through the window you see a Matem square."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -854,18 +848,18 @@ func customActions(actionEvent: String, currentAction):
 					root.user.gold = root.user.gold - 2
 					root.user.objects["bouteille"] = true
 					
-					var msgValue: String = "Le patron de la taverne semble très surpris de voir un jeune moine lui faire une telle demande."
-					msgValue += " Mais il ne peut plus refuser de vous vendre son vin lorsque vous"
-					msgValue += " lui expliquez que ce n'est pas pour vous. Cela vous coûte 2 pièces d'or."
+					var msgValue: String = "The owner of the tavern seems very surprised to see a young monk make such a request."
+					msgValue += " But he can no longer refuse to sell you his wine when you"
+					msgValue += " Explain to him that it’s not for you. This costs you 2 gold."
 					
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 					
 					var action: String = boxViewMessages["action"]
-					action = action.replace("\n#acheter une bouteille de vin.#", "")
+					action = action.replace("\n#buy a bottle of wine.#", "")
 					boxViewMessages["action"] = action
 			elif currentAction == "acheter_tonneau":
-				var msgValue: String = "Une bouteille de vin suffira largement. Vous n'allez tout de même pas acheter un tonneau !"
+				var msgValue: String = "A bottle of wine will be more than enough. You're still not going to buy a barrel!"
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -873,17 +867,17 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "vepres":
 				root.soundManager.play("deogratias", false)
 				
-				var msgValue: String = "Vous assistez, avec votre habituel émerveillement, à l'office vespral. Les chants grégoriens qui l'accommpagnent sont d'une "
-				msgValue += "pureté que vous avez rarement rencontrée. Lorsque le Deo Gratias "
-				msgValue += "final rententit dans la grande église de Matem, vous avez les larmes aux yeux."
+				var msgValue: String = "You attend, with your usual amazement, the evening service. The Gregorian chants which accompany it are of "
+				msgValue += "purity that you have rarely encountered. When the Deo Gratias "
+				msgValue += "The finale sounds in the large church of Matem, you have tears in your eyes."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "lexique_prete" and root.user.objects["lexique"]:
 				if root.user.adventures["lexique_prete"]:
-					var msgValue: String = "Vous n'avez guère de mémoire ! Vous avez déjà vendu un lexique semblable au prêtre. Un seul lexique lui suffit amplement et "
-					msgValue += "il n'a vraiment pas besoin de ce deuxième ouvrage. Vous en "
-					msgValue += "trouverez sûrement un meilleur usage. Allez donc voir à Litter."
+					var msgValue: String = "You have little memory! You already sold a similar lexicon to the priest. A single glossary is more than enough and "
+					msgValue += "he really doesn't need this second book. You "
+					msgValue += "will surely find a better use. So go see Litter."
 					
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
@@ -892,35 +886,35 @@ func customActions(actionEvent: String, currentAction):
 					root.user.objects["lexique"] = false
 					root.user.adventures["lexique_prete"] = true
 					
-					var msgValue: String = "Voilà qui va permettre au prêtre de vérifier les traductions de ses clercs."
-					msgValue += " Il vous offre 5 pièces d'or de ce lexique. Vous faites une bonne affaire."
-					msgValue += " Sauf, peut-être, si ce lexique vous est nécessaire ailleurs."
+					var msgValue: String = "This will allow the priest to check the translations of his clerics."
+					msgValue += " He gives you 5 gold coins from this lexicon. You're getting a good deal."
+					msgValue += " Unless, perhaps, you need this glossary elsewhere."
 					
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 					
 					var action: String = boxViewMessages["action"]
-					action = action.replace("\n#proposer votre lexique au prêtre.#", "")
+					action = action.replace("\n#offer your glossary to the priest.#", "")
 					boxViewMessages["action"] = action
 		elif root.user.cardId == "6197":
 			if currentAction == "entrer_caserne":
 				if root.user.objects["bouteille"]:
 					root.user.objects["bouteille"] = false
 					
-					var description: String = "Le garde vous laisse passer en échange de votre bouteille de vin.\nBien entendu, vous ne devez pas en parler aux chevaliers !"
+					var description: String = "The guard lets you pass in exchange for your bottle of wine.\nOf course, you must not tell the knights about this!"
 					boxViewMessages["description"] = description
-					boxViewMessages["action"] = "#Suite...#"
+					boxViewMessages["action"] = "#Continue...#"
 					
-					actions["Suite..."] = Action.new("goCard", "7533")
+					actions["Continue..."] = Action.new("goCard", "7533")
 				else:
-					var msgValue: String = "Le garde refuse de vous laisser passer. Vous essayez de parlementer avec lui mais il est inflexible car, dit-il, "
-					msgValue += "les consignes que lui ont données les chevaliers sont très strictes."
-					msgValue += " Par exemple, il n'a rien à boire pendant toute la durée de sa garde et cela lui est très pénible."
+					var msgValue: String = "The guard refuses to let you pass. You try to negotiate with him but he is inflexible because, he says, "
+					msgValue += "the instructions given to him by the knights are very strict."
+					msgValue += " For example, he has nothing to drink for the entire duration of his custody and this is very painful for him."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 		elif root.user.cardId == "7533":
 			if currentAction == "aaarghh":
-				var msgValue: String = "Aaaarghh !"
+				var msgValue: String = "Aaaarghh!"
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 		elif root.user.cardId == "7855":
@@ -934,19 +928,19 @@ func customActions(actionEvent: String, currentAction):
 				var msgValue: String = ""
 				
 				if root.user.objects["sablier"]:
-					msgValue += "Ah, c'est toi, @user. Je vois que tu continues ta quête."
-					msgValue += " Je n'ai malheureusement pas le temps de m'occuper de toi en ce"
-					msgValue += " moment. Depuis que tu m'as apporté ce merveilleux boulier, je"
-					msgValue += " travaille sans arrêter.\nBon courage, @user !"
+					msgValue += "Ah, it's you, @user. I see you continue your quest."
+					msgValue += " Unfortunately, I don't have time to take care of you right now."
+					msgValue += " moment. Since you brought me this wonderful abacus, I"
+					msgValue += " works without stopping.\nGood luck, @user!"
 				elif root.user.objects["boulier"]:
-					msgValue += "Bonjour, @user. Je vois que tu m'as apporté le boulier que"
-					msgValue += " je cherchais depuis si longtemps.\nJe vais enfin "
-					msgValue += "pouvoir terminer mes recherches !\nPour te récompenser,"
-					msgValue += " je t'offre un talisman qui te permettra d'entrer dans l'abbaye d'Encyclopia."
+					msgValue += "Hello, @user. I see you brought me the abacus that"
+					msgValue += " I have been looking for so long.\nI will finally "
+					msgValue += "be able to finish my research!\nTo reward you,"
+					msgValue += " I offer you a talisman that will allow you to enter Encyclopia Abbey."
 				else:
-					msgValue += "Qui vient me déranger pendant mon travail ?"
-					msgValue += "\nC'est toi, @user ! M'as-tu apporté l'objet que j'ai envoyé quérir ?"
-					msgValue += "\nnon !?!\nAlors, ne reviens que lorsque tu l'auras trouvé !"
+					msgValue += "Who comes to disturb me during my work?"
+					msgValue += "\nIt's you, @user! Did you bring me the item I sent for?"
+					msgValue += "\nNo !?!\nSo don't come back until you find it!"
 
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -961,22 +955,22 @@ func customActions(actionEvent: String, currentAction):
 					goCard("7855")
 		elif root.user.cardId == "8027":
 			if currentAction == "parler_dame":
-				var msgValue: String = "Bonjour mignon moinillon... Que la chance soit avec toi dans ta quête."
+				var msgValue: String = "Hello cute mink... May luck be with you in your quest."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "caresser_chien":
-				var msgValue: String = "Ce chien ne semble pas très propre. Méfiez-vous."
+				var msgValue: String = "This dog doesn't seem very clean. Beware."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "fleurs_dame":
-				var msgValue: String = "La dame est très flattée de l'hommage que vous lui rendez par ce magnifique bouquet de fleurs. Pour vous "
+				var msgValue: String = "The lady is very flattered by the tribute you pay her with this magnificent bouquet of flowers. For you "
 				
-				msgValue += " remercier, elle vous recommande d'aller voir de sa part le chevalier"
-				msgValue += " dans sa caserne. Elle vous précise que le garde à l'entrée se laisse"
-				msgValue += " facilement soudoyer par une bouteille de vin."
+				msgValue += " thank you, she recommends that you go see the knight for her"
+				msgValue += " in his barracks. She tells you that the guard at the entrance leaves"
+				msgValue += " easily bribed with a bottle of wine."
 				
 				if root.user.gold < 2:
-					msgValue += " De plus, elle vous donne 3 pièces d'or pour votre peine."
+					msgValue += " Additionally, she gives you 3 gold for your trouble."
 					root.user.gold = root.user.gold + 3
 				
 				boxViewMessages["msg"] = msgValue
@@ -985,107 +979,107 @@ func customActions(actionEvent: String, currentAction):
 				root.user.objects["fleurs"] = false
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Donner vos fleurs#\n#à la dame de la fenêtre.#", "")
+				action = action.replace("\n#Give your flowers#\n#to the woman at the window.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "5497":
 			if currentAction == "pencher_rambarde":
-				var msgValue: String = "Vue d'ici, l'île d'Histora paraît magnifique."
+				var msgValue: String = "Seen from here, the island of Histora looks magnificent."
 				
 				if root.user.objects["lexique"] or root.user.objects["boulier"] or root.user.objects["atlas"]:
-					msgValue += " Pour mieux voir, vous vous penchez un peu trop et vous vous apercevez "
-					msgValue += "que votre sac s'est ouvert au-dessus du vide. En essayant de le ramener vers vous, vous voyez"
+					msgValue += " To see better, you lean a little too far and you notice "
+					msgValue += "that your bag has opened above the void. Trying to bring him back to you, you see"
 					
 					var objectsFallen: int = 0
 					var tempMsgValue: String = ""
 					if root.user.objects["lexique"]:
 						root.user.objects["lexique"] = false
 						
-						tempMsgValue += ", votre lexique"
+						tempMsgValue += ", your lexicon"
 						objectsFallen += 1
 					if root.user.objects["boulier"]:
 						root.user.objects["boulier"] = false
 						
-						tempMsgValue += ", votre boulier"
+						tempMsgValue += ", your abacus"
 						objectsFallen += 1
 					if root.user.objects["atlas"]:
 						root.user.objects["atlas"] = false
 						
-						tempMsgValue += ", votre atlas"
+						tempMsgValue += ", your atlas"
 						objectsFallen += 1
 					
 					if objectsFallen == 1:
 						tempMsgValue = tempMsgValue.replace(",", "")
 					elif objectsFallen == 2:
-						tempMsgValue = tempMsgValue.replace(",", " et")
-						tempMsgValue = tempMsgValue.replace(" et", "")
+						tempMsgValue = tempMsgValue.replace(",", " And")
+						tempMsgValue = tempMsgValue.replace(" And", "")
 					elif objectsFallen == 3:
 						tempMsgValue = tempMsgValue.replace(",", "")
-						tempMsgValue = tempMsgValue.replace(",", " et")
+						tempMsgValue = tempMsgValue.replace(",", " And")
 					
 					msgValue += tempMsgValue
-					msgValue += " tomber au milieu des vagues, cinquante mètres plus bas."
+					msgValue += " falling into the middle of the waves, fifty meters below."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 		elif root.user.cardId == "12941" or root.user.cardId == "15930":
 			if currentAction == "aller_nord" or currentAction == "aller_ouest"or currentAction == "aller_est":
-				var description: String = "Après une traversée sans problème, vous débarquez "
+				var description: String = "After a problem-free crossing, you disembark "
 				if currentAction == "aller_nord":
-					description += "sur l'île d'Histora."
+					description += "on the island of Histora."
 				elif currentAction == "aller_ouest":
-					description += "dans la ville de Litter."
+					description += "in the town of Litter."
 				elif currentAction == "aller_est":
-					description += "dans la ville de Matem."
+					description += "in the town of Matem."
 				
-				description += " Le vaisseau est déjà reparti au loin."
+				description += " The ship has already gone far away."
 				
 				if root.user.gold >= 2:
 					root.user.gold = root.user.gold - 2
-					description += " Cela vous a coûté deux pièces d'or."
+					description += " It cost you two gold coins."
 				else:
-					description += " Vous n'avez pas pu payer votre traversée, vous avez été obligé de laver le pont et la soute."
+					description += " You were unable to pay for your crossing, you were forced to wash the deck and the hold."
 				
 				boxViewMessages["description"] = description
-				boxViewMessages["action"] = "#Suite...#"
+				boxViewMessages["action"] = "#Continue...#"
 				
 				if currentAction == "aller_nord":
-					actions["Suite..."] = Action.new("goCard", "10084")
+					actions["Continue..."] = Action.new("goCard", "10084")
 				elif currentAction == "aller_ouest":
-					actions["Suite..."] = Action.new("goCard", "7004")
+					actions["Continue..."] = Action.new("goCard", "7004")
 				elif currentAction == "aller_est":
-					actions["Suite..."] = Action.new("goCard", "9627")
+					actions["Continue..."] = Action.new("goCard", "9627")
 		elif root.user.cardId == "10084":
 			if currentAction == "barque_litter" or currentAction == "barque_matem":
-				var description: String = "Après une longue traversée, vous arrivez enfin "
+				var description: String = "After a long crossing, you finally arrive "
 				if currentAction == "barque_litter":
-					description += "sur le port de Litter. Un marin qui se trouve là accepte de rapporter la barque à Histora."
+					description += "on the port of Litter. A sailor who is there agrees to bring the boat back to Histora."
 				elif currentAction == "barque_matem":
-					description += "sur le port de Matem. Un pêcheur qui se trouve là accepte de rapporter la barque à Histora."
+					description += "on the port of Matem. A fisherman who is there agrees to bring the boat back to Histora."
 				
-				description += " Le vaisseau est déjà reparti au loin."
+				description += " The ship has already gone far away."
 				
 				if root.user.gold >= 1:
 					root.user.gold = root.user.gold - 1
-					description += " Vous le payez d'une pièce d'or."
+					description += " You pay for it with a gold coin."
 				
 				boxViewMessages["description"] = description
-				boxViewMessages["action"] = "#Suite...#"
+				boxViewMessages["action"] = "#Continue...#"
 				
 				if currentAction == "barque_litter":
-					actions["Suite..."] = Action.new("goCard", "7004")
+					actions["Continue..."] = Action.new("goCard", "7004")
 				elif currentAction == "barque_matem":
-					actions["Suite..."] = Action.new("goCard", "9627")
+					actions["Continue..."] = Action.new("goCard", "9627")
 		elif root.user.cardId == "12274":
 			if currentAction == "joncs":
 				if root.user.objects["joncs"]:
-					var msgValue: String = "A force de bourrer votre sac avec ces joncs, vous allez finir par le faire craquer."
+					var msgValue: String = "By stuffing your bag with these rushes, you will end up making it crack."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
 					root.user.objects["joncs"] = true
 					
-					var msgValue: String = "Avec bien des difficultés, vous réussissez finalement à couper quelques tiges dures et sèches de ces joncs."
-					msgValue += " Vous les tressez avant de les mettre dans votre sac."
+					var msgValue: String = "With much difficulty, you finally succeed in cutting a few hard and dry stems from these rushes."
+					msgValue += " You braid them before putting them in your bag."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 		elif root.user.cardId == "11997":
@@ -1095,24 +1089,24 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "piece_or" and root.user.gold >= 1:
 				root.user.gold = root.user.gold - 1
 				
-				var msgValue: String = "Le pêcheur, tout étonné de votre générosité, se remet de ses émotions et pense déjà au falseuveau filet qu'il va pouvoir "
-				msgValue += "s'acheter avec cet argent. Pour vous remercier, il vous "
-				msgValue += "indique qu'on peut trouver un atlas dans la boutique qui "
-				msgValue += "se trouve au sud de l'abbaye d'Encyclopia."
+				var msgValue: String = "The fisherman, astonished at your generosity, recovers from his emotions and is already thinking of the false new fillet he will be able to "
+				msgValue += "buy yourself with this money. To thank you, he "
+				msgValue += "indicates that you can find an atlas in the store which "
+				msgValue += "is located south of Encyclopia Abbey."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				if root.user.gold >= 1:
 					var action: String = boxViewMessages["action"]
-					action = action.replace("\n#donner une pièce d'or au pêcheur#\n#pour le réconforter.#", "")
+					action = action.replace("\n#give a gold coin to the fisherman#\n#to comfort him.#", "")
 					boxViewMessages["action"] = action
 		elif root.user.cardId == "12302":
 			root.soundManager.stopSounds()
 			root.soundManager.play("vache", true)
 			if currentAction == "traire_vache":
 				if root.user.objects["lait"]:
-					var msgValue: String = "Vous avez déjà rempli votre pot de lait et vous n'avez aucun autre récipient."
-					msgValue += " De toutes façons, on ne trait pas une vache toutes les cinq minutes !"
+					var msgValue: String = "You have already filled your jug ​​with milk and you have no other container."
+					msgValue += " In any case, we don't milk a cow every five minutes!"
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
@@ -1120,43 +1114,43 @@ func customActions(actionEvent: String, currentAction):
 					root.soundManager.play("traite", true)
 					root.user.objects["lait"] = true
 					
-					var msgValue: String = "Un pot se trouvait justement sur le sol, au bord du chemin. Vous vous installez, et vous trayez la vache. Le lait que"
-					msgValue += " vous en tirez semble riche et onctueux. Il est vrai que les pâturages"
-					msgValue += " alentour sont três verts. Aprês vous être délecté de ce breuvage"
-					msgValue += ", vous décidez d'en garder un peu avec vous pour la route."
+					var msgValue: String = "A pot happened to be on the ground, at the side of the path. You sit down and milk the cow. The milk that"
+					msgValue += " What you get from it seems rich and creamy. It is true that the pastures"
+					msgValue += " surroundings are very green. After enjoying this beverage"
+					msgValue += ", you decide to keep some with you for the road."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 		elif root.user.cardId == "15565":
 			if currentAction == "dechiffrer_inscriptions":
 				if root.user.objects["torche"]:
-					var description: String = "Effectivement, votre briquet d'amadou a réussi sans problème a enflammer la torche de jonc."
-					description += " On y voit tout de suite plus clair ! Voyons donc ces inscriptions..."
+					var description: String = "Indeed, your tinder lighter succeeded without any problem in igniting the rush torch."
+					description += " We can immediately see more clearly! So let's see these inscriptions..."
 					
 					root.user.objects["torche"] = false
 					
 					boxViewMessages["description"] = description
-					boxViewMessages["action"] = "#Suite...#"
-					actions["Suite..."] = Action.new("goCard", "15762")
+					boxViewMessages["action"] = "#Continue...#"
+					actions["Continue..."] = Action.new("goCard", "15762")
 				elif root.user.objects["joncs"]:
-					var msgValue: String = "Il fait bien trop sombre dans cette caverne !"
+					var msgValue: String = "It's way too dark in this cave!"
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
-					var msgValue: String = "Il fait bien trop sombre dans cette caverne ! Même avec votre briquet d'amadou, vous ne pouvez pas déchiffrer"
-					msgValue += " ce qui est écrit sur la paroi. Il vous faudrait une torche..."
+					var msgValue: String = "It's way too dark in this cave! Even with your tinder lighter you can't decipher"
+					msgValue += " what is written on the wall. You need a torch..."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 			elif currentAction == "confectionner_torche":
 				if root.user.objects["torche"]:
-					var msgValue: String = "Une seule torche suffira largement !"
+					var msgValue: String = "A single torch will be more than enough!"
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				else:
 					root.user.objects["torche"] = true
 					root.user.objects["joncs"] = false
 					
-					var msgValue: String = "Avec votre briquet d'amadou, il vous sera facile d'enflammer cette torche improviste."
-					msgValue += " Vous avez encore des joncs au fond de votre sac."
+					var msgValue: String = "With your tinder lighter, it will be easy for you to ignite this improvised torch."
+					msgValue += " You still have rushes at the bottom of your bag."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 
@@ -1171,19 +1165,19 @@ func customActions(actionEvent: String, currentAction):
 				var msgValue: String = ""
 				
 				if root.user.objects["piece_roi"]:
-					msgValue += "Ah, c'est toi, @user. Je vois que tu continues ta quête."
-					msgValue += " Je n'ai malheureusement pas le temps de m'occuper de toi en ce"
-					msgValue += " moment. Depuis que tu m'as apporté ce merveilleux atlas, je"
-					msgValue += " travaille sans arrêter.\nBon courage, @user !"
+					msgValue += "Ah, it's you, @user. I see you continue your quest."
+					msgValue += " Unfortunately, I don't have time to take care of you right now."
+					msgValue += " moment. Since you brought me this wonderful atlas, I"
+					msgValue += " works without stopping.\nGood luck, @user!"
 				elif root.user.objects["atlas"]:
-					msgValue += "Bonjour, @user. Je vois que tu m'as apporté l'atlas que"
-					msgValue += " je cherchais depuis si longtemps.\nJe vais enfin "
-					msgValue += "pouvoir terminer mes recherches !\nPour te récompenser,"
-					msgValue += " je t'offre un talisman qui te permettra d'entrer dans l'abbaye d'Encyclopia."
+					msgValue += "Hello, @user. I see that you brought me the atlas that"
+					msgValue += " I have been looking for so long.\nI will finally "
+					msgValue += "be able to finish my research!\nTo reward you,"
+					msgValue += " I offer you a talisman that will allow you to enter Encyclopia Abbey."
 				else:
-					msgValue += "Qui vient me déranger pendant mon travail ?"
-					msgValue += "\nC'est toi, @user ! M'as-tu apporté l'objet que j'ai envoyé quérir ?"
-					msgValue += "\nnon !?!\nAlors, ne reviens que lorsque tu l'auras trouvé !"
+					msgValue += "Who comes to disturb me during my work?"
+					msgValue += "\nIt's you, @user! Did you bring me the item I sent for?"
+					msgValue += "\nNo !?!\nSo don't come back until you find it!"
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1202,17 +1196,17 @@ func customActions(actionEvent: String, currentAction):
 				
 				var msgValue: String = ""
 				if nbStepsCat > 0:
-					msgValue += "Le chat refuse de se laisser approcher. Vous courez après lui"
-					msgValue += " pendant quelques instants sans jamais pouvoir le toucher. Lassé,"
-					msgValue += " vous finissez par abandonner. C'est aussi bien, vu ce qui vous "
-					msgValue += "est arrivé la dernière fois."
+					msgValue += "The cat refuses to be approached. You run after him"
+					msgValue += " for a few moments without ever being able to touch him. Tired,"
+					msgValue += " you end up giving up. It's also good, considering what you "
+					msgValue += "happened last time."
 				else:
 					root.soundManager.play("chat", false)
 					
-					msgValue += "Vous caressez le chat pendant quelques instants. Celui-ci se "
-					msgValue += "laisse faire sans réaction apparente. Tout à coup, vous sursautez "
-					msgValue += "et jetez le chat loin de vous ! horreur ! Il grouille de puces !"
-					msgValue += " vous voilà infesté vous-même."
+					msgValue += "You pet the cat for a few moments. This one "
+					msgValue += "lets it happen without any apparent reaction. Suddenly you jump "
+					msgValue += "and throw the cat away from you! horror ! It's crawling with fleas!"
+					msgValue += " you are infested yourself."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1224,18 +1218,18 @@ func customActions(actionEvent: String, currentAction):
 				var msgValue: String = ""
 				
 				if nbCoupDePieds % 3 == 0:
-					msgValue += "Sous le coup, le chien se sauve le long de la rue en hurlant de douleur."
+					msgValue += "Under the blow, the dog runs away along the street, howling in pain."
 					root.soundManager.play("ouah5", false)
 				elif nbCoupDePieds % 3 == 1:
-					msgValue += "Sous le coup, le chien est projeté à deux mêtres et reste inerte comme si vous aviez tapé dans  un caillou."
+					msgValue += "Under the blow, the dog is thrown two meters and remains inert as if you had kicked a stone."
 					root.soundManager.play("claps", false)
 				elif nbCoupDePieds % 3 == 2:
-					msgValue += "Le chien s'accroche à votre mollet et tout en poussant de féroces grognements, "
-					msgValue += "il  vous mord sauvagement. Vous risquez d'en avoir une marque pour longtemps !"
+					msgValue += "The dog clings to your calf and while uttering fierce growls, "
+					msgValue += "he bites you savagely. You risk having a mark for a long time!"
 					root.soundManager.play("grognements", false)
 				
 				if nbCoupDePieds >= 3:
-					msgValue += " Quelques minutes plus tard, il revient, semblant avoir tout oublié."
+					msgValue += " A few minutes later, he returns, seeming to have forgotten everything."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1245,33 +1239,33 @@ func customActions(actionEvent: String, currentAction):
 				var msgValue: String = ""
 				
 				if root.user.adventures["boulier_notable"]:
-					msgValue += "Auriez-vous perdu la mémoire ! Vous avez déjà vendu un boulier "
-					msgValue += "semblable au notable. Le premier "
-					msgValue += "lui convient parfaitement et il n'a nul besoin d'un autre boulier. Gardez-le "
-					msgValue += "donc sur vous, il pourra sûrement vous être utile. Surtout si "
-					msgValue += "vous devez encore aller à Matem."
+					msgValue += "Would you have lost your memory! You have already sold an abacus "
+					msgValue += "similar to notable. The first "
+					msgValue += "suits him perfectly and he has no need for another abacus. keep it "
+					msgValue += "so on you, it will surely be useful to you. Especially if "
+					msgValue += "you still have to travel to Matem."
 				else:
-					msgValue += "Le notable est enchanté par la qualité de votre boulier."
-					msgValue += " Vous n'avez même pas besoin de parlementer pour en tirer 5 belles "
-					msgValue += "pièces d'or. Espérons que cet objet ne vous manquera pas par la suite."
+					msgValue += "The notable is delighted by the quality of your abacus."
+					msgValue += " You don't even need to parley to get 5 nice ones "
+					msgValue += "gold coins. Hopefully you won't miss this item later."
 					
 					root.user.gold = root.user.gold + 5
 					root.user.objects["boulier"] = false
 					root.user.adventures["boulier_notable"] = true
 					
 					var action: String = boxViewMessages["action"]
-					action = action.replace("\n#Proposer votre boulier au notable.#", "")
+					action = action.replace("\n#Offer your abacus to the notable.#", "")
 					boxViewMessages["action"] = action
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 		elif root.user.cardId == "9914":
 			if currentAction == "pieceor_femme":
-				var msgValue: String = "La vieille femme se jette à gefalseux devant vous et rend grâce à votre générosité. Elle va pouvoir embellir le trousseau de"
-				msgValue += " sa fille qui danse en ce moment même à la fête organisée chez "
-				msgValue += " ses voisins de derrière. Pour vous remercier, elle vous "
-				msgValue += "indique qu'on peut trouver un lexique dans la boutique qui "
-				msgValue += "se trouve au sud de l'abbaye d'Encyclopia."
+				var msgValue: String = "The old woman throws herself on her knees in front of you and thanks you for your generosity. She will be able to embellish the trousseau of"
+				msgValue += " her daughter who is dancing at this very moment at the party organized at "
+				msgValue += " his neighbors behind. To thank you, she "
+				msgValue += "indicates that you can find a glossary in the store which "
+				msgValue += "is located south of Encyclopia Abbey."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1280,25 +1274,25 @@ func customActions(actionEvent: String, currentAction):
 				
 				if root.user.gold == 0:
 					var action: String = boxViewMessages["action"]
-					action = action.replace("\n#donner une pièce d'or#\n#à la vieille femme.#", "")
+					action = action.replace("\n#give a gold coin#\n#to the old woman.#", "")
 					boxViewMessages["action"] = action
 		elif root.user.cardId == "7872":
 			if currentAction == "cueillir_herbes":
 				var msgValue: String = ""
 				
 				if root.user.adventures["vente_herbes"] == 2:
-					msgValue += "Vous avez déjà revendu deux fois votre cueillette ! Ce qui"
-					msgValue += " reste au bord du chemin n'est pas suffisant pour une autre revente. De toutes"
-					msgValue += " façons, vous n'êtes pas là pour faire du commerce ! Laissez"
-					msgValue += " donc cette herbe à sa place !"
+					msgValue += "You have already sold your harvest twice! What"
+					msgValue += " left by the wayside is not enough for another resale. Of all"
+					msgValue += " ways, you are not here to trade! Let"
+					msgValue += " so this grass in its place!"
 				elif root.user.objects["herbes"]:
-					msgValue += "Il y a déjà suffisamment d'herbes dans votre sac !"
+					msgValue += "There are already enough herbs in your bag!"
 				else:
 					root.user.objects["herbes"] = true
 					
-					msgValue += "Vous cueillez quelques brins de cette herbe dont l'odeur est"
-					msgValue += " envoûtante. Vous décidez de garder un peu de votre cueillette "
-					msgValue += " dans votre sac."
+					msgValue += "You pick a few blades of this herb whose smell is"
+					msgValue += " bewitching. You decide to keep some of your pickings "
+					msgValue += " in your bag."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1312,37 +1306,37 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "une_piece" or currentAction == "deux_pieces":
 				root.user.adventures["mendiant"] = true
 				
-				var msgValue: String = "Le mendiant vous remercie de votre générosité et il vous"
-				msgValue += " indique que la maison du seigneur Lingus se trouve un peu plus loin au nord."
+				var msgValue: String = "The beggar thanks you for your generosity and he"
+				msgValue += " indicates that Lord Lingus' house is a little further north."
 				
 				if currentAction == "une_piece" and root.user.gold >= 1:
-					msgValue += "\nIl se lève et disparaît en claudiquant."
+					msgValue += "\nHe gets up and limps away."
 					root.user.gold = root.user.gold - 1
 				elif currentAction == "deux_pieces" and root.user.gold >= 2:
-					msgValue += "Il ajoute que l'un des gardes lui a dit que la possession "
-					msgValue += "d'un lexique est très utile dans la demeure de ce seigneur."
-					msgValue += "\nIl se lève et disparaît en claudiquant."
+					msgValue += "He adds that one of the guards told him that possession "
+					msgValue += "of a lexicon is very useful in the residence of this lord."
+					msgValue += "\nHe gets up and limps away."
 					root.user.gold = root.user.gold - 2
 				else:
-					msgValue += "Vous n'avez pas assez de pièces pour cela."
+					msgValue += "You don't have enough coins for this."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "travailler":
 				root.user.adventures["mendiant"] = true
 				
-				var msgValue: String = "Le mendiant se précipite sur vous en vous abreuvant d'insultes."
-				msgValue += " Vous vous défendez du mieux que vous pouvez. Dans la bagarre, "
-				msgValue += "vous êtes étourdi par un choc."
+				var msgValue: String = "The beggar rushes at you, showering you with insults."
+				msgValue += " You defend yourself as best you can. In the fight, "
+				msgValue += "a blow leaves you dazed."
 				
 				if root.user.objects["pepite"]:
-					msgValue += "Le mendiant profite de votre étourdissement pour vous voler votre pépite et"
+					msgValue += "The beggar takes advantage of your daze to steal your nugget and"
 					
 					root.user.objects["pepite"] = false
 				else:
-					msgValue += "Le mendiant vous voyant groggy prend peur et"
+					msgValue += "The beggar seeing you groggy gets scared and"
 				
-				msgValue += "se sauve en courant.\nIl aurait mieux valu lui faire l'aumône."
+				msgValue += "runs away.\nIt would have been better to give him alms."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1355,19 +1349,19 @@ func customActions(actionEvent: String, currentAction):
 				var msgValue: String = ""
 				
 				if root.user.objects["croix_celtique"]:
-					msgValue += "Ah, c'est toi, @user. Je vois que tu continues ta quête."
-					msgValue += " Je n'ai malheureusement pas le temps de m'occuper de toi en ce"
-					msgValue += " moment. Depuis que tu m'as apporté ce merveilleux lexique, je"
-					msgValue += " travaille sans arrêter.\nBon courage, @user !"
+					msgValue += "Ah, it's you, @user. I see you continue your quest."
+					msgValue += " Unfortunately, I don't have time to take care of you right now."
+					msgValue += " moment. Since you brought me this wonderful lexicon, I"
+					msgValue += " works without stopping.\nGood luck, @user!"
 				elif root.user.objects["lexique"]:
-					msgValue += "Bonjour, @user. Je vois que tu m'as apporté le lexique que"
-					msgValue += " je cherchais depuis si longtemps.\nJe vais enfin "
-					msgValue += "pouvoir terminer mes recherches !\nPour te récompenser,"
-					msgValue += " je t'offre un talisman qui te permettra d'entrer dans l'abbaye d'Encyclopia."
+					msgValue += "Hello, @user. I see that you brought me the lexicon that"
+					msgValue += " I have been looking for so long.\nI will finally "
+					msgValue += "be able to finish my research!\nTo reward you,"
+					msgValue += " I offer you a talisman that will allow you to enter Encyclopia Abbey."
 				else:
-					msgValue += "Qui vient me déranger pendant mon travail ?"
-					msgValue += "\nC'est toi, @user ! M'as-tu apporté l'objet que j'ai envoyé quérir ?"
-					msgValue += "\nnon !?!\nAlors, ne reviens que lorsque tu l'auras trouvé !"
+					msgValue += "Who comes to disturb me during my work?"
+					msgValue += "\nIt's you, @user! Did you bring me the item I sent for?"
+					msgValue += "\nNo !?!\nSo don't come back until you find it!"
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1382,35 +1376,35 @@ func customActions(actionEvent: String, currentAction):
 					goCard("5974")
 		elif root.user.cardId == "8034":
 			if currentAction == "vendre_lait":
-				var msgValue: String = "Le damoiseau vous remercie fort pour ce bon lait qui provient,"
-				msgValue += " à n'en pas douter, de l'île d'Histora. Il vous le paie de trois"
-				msgValue += " pièces d'or qui se rajoutent à votre fortune. Vous avez donc "
-				msgValue += "maintenant @gold @pieceor."
+				var msgValue: String = "The gentleman thanks you very much for this good milk which comes from,"
+				msgValue += " undoubtedly from the island of Histora. He pays you three"
+				msgValue += " gold coins that add to your fortune. So you have "
+				msgValue += "now @gold @pieceor."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Vendre votre pot de lait.#", "")
+				action = action.replace("\n#Sell ​​your jar of milk.#", "")
 				boxViewMessages["action"] = action
 				
 				root.user.objects["lait"] = false
 				root.user.gold = root.user.gold + 3
 			elif currentAction == "regarder_mirroir":
-				var msgValue: String = "Vous voyez dans le miroir l'image d'un moinillon harassé par sa déjà longue marche. Devinez de qui il s'agit..."
+				var msgValue: String = "You see in the mirror the image of a youngster exhausted by his already long walk. Guess who it is..."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 		elif root.user.cardId == "8277":
 			if currentAction == "montrer_herbes":
-				var msgValue: String = "L'herboriste est extrèmement satisfait de la qualité des "
-				msgValue += "herbes que vous lui apportez. Il vous en offre 3 pièces d'or."
+				var msgValue: String = "The herbalist is extremely satisfied with the quality of the "
+				msgValue += "herbs that you bring to him. He gives you 3 gold coins."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#montrer vos herbes.#", "")
+				action = action.replace("\n#show your herbs.#", "")
 				boxViewMessages["action"] = action
 				
 				root.user.objects["herbes"] = false
@@ -1423,10 +1417,10 @@ func customActions(actionEvent: String, currentAction):
 				root.soundManager.play("clochettes2", false)
 		elif root.user.cardId == "6640":
 			if currentAction == "prier":
-				var msgValue: String = "Une musique céleste retentit dans votre esprit.\n"
-				msgValue += "Un calme impressionnant vous envahit.\nVous allez "
-				msgValue += "pouvoir reprendre votre parcours, l'esprit serein, prêt à affronter"
-				msgValue += " les falsembreuses épreuves qui vous attendent."
+				var msgValue: String = "Heavenly music resounds in your mind.\n"
+				msgValue += "An impressive calm invades you.\nYou go "
+				msgValue += "be able to resume your journey, with a calm mind, ready to face"
+				msgValue += " the many trials that await you."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1435,12 +1429,12 @@ func customActions(actionEvent: String, currentAction):
 			elif currentAction == "piece_tronc":
 				var msgValue: String = ""
 				if root.user.gold >= 1:
-					msgValue += "Le bedeau vous remercie, et vous assure que le Bon Dieu "
-					msgValue += "vous le rendra au centuple."
+					msgValue += "The beadle thanks you, and assures you that the Good Lord "
+					msgValue += "will repay you a hundredfold."
 					
 					root.user.gold = root.user.gold - 1
 				else:
-					msgValue += "Vous n'avez plus de pièce !\n(mais c'était une bonne intention)"
+					msgValue += "You have no more coins!\n(but it was a good intention)"
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
@@ -1451,21 +1445,21 @@ func customActions(actionEvent: String, currentAction):
 				if root.user.adventures["taverne"] > 2:
 					root.user.adventures["taverne"] = 4
 					
-					msgValue += "Le tavernier refuse de vous donner une troisième fois à"
-					msgValue += " boire de son vin. Il vous jette dehors comme un ivrogne."
+					msgValue += "The innkeeper refuses to give you a third time"
+					msgValue += " drink his wine. He throws you out like a drunk."
 				elif root.user.gold >= 1:
-					msgValue += "Le tavernier vous sert le plus délicieux des vins de pays."
-					msgValue += "\nVous vous délectez de ce nectar, et c'est la joie"
-					msgValue += " au coeur que vous continuez votre périple.\n"
-					msgValue += "Il vous en a coûté une pièce d'or, mais cela valait la peine !"
+					msgValue += "The tavern keeper serves you the most delicious local wines."
+					msgValue += "\nYou delight in this nectar, and it is joy"
+					msgValue += " in the heart as you continue your journey.\n"
+					msgValue += "It cost you a gold coin, but it was worth it!"
 					
 					root.user.adventures["taverne"] = (root.user.adventures["taverne"] + 1)
 					
 					root.soundManager.play("bierre", false)
 				else:
-					msgValue += "Vous commandez à boire au tavernier. Celui-ci vous demande"
-					msgValue += " d'abord votre argent. Malheureusement vous n'avez plus de "
-					msgValue += "pièce.\nLe tavernier refuse donc de vous servir."
+					msgValue += "You order a drink from the tavern keeper. This one asks you"
+					msgValue += " your money first. Unfortunately you no longer have "
+					msgValue += "piece.\nThe innkeeper therefore refuses to serve you."
 				
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
@@ -1474,13 +1468,13 @@ func customActions(actionEvent: String, currentAction):
 			elif currentAction == "spiritueux":
 				if root.user.adventures["taverne"] > 3:
 					root.user.adventures["taverne"] = 3
-				var msgValue: String = "Un jeune moine comme vous ne devrait pas toucher à ce genre de spiritueux."
+				var msgValue: String = "A young monk like you shouldn't touch this kind of spirits."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "assoir":
 				if root.user.adventures["taverne"] > 3:
 					root.user.adventures["taverne"] = 3
-				var msgValue: String = "D'accord. Rien ne vous empêche de vous mettre assis un instant."
+				var msgValue: String = "All right. Nothing stops you from sitting down for a moment."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 		elif root.user.cardId == "6816":
@@ -1488,9 +1482,9 @@ func customActions(actionEvent: String, currentAction):
 				if root.user.objects["croix_celtique"] and root.user.objects["sablier"] and root.user.objects["piece_roi"]:
 					goCard("8813")
 				else:
-					var msgValue: String = "Le frère portier vous demande de lui montrer vos Talismans, gages de vos mérites."
-					msgValue += " Comme vous ne possédez pas les trois Talismans qui sont indispensables,"
-					msgValue += " il vous reconduit sans ménagement à la sortie."
+					var msgValue: String = "The brother doorman asks you to show him your Talismans, tokens of your merits."
+					msgValue += " As you do not have the three Talismans which are essential,"
+					msgValue += " he unceremoniously escorts you back to the exit."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 
@@ -1498,22 +1492,22 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "fleurs_nonne":
 				root.user.objects["fleurs"] = false
 				
-				var msgValue: String = "La nonne vous remercie grandement de ce charmant bouquet qui va lui permettre de décorer l'autel de façon magnifique. Pour vous "
-				msgValue += "remercier, elle vous recommande d'aller voir de sa part la soeur "
-				msgValue += "cuisinière dans la tour Est de l'abbaye pour lui demander un peu de sa fameuse soupe."
+				var msgValue: String = "The nun thanks you very much for this charming bouquet which will allow her to decorate the altar in a magnificent way. For you "
+				msgValue += "thank you, she recommends that you go see her sister "
+				msgValue += "cook in the east tower of the abbey to ask him for some of his famous soup."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#Donner vos fleurs à la nonne.#", "")
+				action = action.replace("\n#Give your flowers to the nun.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "12973":
 			if currentAction == "entrer_bibliotheque":
 				if root.user.points["Encyclopia"] > 20:
 					goCard("18460")
 				else:
-					var msgValue: String = "Vous n'avez pas récolté suffisament de Talents pour pouvoir entrer dans ce lieu."
-					msgValue += " Il vous faut encore subir quelques épreuves."
+					var msgValue: String = "You have not collected enough Talents to be able to enter this place."
+					msgValue += " You still have to undergo some tests."
 					boxViewMessages["msg"] = msgValue
 					msgView.visible = true
 				
@@ -1521,22 +1515,22 @@ func customActions(actionEvent: String, currentAction):
 			if currentAction == "donner_lait":
 				root.user.objects["lait"] = false
 				
-				var msgValue: String = "La cuisinière vous remercie de votre présent qui ne pouvait pas mieux tomber, et, en échange,"
-				msgValue += " vous donne un bol de la soupe de légumes qu'elle vient juste"
-				msgValue += " de préparer. Avec une cuillère de lait pour la rendre encore plus"
-				msgValue += " onctueuse, cette soupe est savoureuse. Vous vous régalez !"
+				var msgValue: String = "The cook thanks you for your present which could not have come at a better time, and, in exchange,"
+				msgValue += " gives you a bowl of the vegetable soup she just came from"
+				msgValue += " to prepare. With a spoon of milk to make it even more"
+				msgValue += " creamy, this soup is tasty. You're enjoying yourself!"
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 				
 				var action: String = boxViewMessages["action"]
-				action = action.replace("\n#donner votre pot de lait#\n#à la cuisinière.#", "")
+				action = action.replace("\n#give your pot of milk#\n#to the cook.#", "")
 				boxViewMessages["action"] = action
 		elif root.user.cardId == "18460":
 			if currentAction == "saluer_encyclopia":
-				var msgValue: String = "Bravo, @user. Tu as fini ton périple et tu as pu me rapporter"
-				msgValue += " les trois Talismans. Grâce à tes connaissances, tu as récolté @totalPoints Talents, durant ta quête."
-				msgValue += "\nJe pense donc que tu es capable de prendre ma difficile succession au poste de Gardien du Savoir."
-				msgValue += "\nEn signe de ta falsemination, je vais maintenant te donner le Livre du Savoir."
+				var msgValue: String = "Well done, @user. You finished your journey and you were able to bring me back"
+				msgValue += " the three Talismans. Thanks to your knowledge, you collected @totalPoints Talents during your quest."
+				msgValue += "\nI therefore think that you are capable of taking over my difficult succession as Keeper of Knowledge."
+				msgValue += "\nAs a sign of your appointment, I will now give you the Book of Knowledge."
 				boxViewMessages["msg"] = msgValue
 				msgView.visible = true
 			elif currentAction == "action_message":

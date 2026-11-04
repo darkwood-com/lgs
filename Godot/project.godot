@@ -22,9 +22,13 @@ GPX="*res://addons/gpx-godot-plugin/gpx.gd"
 
 [display]
 
+window/size/viewport_width=800
+window/size/viewport_height=450
 window/handheld/orientation=4
 
 [rendering]
+
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
