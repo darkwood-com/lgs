@@ -8,6 +8,7 @@ signal clicked(action: String, obj: Node)
 		if is_instance_valid(content):
 			_refresh_content()
 @export var type: String = 'text'
+@export var draw_background: bool = true
 @export var rect: Vector2i
 var bubbleEvent: bool = false
 var content: RichTextLabel
@@ -74,5 +75,7 @@ func _on_content_input(event):
 			clicked.emit(text, self)
 
 func _draw():
+	if not draw_background:
+		return
 	draw_rect(Rect2(Vector2.ZERO, Vector2(rect)), Color.WHITE)
 	draw_rect(Rect2(Vector2(0.5, 0.5), Vector2(rect) - Vector2.ONE), Color.BLACK, false, 1.0)

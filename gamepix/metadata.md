@@ -23,11 +23,13 @@ Desktop: click choices or the scenery to explore. Use the bag for inventory, the
 
 ## Resubmission QA
 - 2026-11-05: Withdrew the French-title resubmission at the owner's request. Restored `The Keeper of Knowledge` and resubmitted; portal confirmed `New release REVIEW`. Release notes request GamePix to change the namespace to `the-keeper-of-knowledge`, since the dashboard has no editable namespace field. Namespace migration remains pending GamePix action.
-- Final uploaded version: `3LfBIiLc7O6XlO2xGn1QV7INFKR` (Game ID `4RS3SV`).
-- Final package: `Exports/lgs-gamepix-no-underlines.zip` (original lgsfont.ttf).
+- Final uploaded version: `3LgqCaOJ7NAY7KhDRnqewYwmtVR` (Game ID `4RS3SV`).
+- Final package: `Exports/lgs-gamepix.zip` (black links, no underlines, original lgsfont.ttf).
 - Automated checks: 4 viewport sizes, 4 scenes, 129 locations, 117 questions, 856 interactions; zero assertion failures.
 - Native 800x450 mouse/keyboard, quiz scoring, inventory and save/load passed.
 - Final GamePix Preview verified loading, game start, English signs, save restoration, compact 620x349/mobile 640x360 sizes, pause/resume and sound callbacks.
 - Submitted successfully; portal verified `New release REVIEW` and `Game in review!`. Original-font final build rechecked in GamePix Preview before submission.
 
 - Latest revision removes link/action underlines, preserves original font and click handling; controls wording updated. Latest hosted build verified in GamePix Preview and resubmitted; portal confirmed `Game in review!`.
+
+- 2026-11-05: Uploaded black-link build `3LgqCaOJ7NAY7KhDRnqewYwmtVR`; verified loading and black clickable menu actions at 620×349 in GamePix Preview. Resubmitted with English title retained and namespace migration request repeated; portal confirmed `New release REVIEW` and `Game in review!`. ZIP SHA-256: `ffc6801fdbbe5b74577d85b9ea092cd4b9df189ce59e1d41feb40dff8c463dc7`.
