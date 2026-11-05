@@ -5,6 +5,8 @@
 - Build: `gamepix/build.sh` → `Exports/lgs-gamepix.zip` (index.html at root; only external URL is the official SDK)
 - Orientation: Landscape; fits resized iframes without cropping at 800×450
 - Default language: English
+- Official GamePix title: The Keeper of Knowledge
+- Current namespace: `le-gardien-du-savoir`; requested namespace: `the-keeper-of-knowledge` (requires GamePix intervention; no editable field in the dashboard).
 - Main tag: Puzzle (alternatives: Trivia / Quiz, Adventure)
 
 ## Description
@@ -17,9 +19,10 @@ Desktop: click choices or the scenery to explore. Use the bag for inventory, the
 - Icon 256x256: `gamepix/icon-256.png`
 - Cover 1360x850: `gamepix/cover-1360x850.jpg`
 - Promotional images are original illustrated key art, not screenshots.
-- Original title: Le Gardien du Savoir; English title: The Keeper of Knowledge.
+- Official submission title: The Keeper of Knowledge; French original: Le Gardien du Savoir.
 
 ## Resubmission QA
+- 2026-11-05: Withdrew the French-title resubmission at the owner's request. Restored `The Keeper of Knowledge` and resubmitted; portal confirmed `New release REVIEW`. Release notes request GamePix to change the namespace to `the-keeper-of-knowledge`, since the dashboard has no editable namespace field. Namespace migration remains pending GamePix action.
 - Final uploaded version: `3LfBIiLc7O6XlO2xGn1QV7INFKR` (Game ID `4RS3SV`).
 - Final package: `Exports/lgs-gamepix-no-underlines.zip` (original lgsfont.ttf).
 - Automated checks: 4 viewport sizes, 4 scenes, 129 locations, 117 questions, 856 interactions; zero assertion failures.

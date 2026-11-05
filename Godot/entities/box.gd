@@ -51,7 +51,7 @@ func _refresh_content():
 		if i % 2 == 1:
 			action_keys.append(parts[i])
 			content.push_meta(str(action_keys.size() - 1))
-			content.push_color(Color(0.05, 0.18, 0.35))
+			content.push_color(Color.BLACK)
 		var label = parts[i]
 		for key in display_replacements:
 			label = label.replace(key, str(display_replacements[key]))
