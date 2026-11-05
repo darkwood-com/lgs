@@ -23,7 +23,7 @@ Desktop: click choices or the scenery to explore. Use the bag for inventory, the
 
 ## Resubmission QA
 - 2026-11-05: Withdrew the French-title resubmission at the owner's request. Restored `The Keeper of Knowledge` and resubmitted; portal confirmed `New release REVIEW`. Release notes request GamePix to change the namespace to `the-keeper-of-knowledge`, since the dashboard has no editable namespace field. Namespace migration remains pending GamePix action.
-- Final uploaded version: `3LgqCaOJ7NAY7KhDRnqewYwmtVR` (Game ID `4RS3SV`).
+- Final uploaded version: `3LgrcM92E8r9aHyIgQ6d0T0a2Bf` (Game ID `4RS3SV`).
 - Final package: `Exports/lgs-gamepix.zip` (black links, no underlines, original lgsfont.ttf).
 - Automated checks: 4 viewport sizes, 4 scenes, 129 locations, 117 questions, 856 interactions; zero assertion failures.
 - Native 800x450 mouse/keyboard, quiz scoring, inventory and save/load passed.
@@ -33,3 +33,5 @@ Desktop: click choices or the scenery to explore. Use the bag for inventory, the
 - Latest revision removes link/action underlines, preserves original font and click handling; controls wording updated. Latest hosted build verified in GamePix Preview and resubmitted; portal confirmed `Game in review!`.
 
 - 2026-11-05: Uploaded black-link build `3LgqCaOJ7NAY7KhDRnqewYwmtVR`; verified loading and black clickable menu actions at 620×349 in GamePix Preview. Resubmitted with English title retained and namespace migration request repeated; portal confirmed `New release REVIEW` and `Game in review!`. ZIP SHA-256: `ffc6801fdbbe5b74577d85b9ea092cd4b9df189ce59e1d41feb40dff8c463dc7`.
+
+- 2026-11-05: Uploaded parchment-introduction build `3LgrcM92E8r9aHyIgQ6d0T0a2Bf` from commit `b4e92e0`. Both original parchment backgrounds restored with centered English text and black links; visual QA at 800×450 and navigation, quiz, inventory, save/load checks passed. Portal confirmed `New release REVIEW`. English title retained; namespace migration request repeated. ZIP SHA-256: `b36e4c33b96ed86f15a01d040550b53cec66c369a6a97b6b47edb093ad8d6112`.
