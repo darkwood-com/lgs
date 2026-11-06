@@ -39,3 +39,5 @@ Desktop: click choices or the scenery to explore. Use the bag for inventory, the
 - 2026-11-06: Prepared title alignment to `le-gardien-du-savoir`: official title, in-game headings, browser title, cover and loading background now use `Le Gardien du Savoir`. Gameplay remains English. Saved on GamePix as `New release EDIT`: title and description updated, corrected cover uploaded successfully, build `3LjQm1gDuHi9SqVJA1XFelrhg85` uploaded. ZIP SHA-256: `b8f458b8d936c3168296cfb0facb7f57eb88dd856d2f5f38c3e2279b9fd9caeb`. Automated QA passed (856 interactions, 4 viewport sizes, 129 locations, 117 questions). No submission; awaiting owner validation.
 
 - GamePix Preview verified for build `3LjQm1gDuHi9SqVJA1XFelrhg85`: corrected loading art and French menu title displayed; SDK reached LOADED. Draft remains `edit`, not submitted.
+
+- 2026-11-06: Owner approved submission. Submitted corrected release for review; portal confirmed `New release REVIEW`. Release notes document French-title alignment and explicitly withdraw the prior namespace-change request.
