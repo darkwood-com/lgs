@@ -5,3 +5,7 @@ Use case: ads-marketing. Create landscape promotional key art for a retro point-
 
 Icon prompt:
 Use case: ads-marketing. Square promotional game icon for The Keeper of Knowledge, a classic point-and-click medieval educational adventure. A young hooded monk, three-quarter bust, holding a large ornate closed book with a prominent Celtic cross motif, a small monastery tower behind. Bold black ink woodcut outlines and a few stippled shadows on warm ivory parchment, strong silhouette, simple composition, appealing mysterious medieval atmosphere. Full-bleed square artwork with generous safe margins, subject clearly recognizable at 256x256 pixels. No text, no letters, no UI, no screenshot, no watermark.
+
+
+2026-11-06 — Built-in image_gen edit, text-localization:
+Change only the cover title to "LE GARDIEN DU SAVOIR" in black serif lettering on two lines; retain "A medieval quiz adventure", medieval illustration, parchment palette and 8:5 composition. Output: gamepix/cover-1360x850.png, JPEG derivative and loading-background.jpg. Icon has no title and needs no modification.

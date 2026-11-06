@@ -26,7 +26,7 @@ func _ready():
 	title_background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(title_background)
 	var title = Label.new()
-	title.text = "THE\nKEEPER\nOF\nKNOWLEDGE"
+	title.text = "LE\nGARDIEN\nDU\nSAVOIR"
 	title.position = Vector2(402, 26)
 	title.size = Vector2(106, 156)
 	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -43,7 +43,7 @@ func _ready():
 	
 	info_message = BoxScene.instantiate()
 	info_message.text = "\n".join([
-		"The Keeper of Knowledge Version 1.0",
+		"Le Gardien du Savoir Version 1.0",
 		"",
 		"      Adapted to Mac OS X, iPhone and iPad",
 		"              by Mathieu Ledru",

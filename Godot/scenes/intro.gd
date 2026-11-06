@@ -7,7 +7,7 @@ var parchment: Sprite
 var text_mask: ColorRect
 const TEXT_BOUNDS = [Rect2(44, 72, 432, 244), Rect2(44, 3, 432, 300)]
 const PAGES = [
-	"THE KEEPER OF KNOWLEDGE\n\nEncyclopia, keeper of the secrets of knowledge, is looking for a worthy successor. Messengers have carried the news across the land.\n\nYou are a young monk studying in a remote monastery. One day, the abbot calls you to his chamber. You enter nervously, expecting a reprimand.",
+	"LE GARDIEN DU SAVOIR\n\nEncyclopia, keeper of the secrets of knowledge, is looking for a worthy successor. Messengers have carried the news across the land.\n\nYou are a young monk studying in a remote monastery. One day, the abbot calls you to his chamber. You enter nervously, expecting a reprimand.",
 	"YOUR QUEST\n\nThe abbot smiles. You have been chosen to seek Encyclopia and prove your courage, wisdom and thirst for knowledge.\n\nHe gives you thirteen gold coins. At dawn you set out, carrying your hopes for the journey ahead.\n\nExplore the towns, answer questions to earn Talents, and collect the three Talismans that open the abbey. Click choices or the scenery to travel. Use the bag for inventory, the disk to save, and the angel for advice."
 ]
 
